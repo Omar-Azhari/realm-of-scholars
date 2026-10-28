@@ -81,4 +81,4 @@ I built Realm of Scholars myself: the game design, rules, world, content, AI fea
 
 To respect La Trobe University's copyright and assessment rules, this repository leaves out course materials, assessment briefs, transcribed LMS pages and the full Handbook scrape. Assessment records keep only titles, weights and dates.
 
-[LinkedIn](https://www.linkedin.com/in/omar-alazhari-028a6a203) · [GitHub](https://github.com/Omar-Azhari)
+[LinkedIn](https://www.linkedin.com/in/omar-al-azhari-028a6a203) · [GitHub](https://github.com/Omar-Azhari)
