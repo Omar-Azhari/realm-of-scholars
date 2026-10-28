@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 60">
+  <!-- UniGame placeholder prop: subject-completion banner (room evolution stage 4). -->
+  <path d="M6 4 L354 4 L344 30 L354 56 L6 56 L16 30 Z" fill="#141b2e" stroke="#f4c542" stroke-width="3"/>
+  <text x="180" y="38" text-anchor="middle" fill="#f4c542" font-size="22" font-family="monospace" font-weight="bold">SUBJECT COMPLETE!</text>
+</svg>

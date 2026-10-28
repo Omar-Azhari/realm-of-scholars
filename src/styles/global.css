@@ -1,0 +1,546 @@
+/*
+ * Global reset + app shell / navigation layout.
+ * Responsive breakpoint (~768px, "tablet") and accessibility rules follow
+ * planning/DESIGN_SYSTEM.md: visible focus outlines distinct from hover,
+ * 44x44px minimum tap targets, icon+text labels (never colour alone), and
+ * `prefers-reduced-motion` respected.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--hq-bg);
+  color: var(--hq-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------- */
+/* Base button                                                            */
+/* --------------------------------------------------------------------- */
+
+button {
+  font-family: inherit;
+}
+
+button[type="button"],
+button[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.1s ease-out;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+  border-color: var(--hq-accent);
+  box-shadow: var(--glow-hq);
+}
+
+button[type="button"]:active,
+button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+button.button--primary {
+  background: var(--gradient-hq);
+  border-color: transparent;
+  color: #0b1220;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--hq-panel);
+  color: var(--hq-text);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 0 8px 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--hq-focus-ring);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------- */
+/* App shell                                                              */
+/* --------------------------------------------------------------------- */
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 264px;
+  flex-shrink: 0;
+  background: var(--hq-panel);
+  border-right: var(--border-width-panel) solid var(--hq-border);
+  padding: var(--space-5) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0 var(--space-3);
+  color: var(--hq-accent);
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.5);
+}
+
+.sidebar-nav,
+.bottom-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--hq-text-muted);
+  font-weight: 600;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.nav-link svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.nav-link:hover {
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+}
+
+.nav-link--active {
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  box-shadow: inset 3px 0 0 var(--hq-accent), var(--glow-hq);
+}
+
+.nav-link--active svg {
+  opacity: 1;
+  color: var(--hq-accent);
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-6);
+}
+
+.bottom-nav {
+  display: none;
+}
+
+/* --------------------------------------------------------------------- */
+/* Screen shell content (placeholder shell only — real content in later phases) */
+/* --------------------------------------------------------------------- */
+
+.screen {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.screen-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.screen-title-icon {
+  color: var(--hq-accent);
+  flex-shrink: 0;
+}
+
+.screen-lede {
+  color: var(--hq-text-muted);
+  margin: 0;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  background: rgba(20, 27, 46, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: var(--border-width-panel) solid var(--hq-border);
+  border-radius: var(--radius-panel);
+  padding: var(--space-5);
+  box-shadow: var(--elevation-2), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--hq-accent), transparent);
+  opacity: 0.5;
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Nested/recessed content inside a .panel (e.g. a stat tile inside a card) —
+   reads as "inset" against the raised outer panel instead of stacking two
+   identical flat surfaces. */
+.panel--inset {
+  background: rgba(8, 13, 24, 0.55);
+  border: 1px solid var(--hq-border);
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* A panel that should read as actively "lit" (hovered/selected/focused) —
+   composes with an existing --subject-accent or --hq-accent glow token. */
+.panel--raised {
+  box-shadow: var(--elevation-3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--hq-panel-alt);
+  border: 1px solid var(--hq-border);
+  width: fit-content;
+}
+
+.badge--confirmed {
+  border-color: #2ed17e;
+  color: #b7f5d4;
+}
+
+.badge--warning {
+  border-color: #ffb238;
+  color: #ffe0ad;
+}
+
+.badge--neutral {
+  color: var(--hq-text-muted);
+}
+
+.badge--progress {
+  border-color: var(--hq-accent);
+  color: #a6f0fa;
+}
+
+.badge--critical {
+  border-color: #ff5c5c;
+  color: #ffc2c2;
+}
+
+.badge--high {
+  border-color: #ff8a3d;
+  color: #ffd3ad;
+}
+
+.badge--medium {
+  border-color: #ffb238;
+  color: #ffe0ad;
+}
+
+.badge--low {
+  border-color: var(--hq-border);
+  color: var(--hq-text-muted);
+}
+
+/* --------------------------------------------------------------------- */
+/* Responsive: below tablet breakpoint, sidebar collapses to a bottom nav */
+/* --------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .app-main {
+    padding: var(--space-4);
+    padding-bottom: calc(var(--tap-target-min) + var(--space-6));
+  }
+
+  .bottom-nav {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--hq-panel);
+    border-top: var(--border-width-panel) solid var(--hq-border);
+    overflow-x: auto;
+    z-index: 10;
+  }
+
+  .bottom-nav-list {
+    flex-direction: row;
+    padding: var(--space-2);
+    width: max-content;
+    min-width: 100%;
+  }
+
+  .bottom-nav .nav-link {
+    flex-direction: column;
+    gap: var(--space-1);
+    font-size: 0.75rem;
+    padding: var(--space-2);
+    white-space: nowrap;
+  }
+
+  .bottom-nav .nav-link--active {
+    box-shadow: inset 0 3px 0 var(--hq-accent);
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Reduced motion                                                         */
+/* --------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-reduced-motion="true"] *,
+[data-reduced-motion="true"] *::before,
+[data-reduced-motion="true"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* RC1: safe-area spacing for notched phones (bottom nav + main padding). */
+@supports (padding: env(safe-area-inset-bottom)) {
+  @media (max-width: 767px) {
+    .bottom-nav {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .app-main {
+      padding-bottom: calc(var(--tap-target-min) + var(--space-6) + env(safe-area-inset-bottom));
+    }
+
+    .app-shell {
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+  }
+}
+
+/* RC1: friendly recovery panels (error boundary + asset failure). */
+.app-error-panel {
+  max-width: 520px;
+  margin: 15vh auto 0;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--hq-panel);
+  border: var(--border-width-panel) solid var(--hq-border);
+  color: var(--hq-text);
+  text-align: center;
+}
+
+.app-error-panel h1 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: var(--hq-accent);
+}
+
+.app-error-panel p {
+  margin: 0 0 10px;
+  color: var(--hq-text-muted);
+  line-height: 1.5;
+}
+
+.app-error-panel button {
+  margin-top: 8px;
+  min-height: var(--tap-target-min);
+  padding: 8px 20px;
+}
+
+/* Phase 20F Part 14 — 3D Campus-specific error recovery panel (Game3DErrorBoundary.tsx), same visual language as .app-error-panel but scoped to fill the world viewport rather than the whole page, and offering the 3D-specific "Use 2D Campus" recovery alongside Retry. */
+.game3d-error-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 32px;
+  text-align: center;
+  background: var(--hq-bg);
+  color: var(--hq-text);
+}
+
+.game3d-error-panel svg {
+  color: #ffb238;
+}
+
+.game3d-error-panel h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--hq-accent);
+}
+
+.game3d-error-panel p {
+  margin: 0;
+  max-width: 440px;
+  color: var(--hq-text-muted);
+  line-height: 1.5;
+}
+
+.game3d-error-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.game3d-error-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--tap-target-min);
+  padding: 8px 16px;
+}
+
+/* RC1: storage-unavailable warning. */
+.storage-warning-banner {
+  margin-bottom: var(--space-4);
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 178, 56, 0.12);
+  border: 1px solid #ffb238;
+  color: var(--hq-text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Classic campus → Realm of Scholars switch (see App.tsx). */
+.back-to-realm {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 9999;
+}
+.realm-loading {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  font-family: "Cinzel", "Palatino Linotype", Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #ece6d8;
+  /* Matches the realm's navy-charcoal glass. */
+  background: radial-gradient(ellipse at 50% 60%, #121827 0%, #07090e 70%);
+}
+.realm-loading::before {
+  content: "";
+  width: 64px;
+  height: 64px;
+  background: url("/icons/icon-192.png") center / contain no-repeat;
+  animation: realm-loading-pulse 1.8s ease-in-out infinite;
+}
+@keyframes realm-loading-pulse {
+  50% {
+    opacity: 0.6;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .realm-loading::before {
+    animation: none;
+  }
+}

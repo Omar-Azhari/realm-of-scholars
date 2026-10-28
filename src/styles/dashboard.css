@@ -1,0 +1,331 @@
+/*
+ * Phase 5 styles: Semester HQ layout (subject rooms surrounding the central
+ * HUD), dashboard widgets, achievements, weekly missions, the Priority
+ * Centre, and the Notification Centre.
+ */
+
+/* --------------------------------------------------------------------- */
+/* Dashboard cards                                                        */
+/* --------------------------------------------------------------------- */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.dashboard-card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-size: 1rem;
+  color: var(--hq-accent);
+}
+
+.dashboard-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dashboard-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.dashboard-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dashboard-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Phase 23 "Dashboard Connection" — a subject name that opens that
+   subject's mentor conversation, styled to read as plain text (matching
+   the plain <span> it replaces) rather than a default button. */
+.dashboard-list-link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: var(--hq-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  min-height: var(--tap-target-min);
+}
+
+.dashboard-list-link:hover {
+  color: var(--hq-accent);
+  text-decoration: underline;
+}
+
+.dashboard-list--progress li {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-1);
+}
+
+@media (max-width: 1023px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Achievements                                                           */
+/* --------------------------------------------------------------------- */
+
+.achievement-strip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.achievement-strip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.achievement-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  min-width: 110px;
+  border-radius: var(--radius-panel);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text-muted);
+  opacity: 0.6;
+}
+
+.achievement-badge--unlocked {
+  opacity: 1;
+  border-color: #ffd15c;
+  color: var(--hq-text);
+  box-shadow: 0 0 12px rgba(255, 209, 92, 0.35);
+}
+
+.achievement-badge-icon {
+  font-size: 1.4rem;
+  color: #ffd15c;
+}
+
+.achievement-badge-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.achievement-badge-status {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------- */
+/* Priority Centre                                                       */
+/* --------------------------------------------------------------------- */
+
+.priority-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.priority-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priority-group-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* --------------------------------------------------------------------- */
+/* Weekly Missions                                                        */
+/* --------------------------------------------------------------------- */
+
+.mission-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mission-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-panel);
+  border: var(--border-width-panel) solid var(--hq-border);
+  background: var(--hq-panel);
+}
+
+.mission-item--completed {
+  border-color: #2ed17e;
+  box-shadow: 0 0 14px rgba(46, 209, 126, 0.25);
+}
+
+.mission-item--completed .mission-item-body a {
+  text-decoration: line-through;
+  color: var(--hq-text-muted);
+}
+
+.mission-item-check {
+  display: flex;
+  color: var(--hq-text-muted);
+  min-width: var(--tap-target-min);
+  justify-content: center;
+}
+
+.mission-item--completed .mission-item-check {
+  color: #2ed17e;
+}
+
+.mission-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mission-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* --------------------------------------------------------------------- */
+/* Notification Centre                                                    */
+/* --------------------------------------------------------------------- */
+
+.notification-bell {
+  position: relative;
+  padding: 0 var(--space-3);
+}
+
+.notification-bell-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 10px;
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notification-bell-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--hq-accent);
+  color: var(--hq-bg);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.notification-panel-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: transparent;
+  border: none;
+  cursor: default;
+}
+
+.notification-panel {
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  left: var(--space-3);
+  right: var(--space-3);
+  z-index: 21;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.notification-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.notification-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.notification-item {
+  padding: var(--space-2) var(--space-3);
+  border-radius: 8px;
+  border-left: 3px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  font-size: 0.85rem;
+}
+
+.notification-item--info {
+  border-left-color: var(--hq-accent);
+}
+
+.notification-item--success {
+  border-left-color: #2ed17e;
+}
+
+.notification-item--warning {
+  border-left-color: #ffb238;
+}
+
+/* RC1 a11y: comfortable touch targets on dashboard/agenda list links
+   (ACCESSIBILITY_REVIEW.md item 1 — previously 24px tall on mobile). */
+.dashboard-list li > a,
+.agenda-day-events li > a,
+.notification-list li,
+.collections-list li > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target-min);
+}

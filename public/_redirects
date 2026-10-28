@@ -1,0 +1,2 @@
+# Netlify SPA fallback — deep links like /collections must serve the app shell.
+/*  /index.html  200

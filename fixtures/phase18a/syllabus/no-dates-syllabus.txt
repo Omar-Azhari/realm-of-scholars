@@ -1,0 +1,18 @@
+Unit code: DEF3000
+Unit name: Introduction to Cyber Security
+Coordinator: Dr Priya Shah
+
+Week 1: Threats and Vulnerabilities
+Week 2: Cryptographic Fundamentals
+
+Required reading: Stallings, W. Network Security Essentials.
+
+Assessment 1: Security Audit Report
+Weighting: 35%
+Submission: Submit via the LMS. Refer to the unit outline for further
+scheduling details, which will be published separately closer to the
+teaching period.
+
+Assessment 2: Practical Penetration Test Write-up
+Weighting: 45%
+Submission: Submit via the LMS as a single PDF. Scheduling to be confirmed.

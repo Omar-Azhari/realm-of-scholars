@@ -1,0 +1,191 @@
+/* Lecture theatre extras: professor card, voice picker, video; plus small HUD pieces. Uses the realm design tokens. */
+
+.realm-root .rs-lecture-prof {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--gold);
+  border-radius: var(--radius-m);
+  background: var(--surface-1);
+}
+.realm-root .rs-lecture-prof p {
+  margin: 4px 0 0;
+  color: var(--text-dim);
+}
+.realm-root .rs-lecture-prof strong {
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  color: var(--text-strong);
+}
+.realm-root .rs-lecture-prof-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border: 1px solid var(--line-gold);
+  border-radius: 50%;
+  color: var(--gold-strong);
+  font-size: 22px;
+  line-height: 1;
+}
+.realm-root .rs-lecture-voice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+.realm-root .rs-lecture-voice select {
+  max-width: min(360px, 70vw);
+}
+.realm-root .rs-lecture-voice p {
+  flex-basis: 100%;
+  margin: 0;
+}
+.realm-root .rs-lecture-video {
+  margin: 4px 0 12px;
+}
+.realm-root .rs-lecture-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 42vh;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: #000;
+}
+.realm-root .rs-lecture-video-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--surface-1);
+}
+.realm-root .rs-lecture-video-card p {
+  flex-basis: 100%;
+  margin: 0;
+}
+
+/* First-person aiming dot. */
+.realm-root .rs-crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.realm-root .rs-crosshair span {
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(251, 247, 238, 0.9);
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.5);
+}
+
+/* During a lecture the panel owns the bottom of the screen: messages move to the top-left. */
+.realm-root .realm-game:has(.rs-lecture) .rs-toasts {
+  bottom: auto;
+  top: 140px;
+}
+
+/* ?fps frame-rate readout. */
+.realm-root .rs-fps {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  z-index: 20;
+  padding: 3px 10px;
+  border-radius: var(--radius-m);
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--text-dim);
+  font: 12px/1.4 var(--font-mono);
+  pointer-events: none;
+}
+.realm-root .rs-look-hint {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 28px);
+  transform: translateX(-50%);
+  z-index: 5;
+  padding: 4px 12px;
+  border-radius: var(--radius-m);
+  background: rgba(3, 5, 9, 0.6);
+  color: var(--text-strong);
+  font-size: var(--fs-13);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Wardrobe / character creator: a clear "Done" at the bottom, always in reach. */
+.realm-root .wardrobe-done {
+  position: sticky;
+  bottom: -24px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 16px -24px -24px;
+  padding: 14px 24px;
+  border-top: 1px solid var(--line);
+  background: rgba(10, 13, 20, 0.97);
+}
+.realm-root .wardrobe-done button.rs-button.big {
+  min-width: 220px;
+}
+
+/* Shift running-boost stamina: a thin line under the prompt. */
+.realm-root .rs-stamina {
+  position: absolute;
+  left: 50%;
+  bottom: 96px;
+  width: 160px;
+  height: 3px;
+  margin-left: -80px;
+  z-index: 6;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.realm-root .rs-stamina.on {
+  opacity: 1;
+}
+.realm-root .rs-stamina span {
+  display: block;
+  height: 100%;
+  transform-origin: left center;
+  background: var(--text-strong);
+}
+.realm-root .rs-stamina.low span {
+  background: var(--danger);
+}
+
+/* Touch: jump button beside attack. */
+.realm-root button.rs-jump-button[type] {
+  position: absolute;
+  right: 172px;
+  bottom: 140px;
+  z-index: 8;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(8, 10, 16, 0.78);
+  border: 1px solid rgba(236, 228, 210, 0.45);
+  color: var(--text-strong);
+  font-size: 24px;
+  touch-action: manipulation;
+}

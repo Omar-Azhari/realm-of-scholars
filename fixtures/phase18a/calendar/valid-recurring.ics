@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//UniGame//Phase18A Fixture//EN
+BEGIN:VEVENT
+UID:lecture-weekly-001@fixture.unigame
+SUMMARY:XYZ1000 Lecture
+DTSTART:20260803T090000
+DTEND:20260803T110000
+LOCATION:Building 5 Theatre 2 (XYZ1000)
+RRULE:FREQ=WEEKLY;COUNT=12;BYDAY=MO
+DESCRIPTION:Weekly lecture covering the current module's topics and readi
+ ngs\, continuing across the whole teaching period without exception.
+END:VEVENT
+BEGIN:VEVENT
+UID:exam-001@fixture.unigame
+SUMMARY:XYZ1000 Final Examination
+DTSTART:20261102T133000
+DTEND:20261102T153000
+LOCATION:Sports Stadium (XYZ1000)
+END:VEVENT
+BEGIN:VEVENT
+UID:broken-001@fixture.unigame
+DTSTART:20260810T090000
+LOCATION:Room 3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,112 @@
+/*
+ * Design tokens implementing planning/DESIGN_SYSTEM.md.
+ *
+ * Subject accent/panel hex values are copied verbatim from the "Subject
+ * colour themes" table in DESIGN_SYSTEM.md (already flagged there as a
+ * Phase 2 design decision, distinct from syllabus data).
+ *
+ * The neutral HQ palette below did not have exact hex values in
+ * DESIGN_SYSTEM.md (only "cool slate/graphite + a single cyan HQ accent"
+ * was specified) — these values are a Phase 2 design decision following the
+ * same "starting proposal, not extracted from /docs" precedent, and have
+ * been recorded back into DESIGN_SYSTEM.md for a single source of truth.
+ *
+ * Visual-overhaul pass: self-hosted display font, elevation/glow/radius
+ * scale, and per-subject gradient pairs added below (see DESIGN_SYSTEM.md's
+ * updated "Visual language" note for provenance — same precedent as above,
+ * a design decision layered on confirmed data, not a change to it).
+ */
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Neutral HQ palette (lobby, nav, calendar grid, cross-subject chrome) */
+  --hq-bg: #0b1220;
+  --hq-panel: #141b2e;
+  --hq-panel-alt: #1b2338;
+  --hq-border: #2a3550;
+  --hq-text: #e7ecf7;
+  --hq-text-muted: #9aa6c0;
+  --hq-accent: #22d3ee;
+  --hq-focus-ring: #67e8f9;
+
+  /* Subject: User Interface Design (CSE2UI) — Violet / magenta */
+  --ui-accent: #b24bf3;
+  --ui-accent-2: #f345c0;
+  --ui-panel: #1b1330;
+
+  /* Subject: Cloud-Based Web Application Development (CSE3CWA) — Electric blue / silver */
+  --cwa-accent: #3da9fc;
+  --cwa-accent-2: #c7d0da;
+  --cwa-panel: #0e1a2b;
+
+  /* Subject: Project Management — Amber / navy */
+  --pm-accent: #ffb238;
+  --pm-accent-2: #1e2a52;
+  --pm-panel: #141b2e;
+
+  /* Subject: Professional Practices & Entrepreneurship in IT — Emerald / gold */
+  --ppe-accent: #2ed17e;
+  --ppe-accent-2: #f4c542;
+  --ppe-panel: #0e1f17;
+
+  /* Typography: body/UI text is a normal legible sans-serif per DESIGN_SYSTEM.md
+     ("system font stack or a single self-hosted font such as Inter"). No
+     external font file is bundled in Phase 2, so the system stack is used. */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Headings/HUD labels/game-style banners only — self-hosted "Press Start 2P"
+     (SIL Open Font License, src/assets/fonts/OFL.txt), confined to short
+     labels per DESIGN_SYSTEM.md's own "never pixel body text" rule. Falls
+     back to the same bold system-stack placeholder if the font fails to load. */
+  --font-display: "Press Start 2P", "Segoe UI Semibold", system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Layout */
+  --radius-panel: 16px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --border-width-panel: 2px;
+  --tap-target-min: 44px;
+
+  /* Elevation scale — soft, colour-neutral drop shadows for layered depth
+     (cards above backdrop, popovers above cards), distinct from the
+     colour-tinted glow tokens below. */
+  --elevation-1: 0 1px 2px rgba(0, 0, 0, 0.24);
+  --elevation-2: 0 4px 16px rgba(0, 0, 0, 0.32);
+  --elevation-3: 0 12px 32px rgba(0, 0, 0, 0.4);
+
+  /* Glow tokens — reuse the existing accent hexes at low alpha rather than
+     inventing new colours; one soft ambient glow and one stronger hover/focus
+     glow per palette, so every panel's "lit up" state stays consistent. */
+  --glow-hq: 0 0 24px rgba(34, 211, 238, 0.28);
+  --glow-hq-strong: 0 0 32px rgba(34, 211, 238, 0.5);
+  --glow-ui: 0 0 24px rgba(178, 75, 243, 0.3);
+  --glow-cwa: 0 0 24px rgba(61, 169, 252, 0.3);
+  --glow-pm: 0 0 24px rgba(255, 178, 56, 0.3);
+  --glow-ppe: 0 0 24px rgba(46, 209, 126, 0.3);
+
+  /* Gradient stop pairs — derived from each palette's existing accent +
+     accent-2 (or accent + a darker read of the same hue for the HQ neutral),
+     used for progress-bar fills, icon badges, and hover borders. */
+  --gradient-hq: linear-gradient(135deg, var(--hq-accent), #6d8dfc);
+  --gradient-ui: linear-gradient(135deg, var(--ui-accent), var(--ui-accent-2));
+  --gradient-cwa: linear-gradient(135deg, var(--cwa-accent), var(--cwa-accent-2));
+  --gradient-pm: linear-gradient(135deg, var(--pm-accent), #ffe0ad);
+  --gradient-ppe: linear-gradient(135deg, var(--ppe-accent), var(--ppe-accent-2));
+}

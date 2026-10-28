@@ -1,0 +1,180 @@
+/*
+ * First-time onboarding flow (Phase 20B, Part 1). Calm, centred, one step
+ * at a time — reuses the existing dark-navy HQ chrome tokens rather than
+ * inventing a new palette for a screen the player only ever sees once.
+ */
+
+.onboarding-flow {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 20%, #141b2e 0%, #0b1220 70%);
+  padding: var(--space-4);
+  z-index: 50;
+}
+
+.onboarding-card {
+  width: min(560px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--hq-border);
+  background: linear-gradient(180deg, rgba(20, 27, 46, 0.97), rgba(11, 18, 32, 0.98));
+  box-shadow: var(--elevation-3);
+}
+
+.onboarding-progress {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.onboarding-progress-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--hq-border);
+}
+
+.onboarding-progress-dot--active {
+  background: var(--hq-accent);
+  box-shadow: var(--glow-hq);
+}
+
+.onboarding-progress-dot--done {
+  background: var(--hq-text-muted);
+}
+
+.onboarding-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.onboarding-step--creator {
+  align-items: stretch;
+  text-align: left;
+}
+
+.onboarding-step-icon {
+  color: var(--hq-accent);
+}
+
+.onboarding-step h1 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--hq-text);
+  margin: 0;
+}
+
+.onboarding-step-title-inline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.onboarding-lede {
+  color: var(--hq-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 44ch;
+}
+
+.onboarding-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  text-align: left;
+}
+
+.onboarding-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 0.82rem;
+  color: var(--hq-text-muted);
+}
+
+.onboarding-field input,
+.onboarding-field select {
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel);
+  color: var(--hq-text);
+  font-size: 0.9rem;
+}
+
+.onboarding-field input:focus,
+.onboarding-field select:focus {
+  outline: 2px solid var(--hq-focus-ring);
+  outline-offset: 1px;
+}
+
+.onboarding-summary {
+  color: var(--hq-text);
+  font-size: 0.95rem;
+}
+
+.onboarding-summary p {
+  margin: 0 0 var(--space-1);
+}
+
+.onboarding-summary-personality {
+  color: var(--hq-text-muted);
+  font-size: 0.85rem;
+}
+
+.onboarding-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.onboarding-primary,
+.onboarding-secondary {
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.onboarding-primary {
+  border: none;
+  background: var(--gradient-hq);
+  color: #041018;
+  font-weight: 600;
+}
+
+.onboarding-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.onboarding-secondary {
+  border: 1px solid var(--hq-border);
+  background: transparent;
+  color: var(--hq-text-muted);
+}
+
+.onboarding-creator-loading {
+  padding: var(--space-6);
+  text-align: center;
+  color: var(--hq-text-muted);
+  font-size: 0.9rem;
+}

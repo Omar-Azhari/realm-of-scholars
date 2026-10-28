@@ -1,0 +1,251 @@
+/*
+ * Phase 4 visual polish: glass/glow panels, particle backdrop, HUD, animated
+ * character, skeleton loading, and the XP-gain toast. Plain CSS @keyframes
+ * here already respect prefers-reduced-motion / [data-reduced-motion] via
+ * the global override in global.css; Framer Motion effects are gated in
+ * their own components via useMotionPreference (a CSS media query can't
+ * reach inline-style/transform animation driven by JS).
+ */
+
+/* --------------------------------------------------------------------- */
+/* Particle field                                                         */
+/* --------------------------------------------------------------------- */
+
+.particle-field {
+  position: absolute;
+  inset: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--hq-accent);
+  animation-name: particle-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes particle-drift {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.55;
+  }
+  90% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(-48px) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Glass / glow panels                                                    */
+/* (the shared .panel class itself is upgraded in global.css, next to     */
+/* where it's already defined, rather than re-declared here)              */
+/* --------------------------------------------------------------------- */
+
+.subject-icon-badge {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--subject-gradient, var(--gradient-hq));
+  color: #0b1220;
+  box-shadow: var(--elevation-1), 0 0 16px var(--subject-accent, var(--hq-accent));
+}
+
+/* --------------------------------------------------------------------- */
+/* Character                                                              */
+/* --------------------------------------------------------------------- */
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.character-figure {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.character--large .character-figure {
+  width: 96px;
+  height: 96px;
+}
+
+.character--small .character-figure {
+  width: 48px;
+  height: 48px;
+}
+
+.character-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 28%;
+  background: radial-gradient(circle at 35% 30%, var(--character-accent) 0%, transparent 70%);
+}
+
+.character-core {
+  position: absolute;
+  inset: 18%;
+  border-radius: 24%;
+  background: var(--hq-panel-alt);
+  border: 2px solid var(--character-accent);
+}
+
+.character-eye {
+  position: absolute;
+  top: 38%;
+  left: 42%;
+  width: 8%;
+  height: 8%;
+  min-width: 3px;
+  min-height: 3px;
+  border-radius: 50%;
+  background: var(--character-accent);
+}
+
+.character-mouth {
+  position: absolute;
+  bottom: 26%;
+  left: 32%;
+  right: 32%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--character-accent);
+}
+
+.character-mouth--happy {
+  border-radius: 0 0 999px 999px;
+  height: 6px;
+}
+
+.character-mouth--concerned {
+  border-radius: 999px 999px 0 0;
+  height: 6px;
+}
+
+.character-speaking-indicator {
+  position: absolute;
+  bottom: -10%;
+  right: -6%;
+  width: 14%;
+  height: 14%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: var(--character-accent);
+  box-shadow: 0 0 8px var(--character-accent);
+}
+
+.character-caption {
+  max-width: 220px;
+  text-align: center;
+  color: var(--hq-text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------- */
+/* Skeleton loading                                                       */
+/* --------------------------------------------------------------------- */
+
+.skeleton-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.skeleton-line {
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--hq-panel-alt) 25%,
+    rgba(255, 255, 255, 0.08) 50%,
+    var(--hq-panel-alt) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.skeleton-line:nth-child(2) {
+  width: 80%;
+}
+
+.skeleton-line:nth-child(3) {
+  width: 60%;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* XP gain toast                                                          */
+/* --------------------------------------------------------------------- */
+
+.xp-toast-region {
+  position: fixed;
+  top: var(--space-4);
+  right: var(--space-4);
+  z-index: 50;
+  pointer-events: none;
+}
+
+.xp-toast {
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  background: rgba(20, 27, 46, 0.9);
+  border: 1px solid var(--hq-accent);
+  color: var(--hq-accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.4);
+}
+
+.xp-toast--negative {
+  border-color: #ffb238;
+  color: #ffb238;
+  box-shadow: 0 0 16px rgba(255, 178, 56, 0.35);
+}
+
+/* --------------------------------------------------------------------- */
+/* Interactive polish                                                     */
+/* (hover states for .quick-link / .back-link are added directly onto     */
+/* their existing rules in components.css, not re-declared here)          */
+/* --------------------------------------------------------------------- */
+
+.module-panel {
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.module-panel:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------- */
+/* Responsive                                                             */
+/* --------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  .hud-stat-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

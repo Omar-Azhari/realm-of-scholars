@@ -1,0 +1,287 @@
+/* Room Edit Mode (Phase 20D, Part 5). */
+
+.room-editor-panel {
+  width: min(640px, 100%);
+}
+
+.room-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.room-editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.room-editor-heading {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--hq-text);
+}
+
+.room-editor-hint {
+  margin: 0;
+  color: var(--hq-text-muted);
+  font-size: 0.8rem;
+}
+
+.room-editor-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.room-editor-theme-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 10px;
+  border-radius: var(--radius-md, 10px);
+  border: 2px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  cursor: pointer;
+  text-align: left;
+}
+
+.room-editor-theme-card.is-active {
+  border-color: var(--hq-accent);
+}
+
+.room-editor-theme-swatch {
+  display: flex;
+  width: 100%;
+  height: 22px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.room-editor-theme-swatch span {
+  flex: 1;
+}
+
+.room-editor-theme-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.room-editor-theme-desc {
+  font-size: 0.72rem;
+  color: var(--hq-text-muted);
+}
+
+.room-editor-theme-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--hq-accent);
+}
+
+.room-editor-slot-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.room-editor-slot-row {
+  display: grid;
+  grid-template-columns: minmax(110px, auto) 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md, 10px);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+}
+
+.room-editor-slot-label {
+  font-size: 0.8rem;
+  color: var(--hq-text-muted);
+}
+
+.room-editor-slot-current {
+  font-size: 0.85rem;
+  color: var(--hq-text);
+}
+
+.room-editor-slot-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.room-editor-slot-controls button {
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel);
+  color: var(--hq-text);
+  cursor: pointer;
+}
+
+.room-editor-slot-controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.room-editor-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--hq-border);
+}
+
+.room-editor-footer button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--hq-border);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.room-editor-cancel {
+  background: var(--hq-panel-alt);
+  color: var(--hq-text-muted);
+}
+
+.room-editor-apply {
+  background: var(--hq-accent);
+  color: var(--hq-on-accent, #fff);
+  border-color: transparent;
+}
+
+/* NPC cosmetic reaction toast (Phase 20D, Part 8). */
+.room-reaction-toast {
+  position: absolute;
+  left: 50%;
+  bottom: 96px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(420px, 86vw);
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  z-index: 5;
+}
+
+.room-reaction-toast-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--hq-accent);
+  white-space: nowrap;
+}
+
+.room-reaction-toast-line {
+  font-size: 0.82rem;
+  color: var(--hq-text);
+}
+
+.room-reaction-toast button {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  color: var(--hq-text-muted);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Phase 23 "Living AI Mentor" — a proper multi-stage conversation panel,
+   deliberately distinct from the pill-shaped ambient `.room-reaction-toast`
+   above: a real panel with a header/close button, since a conversation is a
+   deliberate interaction the player reads at their own pace, not a passing
+   ambient line. `position: fixed` (viewport-relative, not nearest-ancestor-
+   relative) deliberately — this component is mounted from TWO different
+   places (Game3D.tsx's full-viewport canvas overlay, and the narrower
+   `.world-panel` side drawer via the Dashboard's "Talk" buttons); fixed
+   positioning renders identically in both without risking being clipped by
+   the drawer's own internal scroll container. */
+.mentor-conversation-panel {
+  position: fixed;
+  left: 50%;
+  bottom: 96px;
+  transform: translateX(-50%);
+  width: min(460px, 90vw);
+  border-radius: var(--radius-md, 14px);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  z-index: 60;
+  overflow: hidden;
+}
+
+.mentor-conversation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-accent);
+  font-size: 0.85rem;
+}
+
+.mentor-conversation-header button {
+  border: none;
+  background: transparent;
+  color: var(--hq-text-muted);
+  cursor: pointer;
+  display: flex;
+}
+
+.mentor-conversation-transcript {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px 14px;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.mentor-conversation-line {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--hq-text);
+}
+
+.mentor-conversation-line--done {
+  color: var(--hq-text-muted);
+}
+
+.mentor-conversation-line--active {
+  min-height: 1.4em;
+}
+
+.mentor-conversation-why {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text-muted);
+  border-radius: 8px;
+  padding: 4px 9px;
+  font-size: 0.74rem;
+  cursor: pointer;
+}
+
+.mentor-conversation-why:hover {
+  border-color: var(--hq-accent);
+}

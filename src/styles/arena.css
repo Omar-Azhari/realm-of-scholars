@@ -1,0 +1,1276 @@
+/*
+ * The Arena (src/realm/arena/): ranked study games.
+ * "Modern arcane": dark translucent glass, thin gold lines, clean sans-serif
+ * text, rounded corners. Colours come from the realm's custom properties
+ * (src/styles/realm.css) with local fallbacks; nothing here restyles the
+ * shared window chrome.
+ */
+
+.realm-root .arena-window,
+.realm-root .arena-feature {
+  --ar-gold: var(--gold, #ffcf3a);
+  --ar-gold-soft: var(--gold-soft, #e8b84a);
+  --ar-line: color-mix(in srgb, var(--ar-gold) 38%, transparent);
+  --ar-line-soft: color-mix(in srgb, var(--ar-gold) 18%, transparent);
+  --ar-glass: rgba(14, 16, 26, 0.72);
+  --ar-glass-2: rgba(28, 31, 46, 0.66);
+  --ar-text: #eef0f6;
+  --ar-muted: #a9adbd;
+  --ar-good: var(--rs-green, #1fcf3a);
+  --ar-bad: var(--rs-red, #e0302a);
+  --ar-near: #e2b33c;
+  --ar-blue: #5aa8ff;
+  --ar-radius: 12px;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+
+.realm-root .rs-window.arena-window .muted,
+.realm-root .rs-window .arena-feature .muted {
+  color: var(--ar-muted);
+}
+
+/* ---------------------------------------------------------------- */
+/* Games hall feature card                                           */
+/* ---------------------------------------------------------------- */
+
+.realm-root .arena-feature {
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--ar-line);
+  border-radius: var(--ar-radius);
+  background: linear-gradient(135deg, rgba(40, 34, 70, 0.78), rgba(12, 14, 24, 0.82));
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: var(--ar-text);
+}
+.realm-root .arena-feature-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.realm-root .rs-window .arena-feature h3 {
+  margin: 0;
+  color: var(--ar-gold);
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+.realm-root .rs-window .arena-feature p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+.realm-root .arena-feature-games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Common pieces                                                     */
+/* ---------------------------------------------------------------- */
+
+.realm-root :is(.arena-window, .arena-feature) .arena-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ar-text);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-chip.season {
+  border-color: var(--ar-line);
+  color: var(--ar-gold);
+}
+
+.realm-root :is(.arena-window, .arena-feature) button.arena-pill {
+  padding: 5px 12px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ar-text);
+  font-size: 0.86rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-pill:hover:not(:disabled),
+.realm-root :is(.arena-window, .arena-feature) button.arena-pill.on {
+  border-color: var(--ar-gold);
+  background: color-mix(in srgb, var(--ar-gold) 16%, transparent);
+  color: #fff;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-h {
+  margin: 14px 0 8px;
+  color: var(--ar-gold-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-note {
+  min-height: 1.3em;
+  margin: 8px 0;
+  color: var(--ar-text);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-note.bad {
+  color: #ffb0a8;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-bar {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-bar > span {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--ar-gold-soft), var(--ar-gold));
+  transition: width 0.1s linear;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-bar.thinking > span {
+  background: linear-gradient(90deg, #7d6bff, #c08bff);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-bar.rank {
+  margin: 6px 0 10px;
+}
+
+/* Rank badges */
+.realm-root :is(.arena-window, .arena-feature) .arena-rank {
+  --rank: #c98b56;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 9px 2px 6px;
+  border: 1px solid color-mix(in srgb, var(--rank) 60%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--rank) 16%, rgba(0, 0, 0, 0.3));
+  color: color-mix(in srgb, var(--rank) 60%, #fff);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank.compact {
+  padding: 1px 7px 1px 5px;
+  font-size: 0.72rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank .gem {
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  background: var(--rank);
+  box-shadow: 0 0 6px var(--rank);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank-silver {
+  --rank: #c3cad6;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank-gold {
+  --rank: #f2c24a;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank-platinum {
+  --rank: #5fd6c8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank-diamond {
+  --rank: #7fb4ff;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rank-grandmaster {
+  --rank: #ff6f91;
+}
+
+/* ---------------------------------------------------------------- */
+/* Hub                                                               */
+/* ---------------------------------------------------------------- */
+
+.realm-root .arena-window {
+  color: var(--ar-text);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-tabs {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 2px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 999px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-tabs button {
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: var(--ar-muted);
+  font-size: 0.85rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-tabs button.on {
+  background: color-mix(in srgb, var(--ar-gold) 20%, transparent);
+  color: #fff;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-gamebar {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-gametab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 10px 6px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: var(--ar-radius);
+  background: var(--ar-glass-2);
+  color: var(--ar-text);
+  transition: border-color 0.15s, transform 0.15s, background 0.15s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-gametab:hover {
+  border-color: var(--ar-line);
+  transform: translateY(-1px);
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-gametab.on {
+  border-color: var(--ar-gold);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ar-gold) 18%, transparent), var(--ar-glass));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ar-gold) 25%, transparent), 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-gametab .icon {
+  font-size: 1.3rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-gametab .name {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-gametab .rating {
+  color: var(--ar-muted);
+  font-size: 0.75rem;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-panel {
+  padding: 12px 14px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: var(--ar-radius);
+  background: var(--ar-glass);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 14px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-detail h3 {
+  margin: 0 0 6px;
+  color: var(--ar-gold);
+  font-size: 1.15rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-detail p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-detail-stats {
+  padding: 10px 12px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-big-rating {
+  margin: 4px 0 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-stats {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  margin: 0;
+  font-size: 0.82rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-stats dt {
+  color: var(--ar-muted);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-stats dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-rivals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-rival {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 10px 12px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: var(--ar-radius);
+  background: var(--ar-glass-2);
+  color: var(--ar-text);
+  text-align: left;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-rival:hover {
+  border-color: var(--ar-gold);
+  transform: translateY(-2px);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival .label {
+  color: var(--ar-gold-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival.stretch .label {
+  color: #ff9db3;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival.warm .label {
+  color: #8fe0a8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival .name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival .meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Leaderboard */
+.realm-root :is(.arena-window, .arena-feature) .arena-board {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 340px;
+  overflow-y: auto;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto 56px 110px;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row.you {
+  border: 1px solid var(--ar-line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--ar-gold) 10%, transparent);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row.classmate .name {
+  color: #bfe3ff;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .pos {
+  color: var(--ar-muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .rating {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .best {
+  text-align: right;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .tag {
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: rgba(127, 180, 255, 0.18);
+  color: #bfe3ff;
+  font-size: 0.68rem;
+  vertical-align: 1px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .tag.ai {
+  background: rgba(192, 139, 255, 0.18);
+  color: #dcc5ff;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-row .tag.you {
+  background: color-mix(in srgb, var(--ar-gold) 22%, transparent);
+  color: var(--ar-gold);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-share {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--ar-line-soft);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--ar-text);
+  font: inherit;
+}
+
+/* ---------------------------------------------------------------- */
+/* In a match                                                        */
+/* ---------------------------------------------------------------- */
+
+.realm-root :is(.arena-window, .arena-feature) .arena-game {
+  position: relative;
+  padding: 2px;
+  border-radius: var(--ar-radius);
+  transition: box-shadow 0.2s;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-game.flash-good {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ar-good) 70%, transparent), 0 0 30px color-mix(in srgb, var(--ar-good) 30%, transparent);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-game.flash-bad {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ar-bad) 70%, transparent), 0 0 30px color-mix(in srgb, var(--ar-bad) 30%, transparent);
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-vs {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: var(--ar-radius);
+  background: var(--ar-glass);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-vs .side {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-vs .side.rival {
+  align-items: flex-end;
+  text-align: right;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-vs .who {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ar-muted);
+  font-size: 0.85rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-vs .score {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-vs .vs {
+  color: var(--ar-gold);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-vs .round {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--ar-gold);
+  font-weight: 600;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-timer {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-timer.low {
+  color: #ff8f86;
+  animation: arena-pulse 0.8s ease-in-out infinite;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-combo {
+  color: #ffb36b;
+  font-size: 0.85rem;
+  animation: arena-pop 0.4s ease-out;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-pips {
+  display: inline-flex;
+  gap: 5px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-pips span {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--ar-line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-pips span.on {
+  border-color: var(--ar-gold);
+  background: radial-gradient(circle at 35% 35%, #fff6c2, var(--ar-gold));
+  box-shadow: 0 0 8px color-mix(in srgb, var(--ar-gold) 60%, transparent);
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-rival-mind {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival-mind .state {
+  min-width: 11em;
+  color: var(--ar-muted);
+  text-align: right;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival-mind.right .state {
+  color: #ff9db3;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rival-mind.wrong .state {
+  color: #8fe0a8;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-ready {
+  padding: 26px 10px;
+  text-align: center;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-ready .big {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rules {
+  display: inline-block;
+  margin: 6px auto 16px;
+  padding-left: 18px;
+  text-align: left;
+  line-height: 1.6;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-count {
+  margin: 0;
+  color: var(--ar-gold);
+  font-size: 4rem;
+  font-weight: 800;
+  animation: arena-pop 0.5s ease-out;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-question .prompt {
+  margin: 4px 0 12px;
+  color: #fff;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-clock {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-clock .arena-bar {
+  flex: 1;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-clock .t {
+  min-width: 3.5em;
+  color: var(--ar-muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-choice {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 52px;
+  padding: 10px 12px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 10px;
+  background: var(--ar-glass-2);
+  color: var(--ar-text);
+  line-height: 1.35;
+  text-align: left;
+  transition: border-color 0.12s, background 0.12s, transform 0.12s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-choice:hover:not(:disabled) {
+  border-color: var(--ar-gold);
+  background: color-mix(in srgb, var(--ar-gold) 10%, var(--ar-glass-2));
+  transform: translateY(-1px);
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-choice:disabled {
+  opacity: 1;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-choice .key {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--ar-line);
+  border-radius: 6px;
+  color: var(--ar-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-choice .tag {
+  position: absolute;
+  top: -8px;
+  right: 8px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #6c4fd8;
+  color: #fff;
+  font-size: 0.68rem;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-choice.right {
+  border-color: var(--ar-good);
+  background: color-mix(in srgb, var(--ar-good) 22%, var(--ar-glass-2));
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-choice.wrong {
+  border-color: var(--ar-bad);
+  background: color-mix(in srgb, var(--ar-bad) 22%, var(--ar-glass-2));
+  animation: arena-shake 0.3s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.arena-choice.rival-wrong {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+.realm-root :is(.arena-window, .arena-feature) .arena-reveal {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-reveal .verdict {
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-reveal .verdict.player {
+  color: #8fe0a8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-reveal .verdict.rival {
+  color: #ff9db3;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-reveal .explain {
+  margin: 0 0 10px;
+  color: var(--ar-muted);
+  line-height: 1.45;
+}
+
+/* Blitz */
+.realm-root :is(.arena-window, .arena-feature) .arena-streak {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 34px;
+  margin: 4px 0 8px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-streak .mult {
+  padding: 2px 10px;
+  border: 1px solid var(--ar-line);
+  border-radius: 8px;
+  color: var(--ar-gold);
+  font-size: 1.15rem;
+  font-weight: 800;
+  transition: transform 0.15s;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-streak .mult.m3,
+.realm-root :is(.arena-window, .arena-feature) .arena-streak .mult.m4 {
+  color: #ffb36b;
+  box-shadow: 0 0 12px rgba(255, 150, 60, 0.35);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-streak .mult.m5 {
+  color: #ff6f91;
+  box-shadow: 0 0 16px rgba(255, 90, 140, 0.5);
+  animation: arena-pulse 1s ease-in-out infinite;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-pop {
+  margin-left: auto;
+  font-weight: 800;
+  animation: arena-float 0.7s ease-out forwards;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-pop.good {
+  color: #8fe0a8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-pop.bad {
+  color: #ff8f86;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-missed {
+  margin: 10px 0;
+  text-align: left;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-missed summary {
+  cursor: pointer;
+  color: var(--ar-gold-soft);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-missed ul {
+  max-height: 200px;
+  margin: 6px 0 0;
+  padding-left: 18px;
+  overflow-y: auto;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-missed li {
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-missed li span {
+  display: block;
+  color: var(--ar-muted);
+  font-size: 0.88em;
+}
+
+/* Lexicon */
+.realm-root :is(.arena-window, .arena-feature) .arena-mode {
+  margin: 0 0 6px;
+  text-align: center;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-clue {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-left: 2px solid var(--ar-gold);
+  border-radius: 0 10px 10px 0;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  line-height: 1.45;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-clue .label {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ar-gold-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-row {
+  display: flex;
+  gap: 5px;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-cell {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-cell.gap {
+  margin-right: 12px;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-cell.typed {
+  border-color: var(--ar-line);
+  animation: arena-pop 0.12s ease-out;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-cell.hit {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--ar-good) 75%, #000);
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-cell.near {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--ar-near) 80%, #000);
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-cell.miss {
+  border-color: transparent;
+  background: rgba(90, 94, 110, 0.55);
+  color: #d8dae3;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-row.reveal .lex-cell {
+  animation: arena-flip 0.45s ease-out both;
+  animation-delay: calc(var(--i, 0) * 70ms);
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-board.shake-0,
+.realm-root :is(.arena-window, .arena-feature) .lex-board.shake-1 {
+  animation: arena-shake 0.3s;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-board.shake-1 {
+  animation-name: arena-shake-b;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+.realm-root :is(.arena-window, .arena-feature) .lex-key-row {
+  display: flex;
+  gap: 4px;
+}
+.realm-root :is(.arena-window, .arena-feature) button.lex-key {
+  min-width: 32px;
+  height: 40px;
+  padding: 0 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) button.lex-key.wide {
+  min-width: 56px;
+  font-size: 0.8rem;
+}
+.realm-root :is(.arena-window, .arena-feature) button.lex-key.hit {
+  background: color-mix(in srgb, var(--ar-good) 75%, #000);
+}
+.realm-root :is(.arena-window, .arena-feature) button.lex-key.near {
+  background: color-mix(in srgb, var(--ar-near) 80%, #000);
+}
+.realm-root :is(.arena-window, .arena-feature) button.lex-key.miss {
+  background: rgba(40, 42, 52, 0.9);
+  color: #7d8090;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-answer {
+  margin: 8px 0;
+}
+
+/* Connections */
+.realm-root :is(.arena-window, .arena-feature) .conn-solved {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-group,
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review li {
+  --g: #e2b33c;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 12px;
+  border: 1px solid color-mix(in srgb, var(--g) 60%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--g) 22%, rgba(0, 0, 0, 0.3));
+  text-align: center;
+  animation: arena-pop 0.3s ease-out;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-group span,
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review li span {
+  color: var(--ar-text);
+  font-size: 0.85rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-group.g1,
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review li.g1 {
+  --g: #5fd6c8;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-group.g2,
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review li.g2 {
+  --g: #7fb4ff;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-group.g3,
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review li.g3 {
+  --g: #c08bff;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-group.missed,
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review li.missed {
+  opacity: 0.6;
+  border-style: dashed;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-groups-review {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-grid.shake-0 {
+  animation: arena-shake 0.3s;
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-grid.shake-1 {
+  animation: arena-shake-b 0.3s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.conn-tile {
+  min-height: 64px;
+  padding: 8px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 10px;
+  background: var(--ar-glass-2);
+  color: var(--ar-text);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  transition: transform 0.1s, background 0.12s, border-color 0.12s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.conn-tile:hover {
+  border-color: var(--ar-line);
+}
+.realm-root :is(.arena-window, .arena-feature) button.conn-tile.on {
+  border-color: var(--ar-gold);
+  background: color-mix(in srgb, var(--ar-gold) 32%, var(--ar-glass-2));
+  color: #fff;
+  transform: scale(0.97);
+}
+.realm-root :is(.arena-window, .arena-feature) .conn-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-lives {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ar-muted);
+  font-size: 0.85rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-lives span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-lives span.on {
+  background: var(--ar-gold);
+}
+
+/* Sequence */
+.realm-root :is(.arena-window, .arena-feature) .seq-title {
+  margin: 0 0 2px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 9px;
+  background: var(--ar-glass-2);
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-item.empty {
+  border-style: dashed;
+  background: transparent;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-item.fixed {
+  border-color: var(--ar-line);
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-item.right {
+  border-color: var(--ar-good);
+  background: color-mix(in srgb, var(--ar-good) 18%, var(--ar-glass-2));
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-item.wrong {
+  border-color: var(--ar-bad);
+  background: color-mix(in srgb, var(--ar-bad) 16%, var(--ar-glass-2));
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-item .n {
+  color: var(--ar-gold);
+  font-weight: 700;
+  text-align: center;
+}
+.realm-root :is(.arena-window, .arena-feature) button.seq-text {
+  justify-content: flex-start;
+  color: var(--ar-text);
+  text-align: left;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-move {
+  display: inline-flex;
+  gap: 4px;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-move button {
+  width: 26px;
+  height: 24px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 6px;
+  color: var(--ar-gold);
+  font-size: 0.7rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-should {
+  grid-column: 2 / 4;
+  color: #8fe0a8;
+  font-size: 0.82rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .seq-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.realm-root :is(.arena-window, .arena-feature) button.seq-chip {
+  padding: 8px 12px;
+  border: 1px solid var(--ar-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: transform 0.1s, background 0.12s;
+}
+.realm-root :is(.arena-window, .arena-feature) button.seq-chip:hover {
+  background: color-mix(in srgb, var(--ar-gold) 16%, transparent);
+  transform: translateY(-1px);
+}
+
+/* Result */
+.realm-root :is(.arena-window, .arena-feature) .arena-result {
+  padding: 10px 6px;
+  text-align: center;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-title {
+  margin: 0 0 10px;
+  color: var(--ar-gold);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  animation: arena-pop 0.45s ease-out;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result.win .arena-result-title {
+  color: #ffe27a;
+  text-shadow: 0 0 22px rgba(255, 210, 90, 0.45);
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result.loss .arena-result-title {
+  color: #ff9d95;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-scores {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  margin-bottom: 10px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-scores div {
+  display: flex;
+  flex-direction: column;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-scores .label {
+  color: var(--ar-muted);
+  font-size: 0.8rem;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-scores .value {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-rating .rating {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-rating .delta {
+  font-weight: 800;
+  animation: arena-pop 0.5s ease-out;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-rating .delta.up {
+  color: #8fe0a8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result-rating .delta.down {
+  color: #ff8f86;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-flag {
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-flag.promo {
+  background: color-mix(in srgb, var(--ar-gold) 28%, transparent);
+  color: #ffe9a8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-flag.demo {
+  background: rgba(255, 120, 110, 0.18);
+  color: #ffb0a8;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-flag.best {
+  background: rgba(127, 180, 255, 0.2);
+  color: #cfe5ff;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-flag.streak {
+  background: rgba(255, 150, 60, 0.2);
+  color: #ffc58f;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rewards .chip {
+  padding: 2px 10px;
+  border: 1px solid var(--ar-line-soft);
+  border-radius: 999px;
+  color: var(--ar-gold);
+  font-weight: 600;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-rewards .chip.focus {
+  color: #9fd8ff;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-result .row {
+  justify-content: center;
+}
+.realm-root :is(.arena-window, .arena-feature) .arena-empty {
+  padding: 20px 10px;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+/* Accessibility                                                     */
+/* ---------------------------------------------------------------- */
+
+.realm-root .realm-game.cb .lex-cell.hit,
+.realm-root .realm-game.cb button.lex-key.hit,
+.realm-root .realm-game.cb button.arena-choice.right,
+.realm-root .realm-game.cb .seq-item.right {
+  border-color: var(--ar-blue);
+  background: color-mix(in srgb, var(--ar-blue) 55%, #000);
+}
+.realm-root .realm-game.cb .lex-cell.near,
+.realm-root .realm-game.cb button.lex-key.near,
+.realm-root .realm-game.cb button.arena-choice.wrong,
+.realm-root .realm-game.cb .seq-item.wrong {
+  border-color: #ff9a3c;
+  background: color-mix(in srgb, #ff9a3c 50%, #000);
+}
+
+.realm-root .realm-game.calm .arena-window *,
+.realm-root .realm-game.calm .arena-feature * {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .realm-root .arena-window *,
+  .realm-root .arena-feature * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .realm-root :is(.arena-window, .arena-feature) .arena-gamebar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .realm-root :is(.arena-window, .arena-feature) .arena-detail,
+  .realm-root :is(.arena-window, .arena-feature) .arena-rivals,
+  .realm-root :is(.arena-window, .arena-feature) .arena-choices {
+    grid-template-columns: 1fr;
+  }
+  .realm-root :is(.arena-window, .arena-feature) .arena-row {
+    grid-template-columns: 26px minmax(0, 1fr) auto 48px;
+  }
+  .realm-root :is(.arena-window, .arena-feature) .arena-row .best {
+    display: none;
+  }
+  .realm-root :is(.arena-window, .arena-feature) .lex-cell {
+    width: 26px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+  .realm-root :is(.arena-window, .arena-feature) button.lex-key {
+    min-width: 24px;
+  }
+}
+
+@keyframes arena-pop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes arena-pulse {
+  50% {
+    opacity: 0.6;
+  }
+}
+@keyframes arena-shake {
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+@keyframes arena-shake-b {
+  25% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+@keyframes arena-flip {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
+@keyframes arena-float {
+  0% {
+    transform: translateY(6px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-8px);
+    opacity: 0.85;
+  }
+}

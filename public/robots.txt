@@ -1,0 +1,4 @@
+# UniGame is a personal study app with no public content pages —
+# nothing here is useful to index during playtesting.
+User-agent: *
+Disallow: /

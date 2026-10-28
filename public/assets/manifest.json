@@ -1,0 +1,2707 @@
+{
+  "version": 1,
+  "sprites": {
+    "player": "sprites/player.json",
+    "mentor-user-interface-design": "sprites/mentor-user-interface-design.json",
+    "mentor-cloud-based-web-application-development": "sprites/mentor-cloud-based-web-application-development.json",
+    "mentor-project-management": "sprites/mentor-project-management.json",
+    "mentor-professional-practices-and-entrepreneurship-in-it": "sprites/mentor-professional-practices-and-entrepreneurship-in-it.json"
+  },
+  "scenes": {
+    "hq": {
+      "kind": "hall",
+      "width": 1600,
+      "height": 760,
+      "background": "scenes/hq/background.svg",
+      "images": [
+        {
+          "id": "dress-bench-papers",
+          "src": "scenes/shared/props/papers.svg",
+          "x": 250,
+          "y": 588,
+          "width": 42,
+          "height": 26
+        },
+        {
+          "id": "dress-bench-books",
+          "src": "scenes/shared/props/books.svg",
+          "x": 1290,
+          "y": 580,
+          "width": 48,
+          "height": 30
+        }
+      ],
+      "lights": [
+        {
+          "id": "lamp-cone-1",
+          "type": "cone",
+          "x": 400,
+          "y": 48,
+          "spreadTop": 24,
+          "spreadBottom": 92,
+          "bottomY": 520,
+          "color": "#ffe29c",
+          "opacity": 0.22
+        },
+        {
+          "id": "lamp-cone-2",
+          "type": "cone",
+          "x": 800,
+          "y": 48,
+          "spreadTop": 24,
+          "spreadBottom": 92,
+          "bottomY": 520,
+          "color": "#ffe29c",
+          "opacity": 0.22
+        },
+        {
+          "id": "lamp-cone-3",
+          "type": "cone",
+          "x": 1200,
+          "y": 48,
+          "spreadTop": 24,
+          "spreadBottom": 92,
+          "bottomY": 520,
+          "color": "#ffe29c",
+          "opacity": 0.22
+        },
+        {
+          "id": "lamp-pool-1",
+          "type": "glow",
+          "x": 400,
+          "y": 560,
+          "rx": 96,
+          "ry": 18,
+          "color": "#ffe29c",
+          "opacity": 0.1
+        },
+        {
+          "id": "lamp-pool-2",
+          "type": "glow",
+          "x": 800,
+          "y": 560,
+          "rx": 96,
+          "ry": 18,
+          "color": "#ffe29c",
+          "opacity": 0.1
+        },
+        {
+          "id": "lamp-pool-3",
+          "type": "glow",
+          "x": 1200,
+          "y": 560,
+          "rx": 96,
+          "ry": 18,
+          "color": "#ffe29c",
+          "opacity": 0.1
+        },
+        {
+          "id": "window-glow-1",
+          "type": "glow",
+          "x": 450,
+          "y": 275,
+          "rx": 85,
+          "ry": 95,
+          "color": "#8fb4ff",
+          "opacity": 0.14,
+          "phases": [
+            "evening",
+            "night"
+          ]
+        },
+        {
+          "id": "window-glow-2",
+          "type": "glow",
+          "x": 800,
+          "y": 275,
+          "rx": 85,
+          "ry": 95,
+          "color": "#8fb4ff",
+          "opacity": 0.14,
+          "phases": [
+            "evening",
+            "night"
+          ]
+        },
+        {
+          "id": "window-glow-3",
+          "type": "glow",
+          "x": 1150,
+          "y": 275,
+          "rx": 85,
+          "ry": 95,
+          "color": "#8fb4ff",
+          "opacity": 0.14,
+          "phases": [
+            "evening",
+            "night"
+          ]
+        }
+      ],
+      "particles": {
+        "count": 16,
+        "color": "#67e8f9",
+        "minSize": 2,
+        "maxSize": 4,
+        "opacity": 0.5,
+        "driftSeconds": 14
+      },
+      "eras": [
+        {
+          "era": 1,
+          "images": [
+            { "id": "era1-notes-wall", "src": "scenes/shared/props/notes-cluster.svg", "x": 430, "y": 300, "width": 62, "height": 48 },
+            { "id": "era1-bench-papers", "src": "scenes/shared/props/papers.svg", "x": 1240, "y": 590, "width": 42, "height": 26 },
+            { "id": "era1-bench-mug", "src": "scenes/shared/props/mug.svg", "x": 302, "y": 586, "width": 20, "height": 22 }
+          ],
+          "ambience": [
+            { "id": "era1-door-dot-1", "type": "pulse-dot", "x": 560, "y": 300, "r": 3, "color": "#22d3ee", "periodSeconds": 3.4 },
+            { "id": "era1-door-dot-2", "type": "pulse-dot", "x": 1040, "y": 306, "r": 3, "color": "#ffb238", "periodSeconds": 4.1, "delaySeconds": 1.2 }
+          ]
+        },
+        {
+          "era": 2,
+          "images": [
+            { "id": "era2-bench-books", "src": "scenes/shared/props/books.svg", "x": 460, "y": 584, "width": 48, "height": 30 },
+            { "id": "era2-floor-papers", "src": "scenes/shared/props/papers.svg", "x": 700, "y": 592, "width": 42, "height": 26 },
+            { "id": "era2-notes-wall", "src": "scenes/shared/props/notes-cluster.svg", "x": 1176, "y": 298, "width": 62, "height": 48 }
+          ],
+          "lights": [
+            { "id": "era2-lamp-warm-1", "type": "glow", "x": 400, "y": 540, "rx": 110, "ry": 22, "color": "#ffb238", "opacity": 0.1 },
+            { "id": "era2-lamp-warm-2", "type": "glow", "x": 1200, "y": 540, "rx": 110, "ry": 22, "color": "#ffb238", "opacity": 0.1 }
+          ],
+          "ambience": [
+            { "id": "era2-late-study-flicker", "type": "flicker-rect", "x": 900, "y": 316, "width": 56, "height": 38, "color": "#8fb4ff", "maxOpacity": 0.12, "periodSeconds": 6 }
+          ]
+        },
+        {
+          "era": 3,
+          "images": [
+            { "id": "era3-banner", "src": "scenes/shared/props/banner-semester.svg", "x": 620, "y": 118, "width": 360, "height": 74 }
+          ],
+          "lights": [
+            { "id": "era3-banner-glow", "type": "glow", "x": 800, "y": 160, "rx": 220, "ry": 46, "color": "#f4c542", "opacity": 0.12 }
+          ],
+          "ambience": [
+            { "id": "era3-confetti-1", "type": "pulse-dot", "x": 380, "y": 180, "r": 4, "color": "#b24bf3", "periodSeconds": 2.6 },
+            { "id": "era3-confetti-2", "type": "pulse-dot", "x": 660, "y": 168, "r": 4, "color": "#3da9fc", "periodSeconds": 3.1, "delaySeconds": 0.6 },
+            { "id": "era3-confetti-3", "type": "pulse-dot", "x": 950, "y": 172, "r": 4, "color": "#ffb238", "periodSeconds": 2.8, "delaySeconds": 1.1 },
+            { "id": "era3-confetti-4", "type": "pulse-dot", "x": 1230, "y": 182, "r": 4, "color": "#2ed17e", "periodSeconds": 3.4, "delaySeconds": 1.7 },
+            { "id": "era3-banner-breathe", "type": "glow-breathe", "x": 800, "y": 156, "rx": 190, "ry": 40, "color": "#f4c542", "minOpacity": 0.05, "maxOpacity": 0.16, "periodSeconds": 5 }
+          ]
+        }
+      ],
+      "floorY": 520,
+      "doorTop": 250,
+      "doorWidth": 150,
+      "doors": [
+        {
+          "subjectId": "user-interface-design",
+          "x": 275,
+          "accent": "#b24bf3",
+          "accent2": "#f345c0",
+          "panel": "#1b1330",
+          "label": "User Interface Design"
+        },
+        {
+          "subjectId": "cloud-based-web-application-development",
+          "x": 625,
+          "accent": "#3da9fc",
+          "accent2": "#c7d0da",
+          "panel": "#0e1a2b",
+          "label": "Cloud Web App Dev"
+        },
+        {
+          "subjectId": "project-management",
+          "x": 975,
+          "accent": "#ffb238",
+          "accent2": "#ffd88a",
+          "panel": "#141b2e",
+          "label": "Project Management"
+        },
+        {
+          "subjectId": "professional-practices-and-entrepreneurship-in-it",
+          "x": 1325,
+          "accent": "#2ed17e",
+          "accent2": "#f4c542",
+          "panel": "#0e1f17",
+          "label": "Prof. Practices & Ent."
+        }
+      ],
+      "playerHome": {
+        "x": 800,
+        "feetY": 726
+      },
+      "playerHeight": 150,
+      "playerDoorHeight": 90,
+      "doorStandFeetY": 580,
+      "mentorFeetY": 566,
+      "mentorHeight": 105,
+      "mentorOffsetX": -118,
+      "veilY": 400,
+      "atmosphere": {
+        "day": {
+          "tint": "#cfe3ff",
+          "tintOpacity": 0.06,
+          "lightScale": 0.55,
+          "particleScale": 0.5
+        },
+        "evening": {
+          "tint": "#ff9a3d",
+          "tintOpacity": 0.08,
+          "lightScale": 1,
+          "particleScale": 1
+        },
+        "night": {
+          "tint": "#0a1230",
+          "tintOpacity": 0.3,
+          "lightScale": 1.25,
+          "particleScale": 1.4
+        }
+      },
+      "ambience": [
+        {
+          "id": "twinkle-1",
+          "type": "pulse-dot",
+          "x": 404,
+          "y": 285,
+          "r": 2.5,
+          "color": "#8fe7ff",
+          "periodSeconds": 3.2
+        },
+        {
+          "id": "twinkle-2",
+          "type": "pulse-dot",
+          "x": 818,
+          "y": 309,
+          "r": 2.5,
+          "color": "#ffd88a",
+          "periodSeconds": 4.1,
+          "delaySeconds": 1
+        },
+        {
+          "id": "twinkle-3",
+          "type": "pulse-dot",
+          "x": 1104,
+          "y": 333,
+          "r": 2.5,
+          "color": "#8fe7ff",
+          "periodSeconds": 5,
+          "delaySeconds": 0.5
+        },
+        {
+          "id": "twinkle-4",
+          "type": "pulse-dot",
+          "x": 1188,
+          "y": 285,
+          "r": 2.5,
+          "color": "#ffd88a",
+          "periodSeconds": 3.6,
+          "delaySeconds": 2
+        },
+        {
+          "id": "kiosk-holo",
+          "type": "flicker-rect",
+          "x": 536,
+          "y": 574,
+          "width": 62,
+          "height": 36,
+          "color": "#67e8f9",
+          "maxOpacity": 0.14,
+          "periodSeconds": 7
+        },
+        {
+          "id": "vending-glow",
+          "type": "glow-breathe",
+          "x": 1498,
+          "y": 400,
+          "rx": 66,
+          "ry": 120,
+          "color": "#22d3ee",
+          "minOpacity": 0.03,
+          "maxOpacity": 0.08,
+          "periodSeconds": 6
+        }
+      ],
+      "transitions": {
+        "turnMs": 170,
+        "walkBaseMs": 650,
+        "walkMsPerUnit": 0.55,
+        "doorOpenMs": 430,
+        "veilMs": 500
+      }
+    },
+    "room-user-interface-design": {
+      "kind": "room",
+      "width": 1600,
+      "height": 760,
+      "background": "scenes/room-user-interface-design/background.svg",
+      "accent": "#b24bf3",
+      "accent2": "#f345c0",
+      "images": [
+        {
+          "id": "dress-papers",
+          "src": "scenes/shared/props/papers.svg",
+          "x": 1290,
+          "y": 448,
+          "width": 44,
+          "height": 28
+        },
+        {
+          "id": "dress-mug",
+          "src": "scenes/shared/props/mug.svg",
+          "x": 606,
+          "y": 388,
+          "width": 20,
+          "height": 22
+        },
+        {
+          "id": "dress-cable",
+          "src": "scenes/shared/props/cable.svg",
+          "x": 1090,
+          "y": 576,
+          "width": 118,
+          "height": 24
+        }
+      ],
+      "lights": [
+        {
+          "id": "neon-wash",
+          "type": "glow",
+          "x": 800,
+          "y": 96,
+          "rx": 700,
+          "ry": 60,
+          "color": "#b24bf3",
+          "opacity": 0.1
+        },
+        {
+          "id": "door-pool",
+          "type": "glow",
+          "x": 120,
+          "y": 532,
+          "rx": 98,
+          "ry": 14,
+          "color": "#22d3ee",
+          "opacity": 0.12
+        },
+        {
+          "id": "desk-glow",
+          "type": "glow",
+          "x": 1220,
+          "y": 440,
+          "rx": 180,
+          "ry": 70,
+          "color": "#b24bf3",
+          "opacity": 0.1
+        }
+      ],
+      "particles": {
+        "count": 10,
+        "color": "#f345c0",
+        "minSize": 2,
+        "maxSize": 3,
+        "opacity": 0.45,
+        "driftSeconds": 16
+      },
+      "exitDoor": {
+        "x": 120,
+        "top": 266,
+        "width": 124,
+        "accent": "#22d3ee",
+        "panel": "#141b2e"
+      },
+      "playerHome": {
+        "x": 430,
+        "feetY": 706
+      },
+      "playerDoor": {
+        "x": 150,
+        "feetY": 600
+      },
+      "playerHeight": 140,
+      "playerDoorHeight": 95,
+      "mentor": {
+        "x": 980,
+        "feetY": 652,
+        "height": 115
+      },
+      "veilY": 400,
+      "hotspots": [
+        {
+          "id": "modules",
+          "rect": [
+            180,
+            250,
+            190,
+            300
+          ]
+        },
+        {
+          "id": "missions",
+          "rect": [
+            400,
+            220,
+            200,
+            180
+          ]
+        },
+        {
+          "id": "info",
+          "rect": [
+            630,
+            210,
+            210,
+            170
+          ]
+        },
+        {
+          "id": "progress",
+          "rect": [
+            870,
+            190,
+            240,
+            200
+          ]
+        },
+        {
+          "id": "achievements",
+          "rect": [
+            1330,
+            200,
+            200,
+            190
+          ]
+        },
+        {
+          "id": "assessments",
+          "rect": [
+            1080,
+            400,
+            300,
+            190
+          ]
+        },
+        {
+          "id": "deadlines",
+          "rect": [
+            620,
+            560,
+            260,
+            140
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "id": "terminal-grid",
+          "type": "module-grid",
+          "x": 208,
+          "y": 280,
+          "cols": 3,
+          "stepX": 48,
+          "stepY": 46,
+          "cellWidth": 36,
+          "cellHeight": 34,
+          "onColor": "#b24bf3",
+          "offColor": "#221740",
+          "onStroke": "#f345c0",
+          "offStroke": "#2f2152"
+        },
+        {
+          "id": "terminal-count",
+          "type": "stat-text",
+          "bind": "moduleRatio",
+          "x": 275,
+          "y": 512,
+          "fontSize": 20,
+          "color": "#f345c0",
+          "align": "middle"
+        },
+        {
+          "id": "progress-number",
+          "type": "stat-text",
+          "bind": "progressPercent",
+          "template": "{value}%",
+          "x": 990,
+          "y": 262,
+          "fontSize": 52,
+          "color": "#f345c0",
+          "align": "middle",
+          "bold": true
+        },
+        {
+          "id": "progress-bar",
+          "type": "progress-bar",
+          "x": 896,
+          "y": 290,
+          "width": 188,
+          "height": 14,
+          "fg": "#b24bf3",
+          "bg": "#221740"
+        },
+        {
+          "id": "progress-caption",
+          "type": "stat-text",
+          "text": "SUBJECT PROGRESS",
+          "x": 990,
+          "y": 336,
+          "fontSize": 15,
+          "color": "#9aa6c0",
+          "align": "middle",
+          "letterSpacing": 1
+        },
+        {
+          "id": "progress-tracked",
+          "type": "stat-text",
+          "bind": "upcomingCount",
+          "template": "{value} assessments tracked",
+          "x": 990,
+          "y": 362,
+          "fontSize": 13,
+          "color": "#67e8f9",
+          "align": "middle"
+        },
+        {
+          "id": "trophies",
+          "type": "trophy-row",
+          "positions": [
+            [
+              1348,
+              200
+            ],
+            [
+              1410,
+              200
+            ],
+            [
+              1472,
+              200
+            ],
+            [
+              1348,
+              290
+            ],
+            [
+              1410,
+              290
+            ],
+            [
+              1472,
+              290
+            ]
+          ],
+          "width": 28,
+          "height": 44,
+          "litSrc": "scenes/shared/trophy-lit.svg",
+          "lockedSrc": "scenes/shared/trophy-locked.svg",
+          "lockedOpacity": 0.4
+        },
+        {
+          "id": "notes",
+          "type": "note-board",
+          "positions": [
+            [
+              418,
+              240
+            ],
+            [
+              476,
+              240
+            ],
+            [
+              534,
+              240
+            ],
+            [
+              418,
+              314
+            ],
+            [
+              476,
+              314
+            ],
+            [
+              534,
+              314
+            ]
+          ],
+          "width": 46,
+          "height": 56,
+          "maxNotes": 6,
+          "srcs": [
+            "scenes/shared/note-yellow.svg",
+            "scenes/shared/note-blue.svg",
+            "scenes/shared/note-pink.svg"
+          ]
+        },
+        {
+          "id": "holo",
+          "type": "holo-cone",
+          "baseX": 750,
+          "baseY": 666,
+          "topY": 560,
+          "halfBase": 60,
+          "halfTop": 30,
+          "color": "#b24bf3",
+          "labelColor": "#f8cfe8",
+          "template": "{value} DUE",
+          "bind": "upcomingCount",
+          "fontSize": 14
+        }
+      ],
+      "ambience": [
+        {
+          "id": "monitor-glow",
+          "type": "glow-breathe",
+          "x": 1220,
+          "y": 430,
+          "rx": 120,
+          "ry": 62,
+          "color": "#b24bf3",
+          "minOpacity": 0.07,
+          "maxOpacity": 0.17,
+          "periodSeconds": 4
+        },
+        {
+          "id": "terminal-glow",
+          "type": "glow-breathe",
+          "x": 275,
+          "y": 368,
+          "rx": 72,
+          "ry": 92,
+          "color": "#b24bf3",
+          "minOpacity": 0.05,
+          "maxOpacity": 0.12,
+          "periodSeconds": 5.2
+        },
+        {
+          "id": "sketch-trace",
+          "type": "scan-line",
+          "x1": 652,
+          "y1": 306,
+          "x2": 812,
+          "y2": 306,
+          "color": "#f345c0",
+          "r": 3,
+          "periodSeconds": 5
+        },
+        {
+          "id": "display-led",
+          "type": "pulse-dot",
+          "x": 1096,
+          "y": 206,
+          "r": 3,
+          "color": "#f345c0",
+          "periodSeconds": 2.4
+        }
+      ],
+      "transitions": {
+        "walkBaseMs": 550,
+        "walkMsPerUnit": 1.4,
+        "veilMs": 550
+      },
+      "focusDesk": {
+        "standX": 1200,
+        "standFeetY": 662,
+        "seatX": 1200,
+        "seatFeetY": 618,
+        "seatHeight": 110,
+        "chair": {
+          "x": 1168,
+          "y": 540,
+          "width": 64,
+          "height": 78
+        },
+        "monitor": {
+          "x": 1108,
+          "y": 396,
+          "width": 224,
+          "height": 68
+        },
+        "hotspot": [
+          1120,
+          560,
+          180,
+          120
+        ]
+      },
+      "evolution": {
+        "stages": [
+          {
+            "stage": 1,
+            "images": [
+              {
+                "id": "evo-books",
+                "src": "scenes/shared/props/books.svg",
+                "x": 396,
+                "y": 606,
+                "width": 58,
+                "height": 36
+              },
+              {
+                "id": "evo-notes-1",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 560,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-display-pulse",
+                "type": "pulse-dot",
+                "x": 884,
+                "y": 204,
+                "r": 3,
+                "color": "#f345c0",
+                "periodSeconds": 2.8
+              }
+            ]
+          },
+          {
+            "stage": 2,
+            "images": [
+              {
+                "id": "evo-monitor2",
+                "src": "scenes/shared/props/monitor2.svg",
+                "x": 1076,
+                "y": 404,
+                "width": 48,
+                "height": 58
+              },
+              {
+                "id": "evo-mug",
+                "src": "scenes/shared/props/mug.svg",
+                "x": 1346,
+                "y": 444,
+                "width": 24,
+                "height": 26
+              },
+              {
+                "id": "evo-notes-2",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 402,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ]
+          },
+          {
+            "stage": 3,
+            "images": [
+              {
+                "id": "evo-trophy-desk",
+                "src": "scenes/shared/trophy-lit.svg",
+                "x": 736,
+                "y": 612,
+                "width": 26,
+                "height": 40
+              },
+              {
+                "id": "evo-plant-large",
+                "src": "scenes/shared/props/plant-large.svg",
+                "x": 56,
+                "y": 594,
+                "width": 58,
+                "height": 96
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-warm-desk",
+                "type": "glow",
+                "x": 1220,
+                "y": 420,
+                "rx": 200,
+                "ry": 90,
+                "color": "#b24bf3",
+                "opacity": 0.14
+              }
+            ]
+          },
+          {
+            "stage": 4,
+            "images": [
+              {
+                "id": "evo-banner",
+                "src": "scenes/shared/props/banner.svg",
+                "x": 620,
+                "y": 116,
+                "width": 360,
+                "height": 60
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-celebrate-1",
+                "type": "glow",
+                "x": 800,
+                "y": 200,
+                "rx": 380,
+                "ry": 130,
+                "color": "#f345c0",
+                "opacity": 0.13
+              },
+              {
+                "id": "evo-celebrate-2",
+                "type": "glow",
+                "x": 800,
+                "y": 640,
+                "rx": 420,
+                "ry": 80,
+                "color": "#b24bf3",
+                "opacity": 0.1
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-banner-blink-1",
+                "type": "pulse-dot",
+                "x": 640,
+                "y": 146,
+                "r": 3.5,
+                "color": "#f345c0",
+                "periodSeconds": 1.6
+              },
+              {
+                "id": "evo-banner-blink-2",
+                "type": "pulse-dot",
+                "x": 960,
+                "y": 146,
+                "r": 3.5,
+                "color": "#b24bf3",
+                "periodSeconds": 1.9,
+                "delaySeconds": 0.5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "room-cloud-based-web-application-development": {
+      "kind": "room",
+      "width": 1600,
+      "height": 760,
+      "background": "scenes/room-cloud-based-web-application-development/background.svg",
+      "accent": "#3da9fc",
+      "accent2": "#67e8f9",
+      "images": [
+        {
+          "id": "dress-cable-1",
+          "src": "scenes/shared/props/cable.svg",
+          "x": 220,
+          "y": 552,
+          "width": 130,
+          "height": 26
+        },
+        {
+          "id": "dress-cable-2",
+          "src": "scenes/shared/props/cable.svg",
+          "x": 1090,
+          "y": 578,
+          "width": 118,
+          "height": 24
+        },
+        {
+          "id": "dress-papers",
+          "src": "scenes/shared/props/papers.svg",
+          "x": 1292,
+          "y": 450,
+          "width": 42,
+          "height": 26
+        }
+      ],
+      "lights": [
+        {
+          "id": "ceiling-wash",
+          "type": "glow",
+          "x": 800,
+          "y": 96,
+          "rx": 700,
+          "ry": 60,
+          "color": "#3da9fc",
+          "opacity": 0.12
+        },
+        {
+          "id": "rack-glow",
+          "type": "glow",
+          "x": 275,
+          "y": 400,
+          "rx": 150,
+          "ry": 130,
+          "color": "#2ed17e",
+          "opacity": 0.12
+        },
+        {
+          "id": "door-pool",
+          "type": "glow",
+          "x": 120,
+          "y": 532,
+          "rx": 98,
+          "ry": 14,
+          "color": "#22d3ee",
+          "opacity": 0.12
+        },
+        {
+          "id": "desk-glow",
+          "type": "glow",
+          "x": 1220,
+          "y": 440,
+          "rx": 180,
+          "ry": 70,
+          "color": "#3da9fc",
+          "opacity": 0.12
+        },
+        {
+          "id": "floor-net",
+          "type": "glow",
+          "x": 800,
+          "y": 640,
+          "rx": 320,
+          "ry": 50,
+          "color": "#2ed17e",
+          "opacity": 0.06
+        }
+      ],
+      "particles": {
+        "count": 14,
+        "color": "#67e8f9",
+        "minSize": 2,
+        "maxSize": 3,
+        "opacity": 0.5,
+        "driftSeconds": 12
+      },
+      "exitDoor": {
+        "x": 120,
+        "top": 266,
+        "width": 124,
+        "accent": "#22d3ee",
+        "panel": "#141b2e"
+      },
+      "playerHome": {
+        "x": 420,
+        "feetY": 700
+      },
+      "playerDoor": {
+        "x": 150,
+        "feetY": 600
+      },
+      "playerHeight": 140,
+      "playerDoorHeight": 95,
+      "mentor": {
+        "x": 560,
+        "feetY": 662,
+        "height": 115
+      },
+      "veilY": 400,
+      "hotspots": [
+        {
+          "id": "modules",
+          "rect": [
+            180,
+            250,
+            190,
+            300
+          ]
+        },
+        {
+          "id": "missions",
+          "rect": [
+            400,
+            220,
+            200,
+            180
+          ]
+        },
+        {
+          "id": "info",
+          "rect": [
+            630,
+            210,
+            210,
+            170
+          ]
+        },
+        {
+          "id": "progress",
+          "rect": [
+            870,
+            190,
+            240,
+            200
+          ]
+        },
+        {
+          "id": "achievements",
+          "rect": [
+            1330,
+            200,
+            200,
+            190
+          ]
+        },
+        {
+          "id": "assessments",
+          "rect": [
+            1080,
+            400,
+            300,
+            190
+          ]
+        },
+        {
+          "id": "deadlines",
+          "rect": [
+            620,
+            560,
+            260,
+            140
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "id": "module-grid",
+          "type": "module-grid",
+          "x": 208,
+          "y": 280,
+          "cols": 3,
+          "stepX": 48,
+          "stepY": 46,
+          "cellWidth": 36,
+          "cellHeight": 34,
+          "onColor": "#3da9fc",
+          "offColor": "#122238",
+          "onStroke": "#67e8f9",
+          "offStroke": "#1e3a5c"
+        },
+        {
+          "id": "module-count",
+          "type": "stat-text",
+          "bind": "moduleRatio",
+          "x": 275,
+          "y": 512,
+          "fontSize": 20,
+          "color": "#67e8f9",
+          "align": "middle"
+        },
+        {
+          "id": "progress-number",
+          "type": "stat-text",
+          "bind": "progressPercent",
+          "template": "{value}%",
+          "x": 990,
+          "y": 262,
+          "fontSize": 52,
+          "color": "#67e8f9",
+          "align": "middle",
+          "bold": true
+        },
+        {
+          "id": "progress-bar",
+          "type": "progress-bar",
+          "x": 896,
+          "y": 290,
+          "width": 188,
+          "height": 14,
+          "fg": "#3da9fc",
+          "bg": "#122238"
+        },
+        {
+          "id": "progress-caption",
+          "type": "stat-text",
+          "text": "UPTIME · SUBJECT PROGRESS",
+          "x": 990,
+          "y": 336,
+          "fontSize": 15,
+          "color": "#9aa6c0",
+          "align": "middle",
+          "letterSpacing": 1
+        },
+        {
+          "id": "progress-tracked",
+          "type": "stat-text",
+          "bind": "upcomingCount",
+          "template": "{value} assessments tracked",
+          "x": 990,
+          "y": 362,
+          "fontSize": 13,
+          "color": "#67e8f9",
+          "align": "middle"
+        },
+        {
+          "id": "trophies",
+          "type": "trophy-row",
+          "positions": [
+            [
+              1348,
+              200
+            ],
+            [
+              1410,
+              200
+            ],
+            [
+              1472,
+              200
+            ],
+            [
+              1348,
+              290
+            ],
+            [
+              1410,
+              290
+            ],
+            [
+              1472,
+              290
+            ]
+          ],
+          "width": 28,
+          "height": 44,
+          "litSrc": "scenes/shared/trophy-lit.svg",
+          "lockedSrc": "scenes/shared/trophy-locked.svg",
+          "lockedOpacity": 0.4
+        },
+        {
+          "id": "notes",
+          "type": "note-board",
+          "positions": [
+            [
+              418,
+              240
+            ],
+            [
+              476,
+              240
+            ],
+            [
+              534,
+              240
+            ],
+            [
+              418,
+              314
+            ],
+            [
+              476,
+              314
+            ],
+            [
+              534,
+              314
+            ]
+          ],
+          "width": 46,
+          "height": 56,
+          "maxNotes": 6,
+          "srcs": [
+            "scenes/shared/note-yellow.svg",
+            "scenes/shared/note-blue.svg",
+            "scenes/shared/note-pink.svg"
+          ]
+        },
+        {
+          "id": "holo",
+          "type": "holo-cone",
+          "baseX": 750,
+          "baseY": 666,
+          "topY": 560,
+          "halfBase": 60,
+          "halfTop": 30,
+          "color": "#3da9fc",
+          "labelColor": "#c9ecff",
+          "template": "{value} DUE",
+          "bind": "upcomingCount",
+          "fontSize": 14
+        }
+      ],
+      "ambience": [
+        {
+          "id": "rack-led-1",
+          "type": "pulse-dot",
+          "x": 210,
+          "y": 261,
+          "r": 3,
+          "color": "#2ed17e",
+          "periodSeconds": 1.6
+        },
+        {
+          "id": "rack-led-2",
+          "type": "pulse-dot",
+          "x": 340,
+          "y": 261,
+          "r": 3,
+          "color": "#67e8f9",
+          "periodSeconds": 2.2,
+          "delaySeconds": 0.4
+        },
+        {
+          "id": "mini-led-1",
+          "type": "pulse-dot",
+          "x": 176,
+          "y": 575,
+          "r": 2.5,
+          "color": "#2ed17e",
+          "periodSeconds": 1.2
+        },
+        {
+          "id": "mini-led-2",
+          "type": "pulse-dot",
+          "x": 176,
+          "y": 591,
+          "r": 2.5,
+          "color": "#3da9fc",
+          "periodSeconds": 1.8,
+          "delaySeconds": 0.3
+        },
+        {
+          "id": "mini-led-3",
+          "type": "pulse-dot",
+          "x": 176,
+          "y": 607,
+          "r": 2.5,
+          "color": "#2ed17e",
+          "periodSeconds": 2.4,
+          "delaySeconds": 0.9
+        },
+        {
+          "id": "net-pulse-1",
+          "type": "scan-line",
+          "x1": 672,
+          "y1": 256,
+          "x2": 736,
+          "y2": 300,
+          "color": "#67e8f9",
+          "r": 3,
+          "periodSeconds": 2.4
+        },
+        {
+          "id": "net-pulse-2",
+          "type": "scan-line",
+          "x1": 736,
+          "y1": 300,
+          "x2": 800,
+          "y2": 252,
+          "color": "#2ed17e",
+          "r": 3,
+          "periodSeconds": 3,
+          "delaySeconds": 0.8
+        },
+        {
+          "id": "net-pulse-3",
+          "type": "scan-line",
+          "x1": 736,
+          "y1": 300,
+          "x2": 792,
+          "y2": 342,
+          "color": "#67e8f9",
+          "r": 3,
+          "periodSeconds": 2.8,
+          "delaySeconds": 1.4
+        },
+        {
+          "id": "term-flicker-1",
+          "type": "flicker-rect",
+          "x": 1112,
+          "y": 400,
+          "width": 102,
+          "height": 60,
+          "color": "#3da9fc",
+          "maxOpacity": 0.1,
+          "periodSeconds": 5
+        },
+        {
+          "id": "term-flicker-2",
+          "type": "flicker-rect",
+          "x": 1240,
+          "y": 408,
+          "width": 88,
+          "height": 52,
+          "color": "#2ed17e",
+          "maxOpacity": 0.12,
+          "periodSeconds": 7
+        },
+        {
+          "id": "rack-breathe",
+          "type": "glow-breathe",
+          "x": 275,
+          "y": 368,
+          "rx": 80,
+          "ry": 100,
+          "color": "#2ed17e",
+          "minOpacity": 0.05,
+          "maxOpacity": 0.13,
+          "periodSeconds": 4.5
+        }
+      ],
+      "transitions": {
+        "walkBaseMs": 550,
+        "walkMsPerUnit": 1.4,
+        "veilMs": 550
+      },
+      "focusDesk": {
+        "standX": 1200,
+        "standFeetY": 662,
+        "seatX": 1200,
+        "seatFeetY": 618,
+        "seatHeight": 110,
+        "chair": {
+          "x": 1168,
+          "y": 540,
+          "width": 64,
+          "height": 78
+        },
+        "monitor": {
+          "x": 1108,
+          "y": 396,
+          "width": 224,
+          "height": 68
+        },
+        "hotspot": [
+          1120,
+          560,
+          180,
+          120
+        ]
+      },
+      "evolution": {
+        "stages": [
+          {
+            "stage": 1,
+            "images": [
+              {
+                "id": "evo-books",
+                "src": "scenes/shared/props/books.svg",
+                "x": 396,
+                "y": 606,
+                "width": 58,
+                "height": 36
+              },
+              {
+                "id": "evo-notes-1",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 560,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-display-pulse",
+                "type": "pulse-dot",
+                "x": 884,
+                "y": 204,
+                "r": 3,
+                "color": "#67e8f9",
+                "periodSeconds": 2.8
+              }
+            ]
+          },
+          {
+            "stage": 2,
+            "images": [
+              {
+                "id": "evo-monitor2",
+                "src": "scenes/shared/props/monitor2.svg",
+                "x": 1076,
+                "y": 404,
+                "width": 48,
+                "height": 58
+              },
+              {
+                "id": "evo-mug",
+                "src": "scenes/shared/props/mug.svg",
+                "x": 1346,
+                "y": 444,
+                "width": 24,
+                "height": 26
+              },
+              {
+                "id": "evo-notes-2",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 402,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ]
+          },
+          {
+            "stage": 3,
+            "images": [
+              {
+                "id": "evo-trophy-desk",
+                "src": "scenes/shared/trophy-lit.svg",
+                "x": 736,
+                "y": 612,
+                "width": 26,
+                "height": 40
+              },
+              {
+                "id": "evo-plant-large",
+                "src": "scenes/shared/props/plant-large.svg",
+                "x": 56,
+                "y": 594,
+                "width": 58,
+                "height": 96
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-warm-desk",
+                "type": "glow",
+                "x": 1220,
+                "y": 420,
+                "rx": 200,
+                "ry": 90,
+                "color": "#3da9fc",
+                "opacity": 0.14
+              }
+            ]
+          },
+          {
+            "stage": 4,
+            "images": [
+              {
+                "id": "evo-banner",
+                "src": "scenes/shared/props/banner.svg",
+                "x": 620,
+                "y": 116,
+                "width": 360,
+                "height": 60
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-celebrate-1",
+                "type": "glow",
+                "x": 800,
+                "y": 200,
+                "rx": 380,
+                "ry": 130,
+                "color": "#67e8f9",
+                "opacity": 0.13
+              },
+              {
+                "id": "evo-celebrate-2",
+                "type": "glow",
+                "x": 800,
+                "y": 640,
+                "rx": 420,
+                "ry": 80,
+                "color": "#3da9fc",
+                "opacity": 0.1
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-banner-blink-1",
+                "type": "pulse-dot",
+                "x": 640,
+                "y": 146,
+                "r": 3.5,
+                "color": "#67e8f9",
+                "periodSeconds": 1.6
+              },
+              {
+                "id": "evo-banner-blink-2",
+                "type": "pulse-dot",
+                "x": 960,
+                "y": 146,
+                "r": 3.5,
+                "color": "#3da9fc",
+                "periodSeconds": 1.9,
+                "delaySeconds": 0.5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "room-project-management": {
+      "kind": "room",
+      "width": 1600,
+      "height": 760,
+      "background": "scenes/room-project-management/background.svg",
+      "accent": "#ffb238",
+      "accent2": "#ffd88a",
+      "images": [
+        {
+          "id": "dress-papers-1",
+          "src": "scenes/shared/props/papers.svg",
+          "x": 1120,
+          "y": 448,
+          "width": 44,
+          "height": 28
+        },
+        {
+          "id": "dress-papers-2",
+          "src": "scenes/shared/props/papers.svg",
+          "x": 700,
+          "y": 640,
+          "width": 40,
+          "height": 26
+        },
+        {
+          "id": "dress-mug",
+          "src": "scenes/shared/props/mug.svg",
+          "x": 1180,
+          "y": 444,
+          "width": 20,
+          "height": 24
+        }
+      ],
+      "lights": [
+        {
+          "id": "ceiling-wash",
+          "type": "glow",
+          "x": 800,
+          "y": 96,
+          "rx": 700,
+          "ry": 60,
+          "color": "#b24bf3",
+          "opacity": 0.09
+        },
+        {
+          "id": "board-glow",
+          "type": "glow",
+          "x": 280,
+          "y": 380,
+          "rx": 150,
+          "ry": 120,
+          "color": "#ffb238",
+          "opacity": 0.1
+        },
+        {
+          "id": "door-pool",
+          "type": "glow",
+          "x": 120,
+          "y": 532,
+          "rx": 98,
+          "ry": 14,
+          "color": "#22d3ee",
+          "opacity": 0.12
+        },
+        {
+          "id": "desk-glow",
+          "type": "glow",
+          "x": 1220,
+          "y": 440,
+          "rx": 180,
+          "ry": 70,
+          "color": "#ffb238",
+          "opacity": 0.1
+        },
+        {
+          "id": "navy-floor",
+          "type": "glow",
+          "x": 800,
+          "y": 650,
+          "rx": 340,
+          "ry": 55,
+          "color": "#3d5adf",
+          "opacity": 0.07
+        }
+      ],
+      "particles": {
+        "count": 10,
+        "color": "#ffd88a",
+        "minSize": 2,
+        "maxSize": 3,
+        "opacity": 0.45,
+        "driftSeconds": 16
+      },
+      "exitDoor": {
+        "x": 120,
+        "top": 266,
+        "width": 124,
+        "accent": "#22d3ee",
+        "panel": "#141b2e"
+      },
+      "playerHome": {
+        "x": 450,
+        "feetY": 706
+      },
+      "playerDoor": {
+        "x": 150,
+        "feetY": 600
+      },
+      "playerHeight": 140,
+      "playerDoorHeight": 95,
+      "mentor": {
+        "x": 540,
+        "feetY": 648,
+        "height": 115
+      },
+      "veilY": 400,
+      "hotspots": [
+        {
+          "id": "modules",
+          "rect": [
+            180,
+            250,
+            190,
+            300
+          ]
+        },
+        {
+          "id": "missions",
+          "rect": [
+            400,
+            220,
+            200,
+            180
+          ]
+        },
+        {
+          "id": "info",
+          "rect": [
+            630,
+            210,
+            210,
+            170
+          ]
+        },
+        {
+          "id": "progress",
+          "rect": [
+            870,
+            190,
+            240,
+            200
+          ]
+        },
+        {
+          "id": "achievements",
+          "rect": [
+            1330,
+            200,
+            200,
+            190
+          ]
+        },
+        {
+          "id": "assessments",
+          "rect": [
+            1080,
+            400,
+            300,
+            190
+          ]
+        },
+        {
+          "id": "deadlines",
+          "rect": [
+            620,
+            560,
+            260,
+            140
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "id": "module-grid",
+          "type": "module-grid",
+          "x": 208,
+          "y": 280,
+          "cols": 3,
+          "stepX": 48,
+          "stepY": 46,
+          "cellWidth": 36,
+          "cellHeight": 34,
+          "onColor": "#ffb238",
+          "offColor": "#1e2a52",
+          "onStroke": "#ffd88a",
+          "offStroke": "#31406f"
+        },
+        {
+          "id": "module-count",
+          "type": "stat-text",
+          "bind": "moduleRatio",
+          "x": 275,
+          "y": 512,
+          "fontSize": 20,
+          "color": "#ffd88a",
+          "align": "middle"
+        },
+        {
+          "id": "progress-number",
+          "type": "stat-text",
+          "bind": "progressPercent",
+          "template": "{value}%",
+          "x": 990,
+          "y": 262,
+          "fontSize": 52,
+          "color": "#ffd88a",
+          "align": "middle",
+          "bold": true
+        },
+        {
+          "id": "progress-bar",
+          "type": "progress-bar",
+          "x": 896,
+          "y": 290,
+          "width": 188,
+          "height": 14,
+          "fg": "#ffb238",
+          "bg": "#1e2a52"
+        },
+        {
+          "id": "progress-caption",
+          "type": "stat-text",
+          "text": "BURNDOWN · SUBJECT PROGRESS",
+          "x": 990,
+          "y": 336,
+          "fontSize": 15,
+          "color": "#9aa6c0",
+          "align": "middle",
+          "letterSpacing": 1
+        },
+        {
+          "id": "progress-tracked",
+          "type": "stat-text",
+          "bind": "upcomingCount",
+          "template": "{value} assessments tracked",
+          "x": 990,
+          "y": 362,
+          "fontSize": 13,
+          "color": "#67e8f9",
+          "align": "middle"
+        },
+        {
+          "id": "trophies",
+          "type": "trophy-row",
+          "positions": [
+            [
+              1348,
+              200
+            ],
+            [
+              1410,
+              200
+            ],
+            [
+              1472,
+              200
+            ],
+            [
+              1348,
+              290
+            ],
+            [
+              1410,
+              290
+            ],
+            [
+              1472,
+              290
+            ]
+          ],
+          "width": 28,
+          "height": 44,
+          "litSrc": "scenes/shared/trophy-lit.svg",
+          "lockedSrc": "scenes/shared/trophy-locked.svg",
+          "lockedOpacity": 0.4
+        },
+        {
+          "id": "notes",
+          "type": "note-board",
+          "positions": [
+            [
+              418,
+              240
+            ],
+            [
+              476,
+              240
+            ],
+            [
+              534,
+              240
+            ],
+            [
+              418,
+              314
+            ],
+            [
+              476,
+              314
+            ],
+            [
+              534,
+              314
+            ]
+          ],
+          "width": 46,
+          "height": 56,
+          "maxNotes": 6,
+          "srcs": [
+            "scenes/shared/note-yellow.svg",
+            "scenes/shared/note-blue.svg",
+            "scenes/shared/note-pink.svg"
+          ]
+        },
+        {
+          "id": "holo",
+          "type": "holo-cone",
+          "baseX": 750,
+          "baseY": 666,
+          "topY": 560,
+          "halfBase": 60,
+          "halfTop": 30,
+          "color": "#ffb238",
+          "labelColor": "#ffe9c4",
+          "template": "{value} DUE",
+          "bind": "upcomingCount",
+          "fontSize": 14
+        }
+      ],
+      "ambience": [
+        {
+          "id": "timeline-dot",
+          "type": "scan-line",
+          "x1": 648,
+          "y1": 368,
+          "x2": 816,
+          "y2": 368,
+          "color": "#ffd88a",
+          "r": 3,
+          "periodSeconds": 6
+        },
+        {
+          "id": "clock-pendulum",
+          "type": "sway",
+          "x": 120,
+          "y": 180,
+          "length": 17,
+          "color": "#ffd88a",
+          "angleDegrees": 32,
+          "periodSeconds": 4
+        },
+        {
+          "id": "board-update",
+          "type": "flicker-rect",
+          "x": 410,
+          "y": 230,
+          "width": 180,
+          "height": 160,
+          "color": "#ffd88a",
+          "maxOpacity": 0.05,
+          "periodSeconds": 9
+        },
+        {
+          "id": "gantt-glow",
+          "type": "glow-breathe",
+          "x": 735,
+          "y": 295,
+          "rx": 112,
+          "ry": 92,
+          "color": "#ffb238",
+          "minOpacity": 0.06,
+          "maxOpacity": 0.14,
+          "periodSeconds": 5
+        },
+        {
+          "id": "display-led",
+          "type": "pulse-dot",
+          "x": 1096,
+          "y": 206,
+          "r": 3,
+          "color": "#ffb238",
+          "periodSeconds": 2.6
+        }
+      ],
+      "transitions": {
+        "walkBaseMs": 550,
+        "walkMsPerUnit": 1.4,
+        "veilMs": 550
+      },
+      "focusDesk": {
+        "standX": 1200,
+        "standFeetY": 662,
+        "seatX": 1200,
+        "seatFeetY": 618,
+        "seatHeight": 110,
+        "chair": {
+          "x": 1168,
+          "y": 540,
+          "width": 64,
+          "height": 78
+        },
+        "monitor": {
+          "x": 1108,
+          "y": 396,
+          "width": 224,
+          "height": 68
+        },
+        "hotspot": [
+          1120,
+          560,
+          180,
+          120
+        ]
+      },
+      "evolution": {
+        "stages": [
+          {
+            "stage": 1,
+            "images": [
+              {
+                "id": "evo-books",
+                "src": "scenes/shared/props/books.svg",
+                "x": 396,
+                "y": 606,
+                "width": 58,
+                "height": 36
+              },
+              {
+                "id": "evo-notes-1",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 560,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-display-pulse",
+                "type": "pulse-dot",
+                "x": 884,
+                "y": 204,
+                "r": 3,
+                "color": "#ffd88a",
+                "periodSeconds": 2.8
+              }
+            ]
+          },
+          {
+            "stage": 2,
+            "images": [
+              {
+                "id": "evo-monitor2",
+                "src": "scenes/shared/props/monitor2.svg",
+                "x": 1076,
+                "y": 404,
+                "width": 48,
+                "height": 58
+              },
+              {
+                "id": "evo-mug",
+                "src": "scenes/shared/props/mug.svg",
+                "x": 1346,
+                "y": 444,
+                "width": 24,
+                "height": 26
+              },
+              {
+                "id": "evo-notes-2",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 402,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ]
+          },
+          {
+            "stage": 3,
+            "images": [
+              {
+                "id": "evo-trophy-desk",
+                "src": "scenes/shared/trophy-lit.svg",
+                "x": 736,
+                "y": 612,
+                "width": 26,
+                "height": 40
+              },
+              {
+                "id": "evo-plant-large",
+                "src": "scenes/shared/props/plant-large.svg",
+                "x": 56,
+                "y": 594,
+                "width": 58,
+                "height": 96
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-warm-desk",
+                "type": "glow",
+                "x": 1220,
+                "y": 420,
+                "rx": 200,
+                "ry": 90,
+                "color": "#ffb238",
+                "opacity": 0.14
+              }
+            ]
+          },
+          {
+            "stage": 4,
+            "images": [
+              {
+                "id": "evo-banner",
+                "src": "scenes/shared/props/banner.svg",
+                "x": 620,
+                "y": 116,
+                "width": 360,
+                "height": 60
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-celebrate-1",
+                "type": "glow",
+                "x": 800,
+                "y": 200,
+                "rx": 380,
+                "ry": 130,
+                "color": "#ffd88a",
+                "opacity": 0.13
+              },
+              {
+                "id": "evo-celebrate-2",
+                "type": "glow",
+                "x": 800,
+                "y": 640,
+                "rx": 420,
+                "ry": 80,
+                "color": "#ffb238",
+                "opacity": 0.1
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-banner-blink-1",
+                "type": "pulse-dot",
+                "x": 640,
+                "y": 146,
+                "r": 3.5,
+                "color": "#ffd88a",
+                "periodSeconds": 1.6
+              },
+              {
+                "id": "evo-banner-blink-2",
+                "type": "pulse-dot",
+                "x": 960,
+                "y": 146,
+                "r": 3.5,
+                "color": "#ffb238",
+                "periodSeconds": 1.9,
+                "delaySeconds": 0.5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "room-professional-practices-and-entrepreneurship-in-it": {
+      "kind": "room",
+      "width": 1600,
+      "height": 760,
+      "background": "scenes/room-professional-practices-and-entrepreneurship-in-it/background.svg",
+      "accent": "#2ed17e",
+      "accent2": "#f4c542",
+      "images": [
+        {
+          "id": "dress-books",
+          "src": "scenes/shared/props/books.svg",
+          "x": 1440,
+          "y": 436,
+          "width": 50,
+          "height": 32
+        },
+        {
+          "id": "dress-mug",
+          "src": "scenes/shared/props/mug.svg",
+          "x": 1330,
+          "y": 444,
+          "width": 20,
+          "height": 24
+        },
+        {
+          "id": "dress-papers",
+          "src": "scenes/shared/props/papers.svg",
+          "x": 660,
+          "y": 636,
+          "width": 40,
+          "height": 26
+        }
+      ],
+      "lights": [
+        {
+          "id": "ceiling-wash",
+          "type": "glow",
+          "x": 800,
+          "y": 96,
+          "rx": 700,
+          "ry": 60,
+          "color": "#f4c542",
+          "opacity": 0.1
+        },
+        {
+          "id": "pitch-glow",
+          "type": "glow",
+          "x": 990,
+          "y": 290,
+          "rx": 170,
+          "ry": 110,
+          "color": "#ff9a3d",
+          "opacity": 0.1
+        },
+        {
+          "id": "door-pool",
+          "type": "glow",
+          "x": 120,
+          "y": 532,
+          "rx": 98,
+          "ry": 14,
+          "color": "#22d3ee",
+          "opacity": 0.12
+        },
+        {
+          "id": "desk-glow",
+          "type": "glow",
+          "x": 1220,
+          "y": 440,
+          "rx": 180,
+          "ry": 70,
+          "color": "#2ed17e",
+          "opacity": 0.1
+        },
+        {
+          "id": "warm-floor",
+          "type": "glow",
+          "x": 760,
+          "y": 650,
+          "rx": 320,
+          "ry": 50,
+          "color": "#ff9a3d",
+          "opacity": 0.06
+        }
+      ],
+      "particles": {
+        "count": 12,
+        "color": "#f4c542",
+        "minSize": 2,
+        "maxSize": 3,
+        "opacity": 0.5,
+        "driftSeconds": 14
+      },
+      "exitDoor": {
+        "x": 120,
+        "top": 266,
+        "width": 124,
+        "accent": "#22d3ee",
+        "panel": "#141b2e"
+      },
+      "playerHome": {
+        "x": 430,
+        "feetY": 700
+      },
+      "playerDoor": {
+        "x": 150,
+        "feetY": 600
+      },
+      "playerHeight": 140,
+      "playerDoorHeight": 95,
+      "mentor": {
+        "x": 1010,
+        "feetY": 648,
+        "height": 115
+      },
+      "veilY": 400,
+      "hotspots": [
+        {
+          "id": "modules",
+          "rect": [
+            180,
+            250,
+            190,
+            300
+          ]
+        },
+        {
+          "id": "missions",
+          "rect": [
+            400,
+            220,
+            200,
+            180
+          ]
+        },
+        {
+          "id": "info",
+          "rect": [
+            630,
+            210,
+            210,
+            170
+          ]
+        },
+        {
+          "id": "progress",
+          "rect": [
+            870,
+            190,
+            240,
+            200
+          ]
+        },
+        {
+          "id": "achievements",
+          "rect": [
+            1330,
+            200,
+            200,
+            190
+          ]
+        },
+        {
+          "id": "assessments",
+          "rect": [
+            1080,
+            400,
+            300,
+            190
+          ]
+        },
+        {
+          "id": "deadlines",
+          "rect": [
+            620,
+            560,
+            260,
+            140
+          ]
+        }
+      ],
+      "widgets": [
+        {
+          "id": "module-grid",
+          "type": "module-grid",
+          "x": 208,
+          "y": 280,
+          "cols": 3,
+          "stepX": 48,
+          "stepY": 46,
+          "cellWidth": 36,
+          "cellHeight": 34,
+          "onColor": "#2ed17e",
+          "offColor": "#123324",
+          "onStroke": "#f4c542",
+          "offStroke": "#1e4d38"
+        },
+        {
+          "id": "module-count",
+          "type": "stat-text",
+          "bind": "moduleRatio",
+          "x": 275,
+          "y": 512,
+          "fontSize": 20,
+          "color": "#f4c542",
+          "align": "middle"
+        },
+        {
+          "id": "progress-number",
+          "type": "stat-text",
+          "bind": "progressPercent",
+          "template": "{value}%",
+          "x": 990,
+          "y": 262,
+          "fontSize": 52,
+          "color": "#f4c542",
+          "align": "middle",
+          "bold": true
+        },
+        {
+          "id": "progress-bar",
+          "type": "progress-bar",
+          "x": 896,
+          "y": 290,
+          "width": 188,
+          "height": 14,
+          "fg": "#2ed17e",
+          "bg": "#123324"
+        },
+        {
+          "id": "progress-caption",
+          "type": "stat-text",
+          "text": "GROWTH · SUBJECT PROGRESS",
+          "x": 990,
+          "y": 336,
+          "fontSize": 15,
+          "color": "#9aa6c0",
+          "align": "middle",
+          "letterSpacing": 1
+        },
+        {
+          "id": "progress-tracked",
+          "type": "stat-text",
+          "bind": "upcomingCount",
+          "template": "{value} assessments tracked",
+          "x": 990,
+          "y": 362,
+          "fontSize": 13,
+          "color": "#67e8f9",
+          "align": "middle"
+        },
+        {
+          "id": "trophies",
+          "type": "trophy-row",
+          "positions": [
+            [
+              1348,
+              200
+            ],
+            [
+              1410,
+              200
+            ],
+            [
+              1472,
+              200
+            ],
+            [
+              1348,
+              290
+            ],
+            [
+              1410,
+              290
+            ],
+            [
+              1472,
+              290
+            ]
+          ],
+          "width": 28,
+          "height": 44,
+          "litSrc": "scenes/shared/trophy-lit.svg",
+          "lockedSrc": "scenes/shared/trophy-locked.svg",
+          "lockedOpacity": 0.4
+        },
+        {
+          "id": "notes",
+          "type": "note-board",
+          "positions": [
+            [
+              418,
+              240
+            ],
+            [
+              476,
+              240
+            ],
+            [
+              534,
+              240
+            ],
+            [
+              418,
+              314
+            ],
+            [
+              476,
+              314
+            ],
+            [
+              534,
+              314
+            ]
+          ],
+          "width": 46,
+          "height": 56,
+          "maxNotes": 6,
+          "srcs": [
+            "scenes/shared/note-yellow.svg",
+            "scenes/shared/note-blue.svg",
+            "scenes/shared/note-pink.svg"
+          ]
+        },
+        {
+          "id": "holo",
+          "type": "holo-cone",
+          "baseX": 750,
+          "baseY": 666,
+          "topY": 560,
+          "halfBase": 60,
+          "halfTop": 30,
+          "color": "#2ed17e",
+          "labelColor": "#ffefc4",
+          "template": "{value} DUE",
+          "bind": "upcomingCount",
+          "fontSize": 14
+        }
+      ],
+      "ambience": [
+        {
+          "id": "pitch-trace",
+          "type": "scan-line",
+          "x1": 1120,
+          "y1": 452,
+          "x2": 1226,
+          "y2": 408,
+          "color": "#2ed17e",
+          "r": 3,
+          "periodSeconds": 4
+        },
+        {
+          "id": "growth-trace",
+          "type": "scan-line",
+          "x1": 888,
+          "y1": 378,
+          "x2": 1096,
+          "y2": 288,
+          "color": "#f4c542",
+          "r": 3,
+          "periodSeconds": 6,
+          "delaySeconds": 1
+        },
+        {
+          "id": "window-warmth",
+          "type": "glow-breathe",
+          "x": 1220,
+          "y": 270,
+          "rx": 86,
+          "ry": 96,
+          "color": "#ff9a3d",
+          "minOpacity": 0.08,
+          "maxOpacity": 0.18,
+          "periodSeconds": 6
+        },
+        {
+          "id": "festoon-sway-1",
+          "type": "sway",
+          "x": 720,
+          "y": 96,
+          "length": 20,
+          "color": "#f4c542",
+          "angleDegrees": 8,
+          "periodSeconds": 5
+        },
+        {
+          "id": "festoon-sway-2",
+          "type": "sway",
+          "x": 1200,
+          "y": 96,
+          "length": 18,
+          "color": "#ff9a3d",
+          "angleDegrees": 7,
+          "periodSeconds": 6.4
+        },
+        {
+          "id": "festoon-blink-1",
+          "type": "pulse-dot",
+          "x": 360,
+          "y": 113,
+          "r": 3,
+          "color": "#f4c542",
+          "periodSeconds": 3.5
+        },
+        {
+          "id": "festoon-blink-2",
+          "type": "pulse-dot",
+          "x": 1080,
+          "y": 113,
+          "r": 3,
+          "color": "#ff9a3d",
+          "periodSeconds": 4.2,
+          "delaySeconds": 1
+        }
+      ],
+      "transitions": {
+        "walkBaseMs": 550,
+        "walkMsPerUnit": 1.4,
+        "veilMs": 550
+      },
+      "focusDesk": {
+        "standX": 1200,
+        "standFeetY": 662,
+        "seatX": 1200,
+        "seatFeetY": 618,
+        "seatHeight": 110,
+        "chair": {
+          "x": 1168,
+          "y": 540,
+          "width": 64,
+          "height": 78
+        },
+        "monitor": {
+          "x": 1108,
+          "y": 396,
+          "width": 224,
+          "height": 68
+        },
+        "hotspot": [
+          1120,
+          560,
+          180,
+          120
+        ]
+      },
+      "evolution": {
+        "stages": [
+          {
+            "stage": 1,
+            "images": [
+              {
+                "id": "evo-books",
+                "src": "scenes/shared/props/books.svg",
+                "x": 396,
+                "y": 606,
+                "width": 58,
+                "height": 36
+              },
+              {
+                "id": "evo-notes-1",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 560,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-display-pulse",
+                "type": "pulse-dot",
+                "x": 884,
+                "y": 204,
+                "r": 3,
+                "color": "#f4c542",
+                "periodSeconds": 2.8
+              }
+            ]
+          },
+          {
+            "stage": 2,
+            "images": [
+              {
+                "id": "evo-monitor2",
+                "src": "scenes/shared/props/monitor2.svg",
+                "x": 1076,
+                "y": 404,
+                "width": 48,
+                "height": 58
+              },
+              {
+                "id": "evo-mug",
+                "src": "scenes/shared/props/mug.svg",
+                "x": 1346,
+                "y": 444,
+                "width": 24,
+                "height": 26
+              },
+              {
+                "id": "evo-notes-2",
+                "src": "scenes/shared/props/notes-cluster.svg",
+                "x": 402,
+                "y": 182,
+                "width": 42,
+                "height": 38
+              }
+            ]
+          },
+          {
+            "stage": 3,
+            "images": [
+              {
+                "id": "evo-trophy-desk",
+                "src": "scenes/shared/trophy-lit.svg",
+                "x": 736,
+                "y": 612,
+                "width": 26,
+                "height": 40
+              },
+              {
+                "id": "evo-plant-large",
+                "src": "scenes/shared/props/plant-large.svg",
+                "x": 56,
+                "y": 594,
+                "width": 58,
+                "height": 96
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-warm-desk",
+                "type": "glow",
+                "x": 1220,
+                "y": 420,
+                "rx": 200,
+                "ry": 90,
+                "color": "#2ed17e",
+                "opacity": 0.14
+              }
+            ]
+          },
+          {
+            "stage": 4,
+            "images": [
+              {
+                "id": "evo-banner",
+                "src": "scenes/shared/props/banner.svg",
+                "x": 620,
+                "y": 116,
+                "width": 360,
+                "height": 60
+              }
+            ],
+            "lights": [
+              {
+                "id": "evo-celebrate-1",
+                "type": "glow",
+                "x": 800,
+                "y": 200,
+                "rx": 380,
+                "ry": 130,
+                "color": "#f4c542",
+                "opacity": 0.13
+              },
+              {
+                "id": "evo-celebrate-2",
+                "type": "glow",
+                "x": 800,
+                "y": 640,
+                "rx": 420,
+                "ry": 80,
+                "color": "#2ed17e",
+                "opacity": 0.1
+              }
+            ],
+            "ambience": [
+              {
+                "id": "evo-banner-blink-1",
+                "type": "pulse-dot",
+                "x": 640,
+                "y": 146,
+                "r": 3.5,
+                "color": "#f4c542",
+                "periodSeconds": 1.6
+              },
+              {
+                "id": "evo-banner-blink-2",
+                "type": "pulse-dot",
+                "x": 960,
+                "y": 146,
+                "r": 3.5,
+                "color": "#2ed17e",
+                "periodSeconds": 1.9,
+                "delaySeconds": 0.5
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

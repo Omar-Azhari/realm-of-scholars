@@ -1,0 +1,26 @@
+{
+  "institution": "Example University",
+  "degree": "Bachelor of Information Technology",
+  "academicYear": "2026",
+  "semesterName": "Semester 2",
+  "subjects": [
+    {
+      "code": "CSE3CWA",
+      "name": "Cloud-Based Web Application Development",
+      "coordinator": "Dr Example Coordinator",
+      "modules": [
+        { "weekNumber": 1, "title": "Introduction to Cloud Platforms" }
+      ],
+      "assessments": [
+        {
+          "title": "HealthCoverSim, Private Health Insurance Quote Simulator",
+          "type": "project",
+          "weighting": 30,
+          "dueDate": "2026-08-16",
+          "dueTime": "23:59",
+          "submissionMethod": "LMS upload"
+        }
+      ]
+    }
+  ]
+}

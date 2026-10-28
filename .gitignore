@@ -1,0 +1,21 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# La Trobe Handbook download cache (scripts/import-latrobe-handbook.ts)
+data-cache/
+
+# Not published: university materials and large or personal files
+data-cache/
+src/data/latrobe-handbook/
+docs/UniGame_docs_from_screenshots/
+Assignment_*.pdf
+planning/
+CLAUDE.md
+.claude/
+*.exe
+.env
+.env.*
+!.env.example

@@ -1,0 +1,138 @@
+/*
+ * V2 Phase 1 "Prestige Vertical Slice" — a parchment/leather UI skin,
+ * scoped entirely under `.prestige-v2-root` (the root div `PrestigeWorld.tsx`
+ * renders) so nothing here can ever affect the legacy-2d or experimental-3d
+ * renderers' own chrome. Overrides colours/fonts/borders only — never
+ * layout, sizing, or behaviour — of the elements this slice actually uses:
+ * the two mentor overlay components and the E-to-interact prompt (all
+ * rendered INSIDE `.prestige-v2-root`, plain descendant selectors), plus
+ * the persistent HUD chips (`.hud-layer` — rendered by `WorldShell.tsx` as
+ * a SIBLING of the Outlet content, hence the `~` combinator below).
+ *
+ * Scope note (disclosed in docs/V2_PHASE1_VERTICAL_SLICE.md): the full
+ * Tasks/Subjects/Calendar/Settings panel system and the tab rail are
+ * deliberately NOT reskinned here — that's the rest of the app's UI,
+ * reachable from every renderer alike, and a full UI migration is future
+ * V2 scope, not this vertical slice's.
+ */
+
+:root {
+  --prestige-parchment: #e8ddc1;
+  --prestige-parchment-dark: #d8c9a0;
+  --prestige-ink: #2e2418;
+  --prestige-ink-muted: #5a4a36;
+  --prestige-leather: #5a3e28;
+  --prestige-leather-dark: #3c2818;
+  --prestige-gold: #b8923a;
+}
+
+.prestige-v2-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* The mentor conversation panel, reskinned as an open manuscript/journal page. */
+.prestige-v2-root .mentor-conversation-panel {
+  background: linear-gradient(180deg, var(--prestige-parchment), var(--prestige-parchment-dark));
+  border: 2px solid var(--prestige-leather);
+  box-shadow: 0 10px 28px rgba(30, 20, 8, 0.45);
+}
+
+.prestige-v2-root .mentor-conversation-header {
+  background: var(--prestige-leather);
+  border-bottom: 2px solid var(--prestige-leather-dark);
+  color: var(--prestige-gold);
+}
+
+.prestige-v2-root .mentor-conversation-header button {
+  color: var(--prestige-parchment);
+}
+
+.prestige-v2-root .mentor-conversation-line {
+  color: var(--prestige-ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+}
+
+.prestige-v2-root .mentor-conversation-line--done {
+  color: var(--prestige-ink-muted);
+}
+
+.prestige-v2-root .mentor-conversation-why {
+  background: var(--prestige-parchment-dark);
+  border-color: var(--prestige-leather);
+  color: var(--prestige-ink-muted);
+}
+
+/* The "Coming Soon" / inspect notice — a hung notice-board scrap, not a glass HUD card. */
+.prestige-v2-root .mentor-checkin-prompt {
+  background: linear-gradient(180deg, var(--prestige-parchment), var(--prestige-parchment-dark));
+  border: 2px solid var(--prestige-leather);
+  box-shadow: 0 10px 28px rgba(30, 20, 8, 0.45);
+}
+
+.prestige-v2-root .mentor-checkin-header {
+  color: var(--prestige-leather);
+}
+
+.prestige-v2-root .mentor-checkin-header button {
+  color: var(--prestige-ink-muted);
+}
+
+.prestige-v2-root .mentor-checkin-question {
+  color: var(--prestige-ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+}
+
+.prestige-v2-root .mentor-checkin-options button {
+  background: var(--prestige-parchment-dark);
+  border-color: var(--prestige-leather);
+  color: var(--prestige-ink);
+}
+
+.prestige-v2-root .mentor-checkin-options button:hover {
+  border-color: var(--prestige-gold);
+  color: var(--prestige-leather);
+}
+
+/* The E-to-interact prompt — a small brass-and-parchment plaque instead of the sci-fi glass pill. */
+.prestige-v2-root .world-prompt button {
+  background: var(--prestige-parchment);
+  border-color: var(--prestige-leather);
+  box-shadow: 0 4px 14px rgba(30, 20, 8, 0.4);
+  color: var(--prestige-ink);
+}
+
+.prestige-v2-root .world-prompt-object {
+  color: var(--prestige-ink-muted);
+}
+
+.prestige-v2-root .world-prompt kbd {
+  background: var(--prestige-gold);
+  color: var(--prestige-leather-dark);
+}
+
+/* The persistent HUD chips (level/XP, location, objective) — these are
+   rendered by WorldShell.tsx as a SIBLING of the Outlet content inside
+   `.world-viewport`, not a descendant of `.prestige-v2-root`, hence `~`
+   rather than a plain descendant selector. Softened toward parchment/
+   brass so they read as part of this world rather than a leftover
+   dashboard overlay. The full panel system (Tasks/Subjects/Calendar/
+   Settings) and the tab rail are OUT of this scope — see this file's own
+   header comment. */
+.prestige-v2-root ~ .hud-layer .hud-player,
+.prestige-v2-root ~ .hud-layer .hud-location,
+.prestige-v2-root ~ .hud-layer .hud-objective-bar {
+  background: rgba(232, 221, 193, 0.92);
+  border-color: var(--prestige-leather);
+  color: var(--prestige-ink);
+}
+
+.prestige-v2-root ~ .hud-layer .hud-player-lv,
+.prestige-v2-root ~ .hud-layer .hud-objective-flag {
+  color: var(--prestige-leather);
+}
+
+.prestige-v2-root ~ .hud-layer .hud-location span {
+  color: var(--prestige-ink);
+}

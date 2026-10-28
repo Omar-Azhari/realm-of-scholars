@@ -1,0 +1,14 @@
+Unit code: GHI4000
+Unit name: Advanced Data Structures and Algorithms
+Coordinator: Dr Sam Okafor
+
+This is a later revision of the unit outline, exported from a separate
+calendar/document system, and disagrees with the original handbook PDF on
+two points below.
+
+Week 1: Balanced Trees and Heaps
+
+Assessment 1: Major Project Submission
+Weighting: 35%
+Due: 16 August 2026
+Submission: Submit via the LMS as a zipped source archive.

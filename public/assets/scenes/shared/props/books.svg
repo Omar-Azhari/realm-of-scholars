@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 36">
+  <!-- UniGame placeholder prop: book stack (room evolution stage 1). Replace freely. -->
+  <rect x="4" y="22" width="52" height="12" rx="2" fill="#8a4a2e"/>
+  <rect x="10" y="12" width="40" height="10" rx="2" fill="#3d5adf"/>
+  <rect x="16" y="4" width="28" height="8" rx="2" fill="#2ed17e"/>
+  <line x1="30" y1="4" x2="30" y2="12" stroke="#123324" stroke-width="2"/>
+</svg>

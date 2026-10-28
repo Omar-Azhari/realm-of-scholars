@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//UniGame//Phase18A Fixture//EN
+BEGIN:VEVENT
+UID:portfolio-due-001@fixture.unigame
+SUMMARY:Portfolio of Wireframes due
+DTSTART;VALUE=DATE:20260810
+LOCATION:Online (XYZ1000)
+END:VEVENT
+END:VCALENDAR

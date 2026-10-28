@@ -1,0 +1,628 @@
+/*
+ * Sims-style redesign — the illustrated headquarters hero and its rooms/
+ * characters/furniture. See planning/SIMS_STYLE_REDESIGN.md. Kept in its own
+ * file, same "one file per pass" precedent as overhaul.css/dashboard.css.
+ */
+
+/* --------------------------------------------------------------------- */
+/* HQ scene shell                                                         */
+/* --------------------------------------------------------------------- */
+
+.hq-scene {
+  position: relative;
+  padding: var(--space-4) var(--space-4) var(--space-6);
+}
+
+.hq-scene-sky {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #1a2947 0%, #0b1220 55%);
+  z-index: 0;
+}
+
+.hq-scene-shell {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-lg);
+  border: var(--border-width-panel) solid var(--hq-border);
+  background: linear-gradient(180deg, rgba(20, 27, 46, 0.9), rgba(11, 18, 32, 0.95));
+  box-shadow: var(--elevation-3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.hq-scene-roof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--hq-border);
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 2px,
+    transparent 2px,
+    transparent 24px
+  );
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  color: var(--hq-accent);
+}
+
+.hq-scene-rooms {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.hq-scene-corridor {
+  position: absolute;
+  inset: var(--space-5);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hq-scene-corridor::before,
+.hq-scene-corridor::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(103, 232, 249, 0.35), transparent);
+}
+
+.hq-scene-corridor::before {
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-1px);
+}
+
+.hq-scene-corridor::after {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-1px);
+  background: linear-gradient(180deg, transparent, rgba(103, 232, 249, 0.35), transparent);
+}
+
+.hq-scene-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------- */
+/* Subject room tile                                                      */
+/* --------------------------------------------------------------------- */
+
+.subject-room-tile {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--hq-border);
+  background: linear-gradient(165deg, var(--room-accent) -180%, var(--hq-panel) 55%);
+  color: var(--hq-text);
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.subject-room-tile-window {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 36px;
+  height: 26px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #cfe8ff, #6fa8dc);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  opacity: 0.85;
+}
+
+.subject-room-tile-status {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(11, 18, 32, 0.65);
+  border: 1px solid var(--hq-border);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.subject-room-tile--urgent .subject-room-tile-status {
+  color: #ffb238;
+  border-color: #ffb238;
+}
+
+.subject-room-tile--completed .subject-room-tile-status {
+  color: #2ed17e;
+  border-color: #2ed17e;
+}
+
+.subject-room-tile-furniture {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+  color: var(--room-accent);
+}
+
+.room-furniture {
+  width: 96px;
+  height: auto;
+  color: var(--furniture-accent, var(--room-accent));
+}
+
+.room-furniture-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.room-furniture-group .room-furniture {
+  width: 64px;
+}
+
+.furniture-base,
+.furniture-leg,
+.furniture-board,
+.furniture-rack-slot {
+  fill: rgba(11, 18, 32, 0.55);
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.furniture-screen {
+  fill: rgba(8, 13, 24, 0.85);
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.furniture-screen-lines {
+  stroke-width: 1.6;
+  opacity: 0.9;
+}
+
+.furniture-screen-lines-fill {
+  fill: currentColor;
+  opacity: 0.75;
+}
+
+.furniture-rack-light {
+  fill: currentColor;
+}
+
+.furniture-card {
+  fill: currentColor;
+  opacity: 0.85;
+}
+
+.furniture-board-line {
+  stroke-width: 1.5;
+  opacity: 0.6;
+}
+
+.furniture-plant {
+  fill: #2ed17e;
+  stroke: #2ed17e;
+  opacity: 0.85;
+}
+
+.subject-room-tile-character-area {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: var(--space-4);
+}
+
+.subject-room-tile-door {
+  position: absolute;
+  bottom: var(--space-3);
+  right: var(--space-3);
+  width: 20px;
+  height: 34px;
+  border-radius: 4px 4px 0 0;
+  background: rgba(11, 18, 32, 0.7);
+  border: 2px solid var(--room-accent);
+  box-shadow: 0 0 10px var(--room-accent);
+}
+
+.subject-room-tile-door-handle {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--room-accent);
+  transform: translateY(-50%);
+}
+
+.subject-room-tile-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(11, 18, 32, 0.75);
+  border-top: 1px solid var(--hq-border);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.subject-room-tile-label svg {
+  color: var(--room-accent);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------- */
+/* Speech bubble                                                          */
+/* --------------------------------------------------------------------- */
+
+.speech-bubble {
+  pointer-events: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  padding: var(--space-2) var(--space-3);
+  max-width: 160px;
+  border-radius: var(--radius-sm);
+  background: rgba(11, 18, 32, 0.92);
+  border: 1px solid var(--hq-border);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+  box-shadow: var(--elevation-2);
+  z-index: 3;
+}
+
+.speech-bubble-tail {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(11, 18, 32, 0.92);
+}
+
+/* --------------------------------------------------------------------- */
+/* Student character                                                     */
+/* --------------------------------------------------------------------- */
+
+.student-character {
+  position: relative;
+}
+
+.student-character-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.student-character-torso {
+  fill: var(--character-accent);
+}
+
+.student-character-limb {
+  fill: var(--hq-text-muted);
+}
+
+.student-character-head {
+  fill: #f1d9bd;
+}
+
+.student-character-hair {
+  fill: var(--character-accent);
+}
+
+.student-character-eye {
+  fill: #1a1a1a;
+}
+
+.student-character-mouth {
+  stroke: #1a1a1a;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+}
+
+/* --------------------------------------------------------------------- */
+/* Week strip                                                             */
+/* --------------------------------------------------------------------- */
+
+.week-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.week-strip-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-1) 2px;
+  border-radius: var(--radius-sm);
+  background: var(--hq-panel-alt);
+  border: 1px solid transparent;
+}
+
+.week-strip-day--today {
+  border-color: var(--hq-accent);
+  box-shadow: var(--glow-hq);
+}
+
+.week-strip-day-label {
+  font-size: 0.6rem;
+  color: var(--hq-text-muted);
+}
+
+.week-strip-day-number {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+}
+
+.week-strip-day-dots {
+  display: flex;
+  gap: 2px;
+  min-height: 6px;
+}
+
+.week-strip-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+/* --------------------------------------------------------------------- */
+/* Home screen layout                                                     */
+/* --------------------------------------------------------------------- */
+
+.hq-home-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.hq-home-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hq-home-secondary {
+  margin-top: var(--space-5);
+}
+
+.hq-home-secondary-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-3);
+}
+
+/* --------------------------------------------------------------------- */
+/* Responsive                                                             */
+/* --------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .hq-home-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .hq-scene-rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .hq-scene-corridor {
+    display: none;
+  }
+
+  .subject-room-tile {
+    min-height: 200px;
+  }
+
+  .week-strip-day-label {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Semester completion celebration (Phase 11)                           */
+/* ------------------------------------------------------------------ */
+
+.completion-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(5, 9, 20, 0.82);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+.completion-card {
+  width: min(680px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 26px 28px;
+  border-radius: var(--radius-lg);
+  background: var(--hq-panel);
+  border: var(--border-width-panel) solid var(--hq-accent);
+  box-shadow: var(--glow-hq-strong), var(--elevation-3);
+  text-align: center;
+}
+
+.completion-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--hq-accent);
+}
+
+.completion-lede {
+  margin: 0 0 18px;
+  color: var(--hq-text-muted);
+  font-size: 0.92rem;
+}
+
+.completion-mentor-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.completion-mentor {
+  width: 132px;
+  padding: 10px 8px 8px;
+  border-radius: var(--radius-md);
+  background: var(--hq-panel-alt);
+  border: 1px solid var(--mentor-accent, var(--hq-border));
+}
+
+.completion-mentor-sprite {
+  width: 56px;
+  height: 76px;
+  margin: 0 auto 6px;
+}
+
+.completion-mentor-sprite canvas {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+.completion-mentor-line {
+  margin: 0 0 4px;
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--hq-text);
+}
+
+.completion-mentor-name {
+  margin: 0;
+  font-size: 0.68rem;
+  color: var(--mentor-accent, var(--hq-text-muted));
+}
+
+.completion-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 0 0 18px;
+  text-align: left;
+}
+
+.completion-stats > div {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--hq-panel-alt);
+  border: 1px solid var(--hq-border);
+}
+
+.completion-stats-wide {
+  grid-column: 1 / -1;
+}
+
+.completion-stats dt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--hq-text-muted);
+}
+
+.completion-stats dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--hq-text);
+  font-size: 0.95rem;
+}
+
+.completion-dismiss {
+  min-width: 200px;
+}
+
+.completion-footnote {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: var(--hq-text-muted);
+}
+
+/* ------------------------------------------------------------------ */
+/* First-run coach mark (RC1 onboarding)                                */
+/* ------------------------------------------------------------------ */
+
+.hq-coach-mark {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(520px, calc(100% - 32px));
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--hq-panel);
+  border: 1px solid var(--hq-accent);
+  box-shadow: var(--glow-hq), var(--elevation-2);
+}
+
+.hq-coach-mark p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--hq-text);
+}
+
+.hq-coach-mark strong {
+  color: var(--hq-accent);
+}
+
+.hq-coach-mark button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 0 auto;
+  min-height: var(--tap-target-min);
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.hq-scene-frame {
+  position: relative;
+}

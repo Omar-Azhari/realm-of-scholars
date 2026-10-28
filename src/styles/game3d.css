@@ -1,0 +1,44 @@
+/*
+ * Phase 20, Milestone 20A — sizing for the experimental 3D world's R3F
+ * `<Canvas>` mount point. Mirrors `.world-scene`'s existing fill-viewport
+ * pattern (src/styles/world.css) exactly, since both sit in the same
+ * WorldShell layout slot. Kept in its own small file (not lazy-loaded,
+ * unlike the JS module) since CSS can't be split the same way — this file
+ * stays intentionally tiny so it costs negligible bytes for users who never
+ * enable the 3D renderer.
+ */
+
+.game3d-root {
+  position: absolute;
+  inset: 0;
+}
+
+/* R3F's <Canvas> sizes its wrapper divs correctly but leaves the actual
+   <canvas> element at the browser's 300x150 default unless the element
+   itself is explicitly told to fill its wrapper — confirmed by direct
+   DOM inspection during this milestone's live verification. */
+.game3d-root canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Building transition veil (Phase 20F Part 7) — covers the instant a scene
+   swap unmounts/remounts (and whatever moment the incoming lazy chunk's
+   Suspense fallback would otherwise flash). Always in the DOM at opacity 0
+   so the transition can animate in either direction from a single class
+   toggle; never intercepts input. */
+.game3d-transition-veil {
+  position: absolute;
+  inset: 0;
+  background: #05070a;
+  opacity: 0;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  z-index: 5;
+}
+
+.game3d-transition-veil.is-covering {
+  opacity: 1;
+}

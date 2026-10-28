@@ -1,0 +1,701 @@
+/*
+ * Visual-overhaul pass styles: everything introduced to bring the app up to
+ * the reference "command-centre" polish bar — ProgressRing, TopHud, icon
+ * tabs, the Calendar, the extended Priority Centre, and Assessment Detail.
+ * Kept in its own file (rather than growing the Phase 3/4 stylesheets
+ * further) since this pass touches nearly every screen.
+ */
+
+/* --------------------------------------------------------------------- */
+/* Progress ring                                                         */
+/* --------------------------------------------------------------------- */
+
+.progress-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.progress-ring-svg {
+  transform: scaleX(-1); /* fill sweeps clockwise from the top */
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.progress-ring-track {
+  stroke: var(--hq-border);
+}
+
+.progress-ring-fill {
+  stroke: currentColor;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.progress-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.progress-ring-percent {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.progress-ring-caption {
+  font-size: 0.65rem;
+  color: var(--hq-text-muted);
+  max-width: 80%;
+}
+
+/* --------------------------------------------------------------------- */
+/* Top HUD bar                                                           */
+/* --------------------------------------------------------------------- */
+
+.top-hud {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-5);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.top-hud-identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 200px;
+}
+
+.top-hud-name-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.top-hud-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.top-hud-level {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  color: var(--hq-accent);
+  letter-spacing: 0.04em;
+}
+
+.top-hud-xp {
+  flex: 1 1 220px;
+  min-width: 160px;
+}
+
+.top-hud-chips {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.top-hud-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--hq-panel-alt);
+  border: 1px solid var(--hq-border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--hq-text);
+  white-space: nowrap;
+}
+
+.top-hud-chip svg {
+  color: var(--hq-accent);
+}
+
+.top-hud-chip--streak svg {
+  color: #ff8a3d;
+}
+
+.top-hud-chip--deadline {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+  .top-hud {
+    padding: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .top-hud-identity {
+    min-width: 0;
+  }
+
+  .top-hud-chips {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Icon tab switcher (Subject Room, Priority Centre, Assessment Detail)   */
+/* --------------------------------------------------------------------- */
+
+.icon-tabs {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--hq-border);
+  padding-bottom: var(--space-2);
+}
+
+.icon-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--hq-text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out;
+}
+
+.icon-tab:hover {
+  color: var(--hq-text);
+  background: var(--hq-panel-alt);
+}
+
+.icon-tab[aria-selected="true"] {
+  color: var(--hq-text);
+  background: var(--hq-panel-alt);
+  border-color: var(--tab-accent, var(--hq-accent));
+  box-shadow: 0 0 14px var(--tab-accent-glow, rgba(34, 211, 238, 0.35));
+}
+
+.icon-tab[aria-selected="true"] svg {
+  color: var(--tab-accent, var(--hq-accent));
+}
+
+.icon-tab-count {
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--hq-panel);
+  color: var(--hq-text-muted);
+}
+
+/* --------------------------------------------------------------------- */
+/* Assessment Detail screen                                              */
+/* --------------------------------------------------------------------- */
+
+.assessment-detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.assessment-detail-header-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 200px;
+}
+
+.assessment-detail-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.assessment-detail-main,
+.assessment-detail-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.assessment-detail-side-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.assessment-detail-form-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.assessment-detail-progress-controls {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.assessment-detail-add-form {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+.assessment-detail-add-form input {
+  flex: 1;
+  min-width: 140px;
+}
+
+.milestone-list,
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.milestone-item,
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--hq-panel-alt);
+  border: 1px solid var(--hq-border);
+}
+
+.milestone-item label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.milestone-item--done span {
+  text-decoration: line-through;
+  color: var(--hq-text-muted);
+}
+
+.milestone-item button,
+.link-item button {
+  min-height: auto;
+  padding: var(--space-1);
+  background: transparent;
+  border: none;
+  color: var(--hq-text-muted);
+}
+
+.milestone-item button:hover,
+.link-item button:hover {
+  color: #ff5c5c;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .assessment-detail-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Calendar                                                               */
+/* --------------------------------------------------------------------- */
+
+.calendar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.calendar-view-toggle {
+  display: flex;
+  gap: var(--space-1);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.calendar-nav button {
+  padding: var(--space-2);
+}
+
+.calendar-nav-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.calendar-filter-row {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.calendar-filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-height: var(--tap-target-min);
+}
+
+.calendar-filter-pill--active {
+  color: var(--hq-text);
+  border-color: var(--subject-accent, var(--hq-accent));
+}
+
+.calendar-filter-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.calendar-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.calendar-day-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: sticky;
+  top: var(--space-4);
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.month-grid-day-label {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--hq-text-muted);
+  letter-spacing: 0.04em;
+  padding-bottom: var(--space-2);
+}
+
+.month-grid-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  aspect-ratio: 1;
+  min-height: 44px;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  cursor: pointer;
+  transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.month-grid-cell:hover {
+  border-color: var(--hq-border);
+}
+
+.month-grid-cell--outside {
+  opacity: 0.35;
+}
+
+.month-grid-cell--today {
+  border-color: var(--hq-accent);
+  box-shadow: var(--glow-hq);
+}
+
+.month-grid-cell--selected {
+  border-color: var(--hq-accent);
+  background: var(--hq-panel);
+}
+
+.month-grid-cell-number {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+}
+
+.month-grid-cell-events {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.month-grid-event-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.month-grid-event-more {
+  font-size: 0.6rem;
+  color: var(--hq-text-muted);
+}
+
+.agenda-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.agenda-day-date {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--hq-accent);
+}
+
+.agenda-day-events {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.agenda-day-events li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 900px) {
+  .calendar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-day-panel {
+    position: static;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* Priority Centre                                                       */
+/* --------------------------------------------------------------------- */
+
+.priority-toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.priority-spotlight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-color: var(--hq-accent);
+  box-shadow: var(--glow-hq);
+}
+
+.priority-spotlight-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.priority-spotlight-title {
+  font-size: 1.3rem;
+}
+
+.priority-spotlight-reasons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.priority-spotlight-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.priority-item-list li {
+  align-items: center;
+}
+
+.priority-item-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.priority-pin-button {
+  min-height: auto;
+  padding: var(--space-1);
+  background: transparent;
+  border: none;
+  color: var(--hq-text-muted);
+}
+
+.priority-pin-button[aria-pressed="true"] {
+  color: #ffd15c;
+}
+
+.priority-pin-button:hover {
+  box-shadow: none;
+  border-color: transparent;
+  color: var(--hq-accent);
+}
+
+/* --------------------------------------------------------------------- */
+/* Settings                                                               */
+/* --------------------------------------------------------------------- */
+
+.settings-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Phase 20F Part 15 — quality-tier (and similar) dropdown rows. */
+.settings-select-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  max-width: 320px;
+}
+
+/* Phase 20F Part 13 — small secondary actions inline in a settings panel (e.g. "Show first-session guidance again"). */
+.settings-inline-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-3);
+  font-size: 0.85rem;
+}
+
+.settings-inline-action:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Phase 20F Part 10 — mixer category volume sliders. */
+.settings-sound-mixer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 8px);
+  margin-top: var(--space-3);
+}
+
+.settings-volume-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 40px;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.settings-volume-label {
+  font-size: 0.85rem;
+}
+
+.settings-volume-value {
+  font-size: 0.8rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.8;
+}
+
+/* RC1: structured deadline chip — title ellipsizes, date never does. */
+.top-hud-chip--deadline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.top-hud-deadline-label {
+  color: var(--hq-text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex: 0 0 auto;
+}
+
+.top-hud-deadline-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 180px;
+}
+
+.top-hud-deadline-when {
+  flex: 0 0 auto;
+  color: var(--hq-text-muted);
+  white-space: nowrap;
+}
+
+/* The structured chip needs more room than the old single-string one:
+   label + date alone exceed the previous 260px, which squeezed the title
+   to zero width. Title keeps at least a readable stub before ellipsizing. */
+.top-hud-chip--deadline {
+  max-width: 470px;
+}
+
+.top-hud-deadline-title {
+  min-width: 72px;
+  flex: 0 1 auto;
+}
+
+@media (max-width: 900px) {
+  .top-hud-chip--deadline {
+    max-width: 100%;
+  }
+
+  .top-hud-deadline-when {
+    display: none; /* small screens: title + "Due next:" only; full text stays in the tooltip */
+  }
+}

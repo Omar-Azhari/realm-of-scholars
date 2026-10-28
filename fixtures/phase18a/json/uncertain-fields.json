@@ -1,0 +1,26 @@
+{
+  "institution": "Example University",
+  "academicYear": "2026",
+  "semesterName": "Semester 2",
+  "subjects": [
+    {
+      "code": "JKL5000",
+      "name": "Special Topics in Emerging Technology",
+      "modules": [
+        { "weekNumber": 1, "title": "Orientation and Unit Overview" }
+      ],
+      "assessments": [
+        {
+          "title": "Concept Proposal",
+          "type": "report",
+          "submissionMethod": "LMS upload"
+        },
+        {
+          "title": "Final Showcase Presentation",
+          "type": "presentation",
+          "weighting": 50
+        }
+      ]
+    }
+  ]
+}

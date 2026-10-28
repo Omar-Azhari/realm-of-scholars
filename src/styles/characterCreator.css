@@ -1,0 +1,244 @@
+/*
+ * Character Creator (Phase 20B). Reuses the existing dark-navy panel
+ * chrome/tokens (tokens.css) for every 2D control — only the live 3D
+ * preview canvas itself uses the warm World palette, matching this
+ * project's established two-register colour system
+ * (docs/UNIGAME_ART_BIBLE.md Part 6).
+ */
+
+.character-creator-panel {
+  width: min(960px, 100%);
+}
+
+.character-creator {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: var(--space-4);
+  min-height: 420px;
+}
+
+@media (max-width: 720px) {
+  .character-creator {
+    grid-template-columns: 1fr;
+  }
+}
+
+.creator-preview-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.creator-preview-canvas {
+  flex: 1;
+  min-height: 260px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--hq-border);
+  background: radial-gradient(circle at 50% 30%, #2a2438, #0f0c16);
+}
+
+.creator-preview-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.creator-preview-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.creator-preview-controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.creator-preview-controls button:hover {
+  border-color: var(--hq-accent);
+}
+
+.creator-controls-pane {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.creator-toolbar {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.creator-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel-alt);
+  color: var(--hq-text);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.creator-toolbar button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.creator-toolbar button:not(:disabled):hover {
+  border-color: var(--hq-accent);
+}
+
+.creator-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  border-bottom: 1px solid var(--hq-border);
+  padding-bottom: var(--space-2);
+}
+
+.creator-tab {
+  min-height: var(--tap-target-min);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--hq-text-muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.creator-tab--active {
+  background: var(--hq-panel-alt);
+  border-color: var(--hq-accent);
+  color: var(--hq-text);
+}
+
+.creator-tab-panel {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 200px;
+  max-height: 46vh;
+}
+
+.creator-section-title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--hq-text-muted);
+  margin: var(--space-3) 0 var(--space-2);
+}
+
+.creator-section-title:first-child {
+  margin-top: 0;
+}
+
+.creator-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: var(--space-2);
+}
+
+.creator-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel);
+  color: var(--hq-text);
+  cursor: pointer;
+  text-align: center;
+}
+
+.creator-swatch:hover {
+  border-color: var(--hq-accent);
+}
+
+.creator-swatch--selected {
+  border-color: var(--hq-accent);
+  box-shadow: var(--glow-hq);
+  background: var(--hq-panel-alt);
+}
+
+.creator-swatch-chip {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--hq-border);
+}
+
+.creator-swatch-label {
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.creator-hint {
+  font-size: 0.78rem;
+  color: var(--hq-text-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.creator-personality-preview {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--hq-border);
+  background: var(--hq-panel);
+  font-size: 0.84rem;
+}
+
+.creator-personality-preview p {
+  margin: 0 0 var(--space-1);
+}
+
+.creator-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  border-top: 1px solid var(--hq-border);
+  padding-top: var(--space-3);
+}
+
+.creator-action-primary,
+.creator-action-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap-target-min);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.creator-action-primary {
+  border: none;
+  background: var(--gradient-hq);
+  color: #041018;
+  font-weight: 600;
+}
+
+.creator-action-secondary {
+  border: 1px solid var(--hq-border);
+  background: transparent;
+  color: var(--hq-text-muted);
+}

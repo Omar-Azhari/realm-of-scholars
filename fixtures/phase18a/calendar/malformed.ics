@@ -1,0 +1,5 @@
+BEGIN:VEVENT
+UID:orphan-001@fixture.unigame
+SUMMARY:This file forgot its VCALENDAR wrapper
+DTSTART:20260809T090000
+END:VEVENT

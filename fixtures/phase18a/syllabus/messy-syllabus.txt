@@ -1,0 +1,36 @@
+      ABC2000 UNIT OUTLINE -- please read carefully!!
+
+
+Unit code: ABC2000
+Unit name: Introduction to Data Analytics
+
+
+   (scanned copy - formatting may look odd in places)
+
+Course coordinator info below.
+Coordinator: Prof. Kim Nguyen
+
+
+
+
+week 1 -    getting started with spreadsheets
+Module 2- Cleaning and Wrangling Data
+
+
+random noise line that matches nothing in particular
+****************************************
+
+
+Recommended reading:   Wickham, H. Data Analytics Foundations.
+
+
+ASSIGNMENT: Data Cleaning Exercise
+   weighting   -   15  %
+   due  9/8/26
+Submission: submit via LMS dropbox.
+
+
+assessment 2 - Reflective Practice Journal Entry
+weighting: 12%
+due 09/08/2026
+submission: Submit as a single PDF via the LMS.

@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" preserveAspectRatio="none">
+  <!--
+    UniGame interim background v2: User Interface Design studio (hand-built
+    vector, replaceable by final raster art — see planning/ART_BRIEFS.md).
+    Anchor skeleton preserved exactly (ART_PIPELINE.md): exit door 42-198,
+    mission terminal 180-370×250-550 (cells/count are engine widgets),
+    noticeboard 400-600×220-400 (notes widget), whiteboard 630-840×210-380,
+    progress display 870-1110×190-390 (readouts widget), window 1140-1300×
+    180-360, trophy bars y240/330 ×1330-1530 (trophy widget), desk 1080-1380
+    (monitors 396-464, surface 470, chair/monitor-glow engine-drawn), holo
+    table 750,666 (cone widget), floor 520. Ambience/dressing coordinates
+    from the manifest also land on painted objects.
+  -->
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b2050"/>
+      <stop offset="70%" stop-color="#211840"/>
+      <stop offset="100%" stop-color="#1a1233"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#281e44"/>
+      <stop offset="55%" stop-color="#1c1533"/>
+      <stop offset="100%" stop-color="#120d22"/>
+    </linearGradient>
+    <linearGradient id="city" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#170f36"/>
+      <stop offset="55%" stop-color="#2c1c58"/>
+      <stop offset="100%" stop-color="#5a3390"/>
+    </linearGradient>
+    <linearGradient id="neon-refl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b24bf3" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#b24bf3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cyan-refl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wainscot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#191234"/>
+      <stop offset="100%" stop-color="#130d28"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="76%">
+      <stop offset="60%" stop-color="rgba(8,5,16,0)"/>
+      <stop offset="100%" stop-color="rgba(8,5,16,0.5)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ======================= CEILING ======================= -->
+  <rect x="0" y="0" width="1600" height="96" fill="#140d28"/>
+  <rect x="0" y="90" width="1600" height="6" fill="#0d081c"/>
+  <!-- neon strip -->
+  <rect x="140" y="58" width="1320" height="7" rx="3.5" fill="#b24bf3"/>
+  <rect x="140" y="65" width="1320" height="18" fill="#b24bf3" opacity="0.14"/>
+  <!-- track light rail + spots -->
+  <rect x="960" y="24" width="420" height="8" rx="4" fill="#241a3d" stroke="#3a2a55" stroke-width="2"/>
+  <g fill="#241a3d" stroke="#3a2a55" stroke-width="1.6">
+    <rect x="1010" y="32" width="22" height="16" rx="5" transform="rotate(18 1021 40)"/>
+    <rect x="1150" y="32" width="22" height="16" rx="5"/>
+    <rect x="1290" y="32" width="22" height="16" rx="5" transform="rotate(-14 1301 40)"/>
+  </g>
+  <circle cx="1021" cy="50" r="4" fill="#ffd7f2" opacity="0.9"/>
+  <circle cx="1161" cy="50" r="4" fill="#ffd7f2" opacity="0.9"/>
+  <circle cx="1301" cy="50" r="4" fill="#ffd7f2" opacity="0.9"/>
+
+  <!-- ======================= BACK WALL ======================= -->
+  <rect x="0" y="96" width="1600" height="424" fill="url(#wall)"/>
+  <g stroke="rgba(255,255,255,0.025)" stroke-width="2">
+    <line x1="30" y1="96" x2="30" y2="470"/><line x1="160" y1="96" x2="160" y2="470"/>
+    <line x1="290" y1="96" x2="290" y2="470"/><line x1="420" y1="96" x2="420" y2="470"/>
+    <line x1="550" y1="96" x2="550" y2="470"/><line x1="680" y1="96" x2="680" y2="470"/>
+    <line x1="810" y1="96" x2="810" y2="470"/><line x1="940" y1="96" x2="940" y2="470"/>
+    <line x1="1070" y1="96" x2="1070" y2="470"/><line x1="1200" y1="96" x2="1200" y2="470"/>
+    <line x1="1330" y1="96" x2="1330" y2="470"/><line x1="1460" y1="96" x2="1460" y2="470"/>
+  </g>
+  <rect x="0" y="470" width="1600" height="50" fill="url(#wainscot)"/>
+  <line x1="0" y1="470" x2="1600" y2="470" stroke="#332552" stroke-width="2.5"/>
+  <rect x="0" y="508" width="1600" height="12" fill="#120c24"/>
+
+  <!-- wireframe posters above the boards -->
+  <g transform="translate(432,116)">
+    <rect x="0" y="0" width="136" height="88" rx="4" fill="#160f2b" stroke="#3a2a55" stroke-width="2.5"/>
+    <rect x="10" y="10" width="52" height="30" rx="3" fill="none" stroke="#b24bf3" stroke-width="2"/>
+    <line x1="10" y1="19" x2="62" y2="19" stroke="#b24bf3" stroke-width="1.6"/>
+    <rect x="70" y="10" width="56" height="12" rx="2" fill="none" stroke="#67e8f9" stroke-width="1.6"/>
+    <rect x="70" y="27" width="56" height="13" rx="6" fill="#f345c0" opacity="0.75"/>
+    <line x1="10" y1="52" x2="126" y2="52" stroke="#5b6478" stroke-width="1.8" opacity="0.7"/>
+    <line x1="10" y1="62" x2="100" y2="62" stroke="#5b6478" stroke-width="1.8" opacity="0.6"/>
+    <line x1="10" y1="72" x2="112" y2="72" stroke="#5b6478" stroke-width="1.8" opacity="0.5"/>
+  </g>
+  <g transform="translate(648,112)">
+    <rect x="0" y="0" width="150" height="84" rx="4" fill="#160f2b" stroke="#3a2a55" stroke-width="2.5"/>
+    <rect x="12" y="12" width="26" height="18" rx="3" fill="none" stroke="#22d3ee" stroke-width="2"/>
+    <rect x="62" y="12" width="26" height="18" rx="3" fill="none" stroke="#b24bf3" stroke-width="2"/>
+    <rect x="112" y="12" width="26" height="18" rx="3" fill="none" stroke="#f345c0" stroke-width="2"/>
+    <path d="M38 21 h24 M88 21 h24" stroke="#5b6478" stroke-width="1.8"/>
+    <rect x="37" y="46" width="26" height="18" rx="3" fill="none" stroke="#67e8f9" stroke-width="2"/>
+    <rect x="87" y="46" width="26" height="18" rx="3" fill="none" stroke="#2ed17e" stroke-width="2"/>
+    <path d="M25 30 v16 h12 M75 30 v16 h12 M125 30 v16 h-12" stroke="#5b6478" stroke-width="1.8" fill="none"/>
+  </g>
+
+  <!-- vertical palette-token strip left of the whiteboard -->
+  <g transform="translate(610,214)">
+    <rect x="0" y="0" width="16" height="150" rx="4" fill="#160f2b" stroke="#3a2a55" stroke-width="2"/>
+    <rect x="3" y="6" width="10" height="22" rx="2" fill="#b24bf3"/>
+    <rect x="3" y="34" width="10" height="22" rx="2" fill="#f345c0"/>
+    <rect x="3" y="62" width="10" height="22" rx="2" fill="#22d3ee"/>
+    <rect x="3" y="90" width="10" height="22" rx="2" fill="#67e8f9"/>
+    <rect x="3" y="118" width="10" height="22" rx="2" fill="#eaf6ff"/>
+  </g>
+
+  <!-- ======================= EXIT DOOR ======================= -->
+  <rect x="42" y="250" width="156" height="270" fill="#0e0a1e"/>
+  <rect x="46" y="254" width="148" height="266" fill="#110c24"/>
+  <rect x="50" y="258" width="140" height="262" fill="none" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="3.5"/>
+  <rect x="50" y="258" width="140" height="5" fill="#22d3ee" opacity="0.35"/>
+  <circle cx="120" cy="352" r="18" fill="none" stroke="#22d3ee" stroke-width="2.5" opacity="0.85"/>
+
+  <!-- ======================= MISSION TERMINAL ======================= -->
+  <rect x="180" y="250" width="190" height="300" rx="8" fill="#191130" stroke="#b24bf3" stroke-width="3"/>
+  <rect x="186" y="256" width="178" height="288" rx="6" fill="none" stroke="rgba(243,69,192,0.25)" stroke-width="1.6"/>
+  <rect x="188" y="258" width="10" height="284" fill="#241a3d"/>
+  <rect x="352" y="258" width="10" height="284" fill="#241a3d"/>
+  <rect x="196" y="268" width="158" height="200" rx="4" fill="#0c0719"/>
+  <rect x="204" y="256" width="142" height="6" rx="3" fill="#f345c0" opacity="0.85"/>
+  <rect x="196" y="480" width="158" height="52" rx="4" fill="#0f0a20" stroke="#332552" stroke-width="1.5"/>
+  <ellipse cx="275" cy="556" rx="88" ry="9" fill="#000" opacity="0.3"/>
+
+  <!-- ======================= NOTICEBOARD ======================= -->
+  <rect x="396" y="216" width="208" height="188" rx="8" fill="#231710"/>
+  <rect x="400" y="220" width="200" height="180" rx="6" fill="#2f1f15" stroke="#4a3423" stroke-width="5"/>
+  <rect x="404" y="404" width="192" height="4" fill="#000" opacity="0.28"/>
+  <!-- sticky trail toward the whiteboard -->
+  <rect x="606" y="238" width="14" height="14" rx="1.5" fill="#f6e7b2" transform="rotate(8 613 245)"/>
+  <rect x="612" y="266" width="14" height="14" rx="1.5" fill="#f8cfe8" transform="rotate(-6 619 273)"/>
+
+  <!-- ======================= WHITEBOARD ======================= -->
+  <rect x="626" y="206" width="218" height="178" rx="7" fill="#c3c9d8"/>
+  <rect x="630" y="210" width="210" height="170" rx="6" fill="#f2f4fa" stroke="#c3c9d8" stroke-width="3"/>
+  <rect x="648" y="228" width="80" height="52" rx="3" fill="none" stroke="#9b3fe0" stroke-width="2.5"/>
+  <line x1="648" y1="242" x2="728" y2="242" stroke="#9b3fe0" stroke-width="2"/>
+  <circle cx="662" cy="235" r="3" fill="#e13ab2"/>
+  <rect x="744" y="228" width="76" height="24" rx="3" fill="none" stroke="#5b6478" stroke-width="2"/>
+  <rect x="744" y="260" width="76" height="20" rx="10" fill="#e13ab2" opacity="0.8"/>
+  <path d="M688 288 l14 10 l-14 10" stroke="#5b6478" stroke-width="2" fill="none"/>
+  <line x1="648" y1="300" x2="676" y2="300" stroke="#5b6478" stroke-width="2.5" opacity="0.7"/>
+  <line x1="712" y1="300" x2="800" y2="300" stroke="#5b6478" stroke-width="2.5" opacity="0.7"/>
+  <line x1="648" y1="318" x2="760" y2="318" stroke="#5b6478" stroke-width="2.5" opacity="0.65"/>
+  <line x1="648" y1="336" x2="720" y2="336" stroke="#5b6478" stroke-width="2.5" opacity="0.55"/>
+  <!-- swatch row on the board -->
+  <rect x="770" y="330" width="14" height="14" rx="2" fill="#b24bf3"/>
+  <rect x="788" y="330" width="14" height="14" rx="2" fill="#f345c0"/>
+  <rect x="806" y="330" width="14" height="14" rx="2" fill="#22d3ee"/>
+  <!-- marker tray (manifest mug lands at 606,388 next to it) -->
+  <rect x="668" y="382" width="134" height="9" rx="4" fill="#aab2c5"/>
+  <rect x="700" y="376" width="26" height="6" rx="3" fill="#e13ab2"/>
+  <rect x="732" y="376" width="26" height="6" rx="3" fill="#22d3ee"/>
+
+  <!-- ======================= PROGRESS DISPLAY ======================= -->
+  <rect x="864" y="184" width="252" height="212" rx="10" fill="#191130"/>
+  <rect x="870" y="190" width="240" height="200" rx="8" fill="#0c0719" stroke="#b24bf3" stroke-width="3"/>
+  <rect x="878" y="198" width="224" height="184" rx="6" fill="none" stroke="rgba(103,232,249,0.18)" stroke-width="1.6"/>
+  <rect x="944" y="396" width="92" height="8" rx="4" fill="#241a3d"/>
+
+  <!-- ======================= WINDOW + RESOURCES SHELF ======================= -->
+  <rect x="1134" y="174" width="172" height="192" rx="8" fill="#0e0a1e"/>
+  <rect x="1148" y="188" width="144" height="164" rx="4" fill="url(#city)"/>
+  <circle cx="1268" cy="216" r="10" fill="#ffe1f4" opacity="0.9"/>
+  <circle cx="1263" cy="212" r="8.5" fill="url(#city)"/>
+  <circle cx="1170" cy="204" r="1.5" fill="#eef4ff" opacity="0.8"/>
+  <circle cx="1214" cy="198" r="1.2" fill="#eef4ff" opacity="0.6"/>
+  <rect x="1158" y="250" width="26" height="102" fill="#1c1240"/>
+  <rect x="1192" y="226" width="22" height="126" fill="#241851"/>
+  <rect x="1222" y="262" width="28" height="90" fill="#1c1240"/>
+  <rect x="1258" y="238" width="20" height="114" fill="#241851"/>
+  <rect x="1162" y="266" width="4" height="5" fill="#67e8f9" opacity="0.9"/>
+  <rect x="1196" y="266" width="4" height="5" fill="#f345c0" opacity="0.9"/>
+  <rect x="1230" y="266" width="4" height="5" fill="#67e8f9" opacity="0.9"/>
+  <rect x="1162" y="300" width="4" height="5" fill="#f345c0" opacity="0.9"/>
+  <rect x="1196" y="300" width="4" height="5" fill="#67e8f9" opacity="0.9"/>
+  <rect x="1230" y="300" width="4" height="5" fill="#f345c0" opacity="0.9"/>
+  <line x1="1220" y1="188" x2="1220" y2="352" stroke="#0e0a1e" stroke-width="5"/>
+  <!-- resources shelf under the window -->
+  <rect x="1140" y="372" width="160" height="9" rx="3" fill="#3a2a55"/>
+  <rect x="1148" y="344" width="10" height="28" fill="#b24bf3"/>
+  <rect x="1160" y="348" width="10" height="24" fill="#22d3ee"/>
+  <rect x="1172" y="342" width="10" height="30" fill="#f345c0"/>
+  <rect x="1184" y="350" width="10" height="22" fill="#eaf6ff"/>
+  <rect x="1200" y="346" width="22" height="26" rx="2" fill="#2a1c47" stroke="#4a3670" stroke-width="1.6"/>
+  <rect x="1226" y="346" width="22" height="26" rx="2" fill="#241851" stroke="#4a3670" stroke-width="1.6"/>
+  <path d="M1258 372 q -12 -18 -4 -30 q 6 8 6 16 q 2 -12 10 -18 q 4 14 -4 32 Z" fill="#2ed17e" opacity="0.9"/>
+
+  <!-- ======================= TROPHY CASE ======================= -->
+  <rect x="1324" y="192" width="212" height="204" rx="8" fill="none" stroke="#3a2a55" stroke-width="3"/>
+  <rect x="1330" y="240" width="200" height="10" rx="3" fill="#3a2a55"/>
+  <rect x="1330" y="330" width="200" height="10" rx="3" fill="#3a2a55"/>
+  <rect x="1330" y="392" width="200" height="6" rx="3" fill="#2a1e40"/>
+
+  <!-- ======================= FLOOR ======================= -->
+  <rect x="0" y="520" width="1600" height="240" fill="url(#floor)"/>
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="2">
+    <line x1="0" y1="556" x2="1600" y2="556"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="652" x2="1600" y2="652"/>
+    <line x1="0" y1="712" x2="1600" y2="712"/>
+    <line x1="320" y1="520" x2="220" y2="760"/>
+    <line x1="560" y1="520" x2="505" y2="760"/>
+    <line x1="800" y1="520" x2="790" y2="760"/>
+    <line x1="1040" y1="520" x2="1075" y2="760"/>
+    <line x1="1280" y1="520" x2="1360" y2="760"/>
+  </g>
+  <!-- neon + monitor reflections on the floor -->
+  <rect x="140" y="520" width="1320" height="70" fill="url(#neon-refl)"/>
+  <rect x="60" y="520" width="120" height="110" fill="url(#cyan-refl)"/>
+  <rect x="1090" y="520" width="260" height="96" fill="url(#neon-refl)"/>
+  <rect x="0" y="520" width="1600" height="10" fill="rgba(0,0,0,0.35)"/>
+
+  <!-- patterned rug -->
+  <ellipse cx="500" cy="660" rx="214" ry="54" fill="#241a40"/>
+  <ellipse cx="500" cy="660" rx="210" ry="52" fill="#2a1e4a" stroke="#b24bf3" stroke-opacity="0.4" stroke-width="2"/>
+  <ellipse cx="500" cy="660" rx="150" ry="36" fill="none" stroke="rgba(243,69,192,0.28)" stroke-width="2" stroke-dasharray="12 8"/>
+  <ellipse cx="500" cy="660" rx="86" ry="20" fill="none" stroke="rgba(103,232,249,0.25)" stroke-width="2"/>
+
+  <!-- crumpled paper balls near the desk (storytelling) -->
+  <circle cx="1052" cy="702" r="7" fill="#d8d4c8"/>
+  <circle cx="1049" cy="699" r="3" fill="#eae6da"/>
+  <circle cx="1078" cy="716" r="5.5" fill="#cfcbc0"/>
+
+  <!-- ======================= ASSESSMENT DESK / WORKSTATION ======================= -->
+  <ellipse cx="1230" cy="588" rx="158" ry="17" fill="#000" opacity="0.32"/>
+  <rect x="1080" y="470" width="300" height="18" rx="4" fill="#31234f" stroke="#b24bf3" stroke-opacity="0.65" stroke-width="2"/>
+  <rect x="1080" y="486" width="300" height="5" fill="#241a3d"/>
+  <rect x="1096" y="488" width="14" height="86" fill="#1f1638"/>
+  <rect x="1350" y="488" width="14" height="86" fill="#1f1638"/>
+  <rect x="1090" y="560" width="280" height="8" rx="4" fill="#1f1638"/>
+  <!-- monitors (glow overlay + widgets engine-drawn) -->
+  <rect x="1104" y="392" width="118" height="76" rx="6" fill="#0c0719" stroke="#b24bf3" stroke-width="3"/>
+  <rect x="1112" y="400" width="102" height="56" rx="3" fill="#120b26"/>
+  <line x1="1120" y1="412" x2="1200" y2="412" stroke="#b24bf3" stroke-width="3" opacity="0.85"/>
+  <line x1="1120" y1="426" x2="1182" y2="426" stroke="#67e8f9" stroke-width="3" opacity="0.8"/>
+  <line x1="1120" y1="440" x2="1164" y2="440" stroke="#b24bf3" stroke-width="3" opacity="0.75"/>
+  <rect x="1232" y="400" width="100" height="64" rx="6" fill="#0c0719" stroke="#f345c0" stroke-width="3"/>
+  <rect x="1240" y="408" width="84" height="48" rx="3" fill="#120b26"/>
+  <rect x="1246" y="414" width="34" height="24" rx="2" fill="#f345c0" opacity="0.75"/>
+  <line x1="1288" y1="418" x2="1320" y2="418" stroke="#67e8f9" stroke-width="3" opacity="0.85"/>
+  <line x1="1288" y1="430" x2="1314" y2="430" stroke="#67e8f9" stroke-width="3" opacity="0.6"/>
+  <!-- drawing tablet + pen pot on the desk -->
+  <path d="M1146 468 l86 0 l14 -14 l-86 0 Z" fill="#1a1133" stroke="#67e8f9" stroke-width="2"/>
+  <path d="M1158 462 l60 0 l8 -8 l-60 0 Z" fill="#221845"/>
+  <path d="M1170 459 q14 -6 30 -2" stroke="#f345c0" stroke-width="2" fill="none"/>
+  <rect x="1112" y="446" width="16" height="22" rx="3" fill="#241a3d" stroke="#4a3670" stroke-width="1.6"/>
+  <line x1="1117" y1="440" x2="1117" y2="450" stroke="#22d3ee" stroke-width="2.5"/>
+  <line x1="1123" y1="438" x2="1123" y2="450" stroke="#f345c0" stroke-width="2.5"/>
+
+  <!-- ======================= HOLO TABLE ======================= -->
+  <ellipse cx="750" cy="682" rx="112" ry="16" fill="#000" opacity="0.3"/>
+  <ellipse cx="750" cy="666" rx="120" ry="26" fill="#221845" stroke="#b24bf3" stroke-opacity="0.55" stroke-width="2.5"/>
+  <ellipse cx="750" cy="662" rx="104" ry="20" fill="#191130"/>
+  <ellipse cx="750" cy="662" rx="56" ry="10" fill="none" stroke="rgba(103,232,249,0.35)" stroke-width="2"/>
+
+  <!-- wall-base cable run desk → terminal -->
+  <path d="M1090 566 q -160 -22 -330 -8 q -200 16 -350 -6" fill="none" stroke="#0b0716" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1090 566 q -160 -22 -330 -8 q -200 16 -350 -6" fill="none" stroke="#332552" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- large plant right corner -->
+  <ellipse cx="1561" cy="512" rx="30" ry="7" fill="#000" opacity="0.3"/>
+  <rect x="1540" y="470" width="42" height="38" rx="3" fill="#221a10"/>
+  <rect x="1540" y="470" width="42" height="8" fill="#2c2214"/>
+  <path d="M1561 470 q -26 -30 -11 -56 q 11 15 11 28 q 2 -22 15 -34 q 9 26 -4 62 Z" fill="#2ed17e"/>
+  <path d="M1561 470 q 16 -20 10 -42 q -10 9 -10 22 Z" fill="#1fa35f"/>
+
+  <!-- ======================= VIGNETTE ======================= -->
+  <rect x="0" y="0" width="1600" height="760" fill="url(#vignette)"/>
+</svg>

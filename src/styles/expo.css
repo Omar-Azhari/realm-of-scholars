@@ -1,0 +1,220 @@
+/* Expo mode: welcome screen and the presenter bar (see src/realm/expo.ts). Uses the realm design tokens. */
+
+/* --- Welcome screen (shares the main-menu layout in realm.css) --------- */
+.realm-root .expo-welcome .expo-showcase {
+  min-height: 1.5em;
+  margin: 0 0 34px;
+  max-width: 440px;
+  color: var(--text);
+  font-size: var(--fs-18);
+  line-height: 1.45;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+  animation: expo-line-in 0.6s var(--ease) both;
+}
+@keyframes expo-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+.realm-root .expo-welcome .expo-name {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: min(320px, 100%);
+  margin: 0 0 30px;
+}
+.realm-root .expo-welcome .expo-name-label {
+  color: var(--text-dim);
+  font-size: var(--fs-12);
+  font-weight: 700;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+}
+/* !important: the realm's form-field rule is far more specific (a chain of :not()s). */
+.realm-root .expo-welcome .expo-name input {
+  min-height: 0 !important;
+  height: 40px;
+  padding: 0 2px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(236, 228, 210, 0.45) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--text-strong);
+  font-size: var(--fs-18) !important;
+}
+.realm-root .expo-welcome .expo-name input::placeholder {
+  color: var(--text-muted);
+}
+.realm-root .expo-welcome .expo-name input:focus {
+  border-color: transparent !important;
+  border-bottom-color: var(--gold) !important;
+  box-shadow: 0 1px 0 0 var(--gold) !important;
+}
+.realm-root .expo-welcome button.expo-start {
+  position: relative;
+  gap: 14px;
+  padding: 0;
+  color: var(--text-strong);
+  font-family: var(--font-display);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+}
+.realm-root .expo-welcome button.expo-start::before,
+.realm-root .expo-welcome button.expo-start::after {
+  content: "";
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+}
+.realm-root .expo-welcome button.expo-start::after {
+  display: none;
+}
+.realm-root .expo-welcome .expo-start-text {
+  animation: expo-pulse 2.4s ease-in-out infinite;
+}
+.realm-root .expo-welcome button.expo-start:hover .expo-start-text {
+  color: var(--gold-strong);
+}
+@keyframes expo-pulse {
+  50% {
+    opacity: 0.45;
+  }
+}
+.realm-root .expo-welcome .expo-note {
+  margin: 14px 0 0 50px;
+  color: var(--text-muted);
+  font-size: var(--fs-13);
+}
+@media (prefers-reduced-motion: reduce) {
+  .realm-root .expo-welcome .expo-showcase,
+  .realm-root .expo-welcome .expo-start-text {
+    animation: none;
+  }
+}
+
+/* --- Presenter bar: bottom-left beside the message-log button ---------- */
+.realm-root .rs-expo-bar {
+  position: absolute;
+  bottom: var(--hud-edge, 16px);
+  left: calc(var(--hud-edge, 16px) + 56px);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 44px;
+  padding: 0 4px 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-l);
+  background: rgba(8, 10, 16, 0.82);
+  box-shadow: var(--shadow-1);
+}
+.realm-root .realm-game:has(.rs-lecture) .rs-expo-bar {
+  display: none;
+}
+.realm-root .rs-expo-badge {
+  margin-right: 6px;
+  padding-right: 12px;
+  border-right: 1px solid var(--line);
+  color: var(--gold);
+  font: 700 11px/1 var(--font-ui);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.realm-root .rs-expo-bar button[type],
+.realm-root .rs-expo-tour button[type],
+.realm-root .rs-expo-idle button[type] {
+  gap: 8px;
+  height: 34px;
+  padding: 0 12px;
+  border-radius: var(--radius-m);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  font: 600 var(--fs-13) / 1.2 var(--font-ui);
+  cursor: pointer;
+}
+.realm-root .rs-expo-bar button[type] .rs-icon,
+.realm-root .rs-expo-tour button[type] .rs-icon {
+  font-size: 16px;
+  color: var(--text-dim);
+}
+.realm-root .rs-expo-bar button[type]:hover,
+.realm-root .rs-expo-tour button[type]:hover {
+  background: var(--surface-2);
+  color: var(--text-strong);
+}
+.realm-root .rs-expo-bar button[type].on {
+  border-color: var(--line-gold);
+  color: var(--text-strong);
+}
+.realm-root .rs-expo-bar button[type].danger {
+  border-color: rgba(232, 136, 126, 0.6);
+  background: var(--danger-tint);
+  color: #fff;
+}
+.realm-root .rs-expo-tour {
+  position: absolute;
+  bottom: calc(var(--hud-edge, 16px) + 54px);
+  left: calc(var(--hud-edge, 16px) + 56px);
+  z-index: 15;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(190px, 1fr));
+  gap: 2px;
+  padding: 8px;
+  border-radius: var(--radius-l);
+  background: rgba(8, 10, 16, 0.94);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-2);
+}
+.realm-root .rs-expo-tour button[type] {
+  justify-content: flex-start;
+  text-align: left;
+}
+.realm-root .rs-expo-idle {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  background: rgba(3, 5, 9, 0.78);
+  color: var(--text-strong);
+  text-align: center;
+}
+.realm-root .rs-expo-idle p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-32);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.realm-root .rs-expo-idle p.small {
+  font-family: var(--font-ui);
+  font-size: var(--fs-15);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-dim);
+}
+.realm-root .rs-expo-idle button[type] {
+  margin-top: 10px;
+  height: 42px;
+  padding: 0 22px;
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--text-on-gold);
+  font-weight: 700;
+}
+.realm-root .rs-expo-idle button[type]:hover {
+  background: var(--gold-strong);
+}
+@media (max-width: 640px) {
+  .realm-root .rs-expo-tour {
+    grid-template-columns: 1fr;
+  }
+}

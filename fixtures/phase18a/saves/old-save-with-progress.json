@@ -1,0 +1,3222 @@
+{
+  "version": 2,
+  "semester": {
+    "label": "2026 Semester 2",
+    "timezone": "Australia/Melbourne",
+    "startDate": {
+      "value": null,
+      "status": "needs_confirmation"
+    },
+    "endDate": {
+      "value": null,
+      "status": "needs_confirmation"
+    },
+    "breaks": [],
+    "examPeriod": {
+      "value": null,
+      "status": "needs_confirmation"
+    },
+    "weekNumberingNote": "No semester start date, break dates, or exam period are stated anywhere in /docs. Previous automated inference that a mid-semester break occurred (10-16 August 2026) was removed: that inference was based on extrapolating from week numbers and is not supported by an explicit source file in /docs. The application distinguishes between: confirmed current-semester dates, placeholder dates shown in the source, conflicting or potentially stale dates, and dates inferred only from week numbers. All non-confirmed dates are labelled with an explicit dateKind and must be verified before being used as planner deadlines.",
+    "subjects": [
+      {
+        "id": "user-interface-design",
+        "name": "User Interface Design",
+        "code": {
+          "value": "CSE2UI",
+          "status": "confirmed"
+        },
+        "colourTheme": "Violet / magenta",
+        "characterConcept": "A creative interface designer with a holographic sketch tablet.",
+        "modules": [
+          {
+            "id": "ui-module-01",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 1,
+            "title": "Introduction to CSE2UI",
+            "overview": "Subject orientation, expectations, assessment overview, and the role of user interface design.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-02",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 2,
+            "title": "Basics of Human-Centred Design",
+            "overview": "Human-centred design principles, user needs, usability, accessibility, and designing around real users.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-03",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 3,
+            "title": "Design Process Part 1: Discover",
+            "overview": "Researching users and contexts, gathering evidence, observations, interviews, and identifying problems.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-04",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 4,
+            "title": "Design Process Part 2: Define",
+            "overview": "Synthesising research, defining the design problem, personas, user needs, and clear problem statements.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-05",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 5,
+            "title": "Design Process Part 3: Develop",
+            "overview": "Generating ideas, comparing alternatives, sketching, ideation, and refining possible solutions.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-06",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 6,
+            "title": "Design Process Part 4: Deliver and Prototyping",
+            "overview": "Creating prototypes, selecting appropriate fidelity, testing interactions, and preparing designs for evaluation.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-07",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 7,
+            "title": "Evaluation and User Testing",
+            "overview": "Planning and conducting usability testing, collecting feedback, identifying usability problems, and improving designs.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-08",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 8,
+            "title": "Quantitative and Qualitative Analysis",
+            "overview": "Analysing numerical and qualitative data, using tools such as JASP and Taguette where required, and reporting findings.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-09",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 9,
+            "title": "Affordances",
+            "overview": "Understanding how design elements communicate possible actions and how users perceive and use interface controls.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-10",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 10,
+            "title": "Interfaces, Models and Metaphors",
+            "overview": "Mental models, conceptual models, interface metaphors, and how familiar patterns support understanding.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-11",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 11,
+            "title": "Design for All",
+            "overview": "Inclusive design, accessibility, diverse user needs, and reducing barriers in interfaces.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ui-module-12",
+            "subjectId": "user-interface-design",
+            "moduleNumber": 12,
+            "title": "User Interfaces of Tomorrow",
+            "overview": "Emerging interfaces, future interaction technologies, and reflection on changing interface design practice.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          }
+        ],
+        "assessments": [
+          {
+            "id": "ui-assessment-1",
+            "subjectId": "user-interface-design",
+            "assessmentNumber": 1,
+            "part": null,
+            "title": "Assessment 1",
+            "kind": "other",
+            "weight": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "weightRaw": "NEEDS_CONFIRMATION",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Week 4, 3-9 August 2026; exact date/time NEEDS_CONFIRMATION",
+            "dateKind": "week_only",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Title and instructions were not clearly visible in the screenshots.",
+            "notes": "Nothing about this assessment beyond the Week 4 due window is confirmed. Do not schedule a deadline reminder until title, weight, and exact date/time are confirmed.",
+            "sourceFile": "01_User_Interface_Design/13_Assessments.md",
+            "confirmationStatus": "needs_confirmation",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "ui-assessment-2",
+            "subjectId": "user-interface-design",
+            "assessmentNumber": 2,
+            "part": null,
+            "title": "Quantitative and Qualitative Data Analysis",
+            "kind": "report",
+            "weight": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "weightRaw": "NEEDS_CONFIRMATION (internal split only: 40% quantitative / 40% qualitative / 20% report)",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Week 8, 7-13 September 2026; exact date/time NEEDS_CONFIRMATION",
+            "dateKind": "week_only",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Includes a quantitative task, qualitative task, written report, and associated video presentations. May be completed individually or in a group of up to five. JASP and Taguette or similar tools may be used. Submission appears to be one PDF through the LMS with AI acknowledgement where applicable.",
+            "notes": "The 40/40/20 split shown in source is an internal component breakdown of this assessment, not the overall subject-level weight — do not treat it as the weight value. Source mentions 'AI acknowledgement where applicable' as part of submission, but does not state an explicit AI-use policy (e.g. permitted/restricted) the way Assessment 4 does, so aiPolicy remains NEEDS_CONFIRMATION rather than being inferred from that phrase. Extension eligibility not stated.",
+            "sourceFile": "01_User_Interface_Design/13_Assessments.md",
+            "confirmationStatus": "needs_confirmation",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "ui-assessment-3",
+            "subjectId": "user-interface-design",
+            "assessmentNumber": 3,
+            "part": null,
+            "title": "Assessment 3",
+            "kind": "other",
+            "weight": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "weightRaw": "NEEDS_CONFIRMATION",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Week 12, 5-11 October 2026; exact date/time NEEDS_CONFIRMATION",
+            "dateKind": "week_only",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Title and instructions were not clearly visible in the screenshots.",
+            "notes": "Nothing about this assessment beyond the Week 12 due window is confirmed. Do not schedule a deadline reminder until title, weight, and exact date/time are confirmed.",
+            "sourceFile": "01_User_Interface_Design/13_Assessments.md",
+            "confirmationStatus": "needs_confirmation",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "ui-assessment-4",
+            "subjectId": "user-interface-design",
+            "assessmentNumber": 4,
+            "part": null,
+            "title": "Online Supervised Exam",
+            "kind": "exam",
+            "weight": {
+              "value": 50,
+              "status": "confirmed"
+            },
+            "weightRaw": "50%",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Exam period; exact date/time NEEDS_CONFIRMATION",
+            "dateKind": "placeholder_in_source",
+            "aiPolicy": {
+              "value": "No AI.",
+              "status": "confirmed"
+            },
+            "extensionEligibility": {
+              "value": "Not eligible for a short extension.",
+              "status": "confirmed"
+            },
+            "description": "120 minutes, 120 marks, multiple-choice, matching, and short-answer questions covering all 12 modules.",
+            "notes": "Weight (50%), AI policy, and extension ineligibility are confirmed; only the exact exam date/time within the exam period remains NEEDS_CONFIRMATION.",
+            "sourceFile": "01_User_Interface_Design/13_Assessments.md",
+            "confirmationStatus": "partially_confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "cloud-based-web-application-development",
+        "name": "Cloud-Based Web Application Development",
+        "code": {
+          "value": "CSE3CWA",
+          "status": "confirmed"
+        },
+        "colourTheme": "Electric blue / silver",
+        "characterConcept": "A calm cloud engineer with a floating terminal and server drone.",
+        "modules": [
+          {
+            "id": "cwa-module-01",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 1,
+            "title": "Introduction to Cloud-Based Web Application Development",
+            "overview": "Subject overview and foundations of modern cloud-based web applications.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-02",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 2,
+            "title": "Web Hosting and Full-Stack Development",
+            "overview": "Web hosting, frontend and backend responsibilities, HTML, CSS, JavaScript, React, Node.js, and Express.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-03",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 3,
+            "title": "Databases for Modern Web Applications",
+            "overview": "SQL, NoSQL, graph databases, PostgreSQL, SQLite, data modelling, and CRUD operations.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-04",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 4,
+            "title": "Building a Full-Stack Web Application",
+            "overview": "Connecting frontend, backend, and database layers; testing APIs and application behaviour.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-05",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 5,
+            "title": "Authentication, Identity and Secure Access",
+            "overview": "Authentication, protected routes, OAuth, passkeys, multi-factor authentication, and secure access practices.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-06",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 6,
+            "title": "Advanced React, Next.js and Modern Frontend Design",
+            "overview": "Advanced React patterns, Next.js, component architecture, and modern frontend application design.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-07",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 7,
+            "title": "Cloud Web Applications for IoT Networks",
+            "overview": "IoT-connected web applications, device communication, MQTT, and cloud integration.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-08",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 8,
+            "title": "Microsoft ASP.NET Core and the Microsoft Web Ecosystem",
+            "overview": "ASP.NET Core, Razor, API development, and Microsoft web technologies.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-09",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 9,
+            "title": "ASP.NET Core in the Microsoft Family",
+            "overview": "Microsoft Graph, Azure integration, identity, and broader Microsoft ecosystem services.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-10",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 10,
+            "title": "AWS Cloud Deployment and Hosting",
+            "overview": "Deploying and hosting web applications using AWS and related cloud infrastructure.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-11",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 11,
+            "title": "AWS Cloud Automation and Deployment Operations",
+            "overview": "Automation, deployment workflows, GitHub, Ubuntu, secure keys, environment variables, and operations.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "cwa-module-12",
+            "subjectId": "cloud-based-web-application-development",
+            "moduleNumber": 12,
+            "title": "Final Integration and Professional Practice",
+            "overview": "Integrating the complete application, deployment checks, documentation, testing, and professional submission practice.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          }
+        ],
+        "assessments": [
+          {
+            "id": "cwa-assessment-1",
+            "subjectId": "cloud-based-web-application-development",
+            "assessmentNumber": 1,
+            "part": null,
+            "title": "HealthCoverSim, Private Health Insurance Quote Simulator",
+            "kind": "project",
+            "weight": {
+              "value": 20,
+              "status": "confirmed"
+            },
+            "weightRaw": "20%",
+            "dueDate": {
+              "value": "2026-08-09",
+              "status": "confirmed"
+            },
+            "dueTime": {
+              "value": "23:59",
+              "status": "confirmed"
+            },
+            "dueWindowRaw": "11:59 pm AEST, Sunday 9 August 2026",
+            "dateKind": "exact",
+            "aiPolicy": {
+              "value": "AI Collaboration category — requires an AI-use statement and a completed AI acknowledgement form.",
+              "status": "confirmed"
+            },
+            "extensionEligibility": {
+              "value": "Short-extension eligible.",
+              "status": "confirmed"
+            },
+            "description": "Build a basic full-stack web application using a React frontend, Node/Express backend, and SQLite database. Include persistent data, private health insurance business logic such as Lifetime Health Cover loading and premium calculations, clear results, a README, AI-use statement, AI acknowledgement form, and a 3-5 minute video demonstration.",
+            "notes": "Fully confirmed: weight, due date/time, AI policy, and extension eligibility all stated explicitly in source.",
+            "sourceFile": "02_Cloud_Based_Web_Application_Development/13_Assessments.md",
+            "confirmationStatus": "confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": true,
+              "reason": null
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "cwa-assessment-2",
+            "subjectId": "cloud-based-web-application-development",
+            "assessmentNumber": 2,
+            "part": null,
+            "title": "Full-Stack Web Application",
+            "kind": "project",
+            "weight": {
+              "value": 25,
+              "status": "confirmed"
+            },
+            "weightRaw": "25%",
+            "dueDate": {
+              "value": "2026-08-30",
+              "status": "confirmed"
+            },
+            "dueTime": {
+              "value": "23:59",
+              "status": "confirmed"
+            },
+            "dueWindowRaw": "11:59 pm AEST, 30 August 2026",
+            "dateKind": "exact",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Further details were marked as to be announced in the screenshots.",
+            "notes": "Weight and due date/time are confirmed. Task content, AI policy, and extension eligibility were marked 'to be announced' in source and remain NEEDS_CONFIRMATION.",
+            "sourceFile": "02_Cloud_Based_Web_Application_Development/13_Assessments.md",
+            "confirmationStatus": "confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": true,
+              "reason": null
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "cwa-assessment-3",
+            "subjectId": "cloud-based-web-application-development",
+            "assessmentNumber": 3,
+            "part": null,
+            "title": "Cloud-Based Web Application",
+            "kind": "project",
+            "weight": {
+              "value": 25,
+              "status": "confirmed"
+            },
+            "weightRaw": "25%",
+            "dueDate": {
+              "value": "2026-09-20",
+              "status": "confirmed"
+            },
+            "dueTime": {
+              "value": "23:59",
+              "status": "confirmed"
+            },
+            "dueWindowRaw": "11:59 pm AEST, 20 September 2026",
+            "dateKind": "exact",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Further details were marked as to be announced in the screenshots.",
+            "notes": "Weight and due date/time are confirmed. Task content, AI policy, and extension eligibility were marked 'to be announced' in source and remain NEEDS_CONFIRMATION.",
+            "sourceFile": "02_Cloud_Based_Web_Application_Development/13_Assessments.md",
+            "confirmationStatus": "confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": true,
+              "reason": null
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "cwa-assessment-4",
+            "subjectId": "cloud-based-web-application-development",
+            "assessmentNumber": 4,
+            "part": null,
+            "title": "Final Web Application",
+            "kind": "project",
+            "weight": {
+              "value": 30,
+              "status": "confirmed"
+            },
+            "weightRaw": "30%",
+            "dueDate": {
+              "value": "2026-10-11",
+              "status": "confirmed"
+            },
+            "dueTime": {
+              "value": "23:59",
+              "status": "confirmed"
+            },
+            "dueWindowRaw": "11:59 pm AEDT, 11 October 2026",
+            "dateKind": "exact",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Further details were marked as to be announced in the screenshots.",
+            "notes": "Weight and due date/time are confirmed. Note: source lists this deadline in AEDT (daylight saving), unlike the earlier AEST deadlines for this subject — preserved as-is, not treated as a source error. Task content, AI policy, and extension eligibility remain NEEDS_CONFIRMATION.",
+            "sourceFile": "02_Cloud_Based_Web_Application_Development/13_Assessments.md",
+            "confirmationStatus": "confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": true,
+              "reason": null
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "project-management",
+        "name": "Project Management",
+        "code": {
+          "value": null,
+          "status": "needs_confirmation"
+        },
+        "colourTheme": "Amber / navy",
+        "characterConcept": "A focused project coordinator carrying a smart clipboard and timeline projector.",
+        "modules": [
+          {
+            "id": "pm-module-01",
+            "subjectId": "project-management",
+            "moduleNumber": 1,
+            "title": "Introduction to Project Management",
+            "overview": "What projects are, the role of project management, project lifecycles, project managers, and the triple constraint of scope, time, and cost.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-02",
+            "subjectId": "project-management",
+            "moduleNumber": 2,
+            "title": "Project Management Approaches",
+            "overview": "Waterfall, Agile, iterative delivery, when each approach is suitable, strengths, limitations, and comparison.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-03",
+            "subjectId": "project-management",
+            "moduleNumber": 3,
+            "title": "Agile Development and Scrum",
+            "overview": "Agile values, Scrum roles, sprints, sprint planning, daily stand-ups, reviews, retrospectives, and backlogs.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-04",
+            "subjectId": "project-management",
+            "moduleNumber": 4,
+            "title": "Project Integration Management",
+            "overview": "Project charters, project management plans, directing work, monitoring, integrated change control, and project closure.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-05",
+            "subjectId": "project-management",
+            "moduleNumber": 5,
+            "title": "Project Scope Management",
+            "overview": "Requirements, scope statements, work breakdown structures, deliverables, boundaries, and controlling scope creep.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-06",
+            "subjectId": "project-management",
+            "moduleNumber": 6,
+            "title": "Schedule and Resource Management",
+            "overview": "Activities, dependencies, critical path, Gantt charts, milestones, people, equipment, software, and resource planning.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-07",
+            "subjectId": "project-management",
+            "moduleNumber": 7,
+            "title": "Quality and Cost Management",
+            "overview": "Quality assurance, quality control, cost estimation, budgets, cost baselines, and cost control.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-08",
+            "subjectId": "project-management",
+            "moduleNumber": 8,
+            "title": "Risk Management",
+            "overview": "Risk identification, analysis, prioritisation, response strategies, risk registers, likelihood, impact, and monitoring.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-09",
+            "subjectId": "project-management",
+            "moduleNumber": 9,
+            "title": "Quality Control and Project Success",
+            "overview": "Testing, continuous improvement, Six Sigma concepts, success factors, success criteria, and KPIs.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-10",
+            "subjectId": "project-management",
+            "moduleNumber": 10,
+            "title": "Project Management Standards",
+            "overview": "PMBOK, PRINCE2, structured project management standards, frameworks, and their practical application.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-11",
+            "subjectId": "project-management",
+            "moduleNumber": 11,
+            "title": "ITIL and IT Service Management",
+            "overview": "ITIL, ITSM, service delivery, support, incident management, problem management, change management, and continual improvement.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "pm-module-12",
+            "subjectId": "project-management",
+            "moduleNumber": 12,
+            "title": "Revision and Integration",
+            "overview": "Reviewing the full subject, connecting the knowledge areas, and preparing for final assessment or examination.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          }
+        ],
+        "assessments": [
+          {
+            "id": "pm-assessment-1-case-study",
+            "subjectId": "project-management",
+            "assessmentNumber": 1,
+            "part": null,
+            "title": "Case study task analysing project constraints and framework",
+            "kind": "other",
+            "weight": {
+              "value": 30,
+              "status": "confirmed"
+            },
+            "weightRaw": "30% (recorded)",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Sunday 29 March 2026 (preserved from source; potentially stale)",
+            "dateKind": "placeholder_in_source",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Case study task analysing project constraints and framework, per the subject's assessment overview page.",
+            "notes": "The overview page displays 29 March 2026 as the due date, but this conflicts with the rest of the Semester 2 material and may be stale or from another teaching period. Preserved as source evidence; do NOT treat as a confirmed Semester 2 deadline until verified against the LMS. AI policy and extension eligibility are not mentioned anywhere in source for this subject.",
+            "sourceFile": "screenshots: Project Management assessment overview",
+            "confirmationStatus": "partially_confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "pm-assessment-2-quizzes",
+            "subjectId": "project-management",
+            "assessmentNumber": 2,
+            "part": null,
+            "title": "Four quizzes (weekly short assessments)",
+            "kind": "quiz",
+            "weight": {
+              "value": 10,
+              "status": "confirmed"
+            },
+            "weightRaw": "10% (recorded total)",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Fridays in Weeks 4, 6, 8 and 10 (exact dates not shown)",
+            "dateKind": "week_only",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Four quiz occurrences, one each in Weeks 4, 6, 8, and 10, each due on a Friday per the source.",
+            "notes": "The overview lists four quiz weeks but no exact calendar dates were shown in the screenshots. AI policy and extension eligibility are not mentioned anywhere in source for this subject.",
+            "sourceFile": "screenshots: Project Management assessment overview",
+            "confirmationStatus": "partially_confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "pm-assessment-3-group-project",
+            "subjectId": "project-management",
+            "assessmentNumber": 3,
+            "part": null,
+            "title": "Three-part group project (total)",
+            "kind": "project",
+            "weight": {
+              "value": 60,
+              "status": "confirmed"
+            },
+            "weightRaw": "60% (recorded total)",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Overview places parts around Weeks 9, 11 and 12; individual part pages show Week 13 (Part 1) and Week 12 (Part 3) — SOURCE CONFLICT",
+            "dateKind": "source_conflict",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Three-part group project; see the pm-assessment-3-part1 and pm-assessment-3-part3 records for individually documented parts (Part 2 does not appear anywhere in the source material).",
+            "notes": "The assessment overview and the individual part pages disagree on scheduling (overview: parts around Weeks 9/11/12; Part 1 page: Week 13; Part 3 page: Week 12). All timing is NEEDS_CONFIRMATION until resolved against the LMS. No Part 2 record exists in source — this is a genuine gap, not something inferred or filled in here.",
+            "sourceFile": "screenshots: Project Management assessment overview and individual Part pages",
+            "confirmationStatus": "partially_confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "pm-assessment-3-part1",
+            "subjectId": "project-management",
+            "assessmentNumber": 3,
+            "part": "Part 1: Group Project Management Plan",
+            "title": "Assessment 3 - Part 1: Group Project Management Plan",
+            "kind": "report",
+            "weight": {
+              "value": 25,
+              "status": "confirmed"
+            },
+            "weightRaw": "25% (recorded)",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Displayed as due in Week 13 on the Part 1 page; date field was placeholder text",
+            "dateKind": "placeholder_in_source",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "1000 words per student, per the Part 1 page.",
+            "notes": "Week 13 conflicts with the overview's Week 9-12 range for this assessment — see pm-assessment-3-group-project. Date field on the source page was placeholder text, not a real date.",
+            "sourceFile": "screenshots: Project Management Assessment 3 Part 1 page",
+            "confirmationStatus": "partially_confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          },
+          {
+            "id": "pm-assessment-3-part3",
+            "subjectId": "project-management",
+            "assessmentNumber": 3,
+            "part": "Part 3: Group Presentation",
+            "title": "Assessment 3 - Part 3: Group Presentation",
+            "kind": "presentation",
+            "weight": {
+              "value": 15,
+              "status": "confirmed"
+            },
+            "weightRaw": "15% (recorded)",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "Displayed as due in Week 12 on the Part 3 page; date field was placeholder text",
+            "dateKind": "placeholder_in_source",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "Group presentation, around five minutes per team member, per the Part 3 page.",
+            "notes": "Week 12 is consistent with one reading of the overview but the overall conflict remains unresolved — see pm-assessment-3-group-project. Date field on the source page was placeholder text, not a real date.",
+            "sourceFile": "screenshots: Project Management Assessment 3 Part 3 page",
+            "confirmationStatus": "partially_confirmed",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          }
+        ]
+      },
+      {
+        "id": "professional-practices-and-entrepreneurship-in-it",
+        "name": "Professional Practices and Entrepreneurship in Information Technology",
+        "code": {
+          "value": null,
+          "status": "needs_confirmation"
+        },
+        "colourTheme": "Emerald / gold",
+        "characterConcept": "An energetic startup founder with a digital pitch board and ethics compass.",
+        "modules": [
+          {
+            "id": "ppe-module-01",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 1,
+            "title": "Professional Practice and Entrepreneurship Foundations",
+            "overview": "Introduction to professional practice in IT, entrepreneurship, professional identity, and the relationship between technology and business.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-02",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 2,
+            "title": "Opportunity Identification and Innovation",
+            "overview": "Recognising problems worth solving, generating ideas, innovation, customer needs, and evaluating opportunities.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-03",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 3,
+            "title": "Market and Customer Discovery",
+            "overview": "Market research, customer discovery, target users, competitors, evidence gathering, and validating assumptions.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-04",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 4,
+            "title": "Entrepreneurial Planning and Value Propositions",
+            "overview": "Developing the startup concept, defining value propositions, feasibility, positioning, and early planning.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-05",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 5,
+            "title": "Start-up Business Models",
+            "overview": "Business models, Business Model Canvas, Lean Canvas, customer segments, value propositions, revenue streams, cost structures, SaaS, platform and marketplace models, validation, valuation, and investor expectations.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-06",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 6,
+            "title": "Structuring and Delivering the Startup Plan and Pitch",
+            "overview": "Business plans, problem and solution statements, market and competitor analysis, financial projections, pitch decks, storytelling, public speaking, investor communication, and Q&A.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-07",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 7,
+            "title": "Ethics in Information Technology",
+            "overview": "Professional ethics, ACS Code of Ethics, ACS Code of Professional Conduct, utilitarianism, deontology, virtue ethics, accountability, and ethical decision-making.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-08",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 8,
+            "title": "Privacy, Surveillance and Digital Manipulation",
+            "overview": "Privacy rights, GDPR, data protection, surveillance, security versus privacy, whistleblowing, data breaches, deepfakes, misinformation, and digital manipulation.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-09",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 9,
+            "title": "Ethics and Governance in Artificial Intelligence",
+            "overview": "AI bias, fairness, transparency, accountability, responsible AI, governance frameworks, OECD principles, IEEE guidance, Australian Privacy Principles, and regulation.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-10",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 10,
+            "title": "Open-Source Ethics and Licensing",
+            "overview": "Open-source software, licences, copyright, intellectual property, AI-generated content ownership, blockchain governance, VR/AR ethics, IoT ethics, and professional responsibility.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-11",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 11,
+            "title": "Professional Career Readiness",
+            "overview": "Resumes, cover letters, LinkedIn, professional identity, networking, personal branding, behavioural interviews, STAR, SCAR, and career planning.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          },
+          {
+            "id": "ppe-module-12",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "moduleNumber": 12,
+            "title": "Professional Communication, Decision-Making and Conflict Management",
+            "overview": "Workplace and cross-cultural communication, active listening, barriers, inclusion, negotiation, conflict management, decision-making, prioritisation, teamwork, and collaboration.",
+            "suggestedTasks": [
+              "Open and review the module materials.",
+              "Record key concepts and definitions.",
+              "Complete any lecture, tutorial, lab, or activity shown in the LMS.",
+              "Add unclear points to the subject notes.",
+              "Connect the module to any upcoming assessment.",
+              "Mark the module complete after reviewing all available material."
+            ],
+            "miniGameIdeas": [
+              "Match key terms to their definitions.",
+              "Sort concepts into the correct process or category.",
+              "Complete a short memory-card challenge based on this module."
+            ],
+            "sourceNote": "Prepared from the screenshots provided in the conversation. Detailed readings, files, and activities not visible in those screenshots should be added later.",
+            "readings": [],
+            "schedule": [],
+            "outcomes": [],
+            "prerequisiteModuleIds": [],
+            "manualOverrides": []
+          }
+        ],
+        "assessments": [
+          {
+            "id": "ppe-assessments-structure-not-confirmed",
+            "subjectId": "professional-practices-and-entrepreneurship-in-it",
+            "assessmentNumber": 1,
+            "part": null,
+            "title": "Assessment structure not confirmed from the supplied source material",
+            "kind": "other",
+            "weight": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "weightRaw": "not_provided",
+            "dueDate": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueTime": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "dueWindowRaw": "NEEDS_CONFIRMATION",
+            "dateKind": "missing",
+            "aiPolicy": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "extensionEligibility": {
+              "value": null,
+              "status": "needs_confirmation"
+            },
+            "description": "The available screenshots show module/topic groupings (startup ideas and pitches; ethics and AI governance; career readiness and communication) but do not explicitly label these as assessed items or provide deadlines.",
+            "notes": "No assessment titles, weights, dates, AI policy, or extension eligibility exist anywhere in source for this subject — this placeholder record exists only so the subject has a visible, editable entry in the planner rather than an empty/invisible assessment list. Must be confirmed from the LMS or original assessment documentation before being treated as real assessments.",
+            "sourceFile": "04_Professional_Practices_and_Entrepreneurship_in_IT/13_Assessments.md",
+            "confirmationStatus": "needs_confirmation",
+            "reminderSchedule": {
+              "offsets": [
+                {
+                  "label": "4 weeks before",
+                  "isoDuration": "P28D"
+                },
+                {
+                  "label": "2 weeks before",
+                  "isoDuration": "P14D"
+                },
+                {
+                  "label": "1 week before",
+                  "isoDuration": "P7D"
+                },
+                {
+                  "label": "3 days before",
+                  "isoDuration": "P3D"
+                },
+                {
+                  "label": "1 day before",
+                  "isoDuration": "P1D"
+                },
+                {
+                  "label": "3 hours before",
+                  "isoDuration": "PT3H"
+                }
+              ],
+              "active": false,
+              "reason": "Due date and/or time is not yet confirmed. Per the UniGame reminder rules stated in this subject's assessments file, deadline reminders are not scheduled until both are confirmed."
+            },
+            "examInfo": {
+              "value": null,
+              "status": "needs_confirmation"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "module-task-ui-module-01",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-01",
+      "title": "Complete: Introduction to CSE2UI",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": true,
+      "completedAt": "2026-06-01T00:00:00.000Z",
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-02",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-02",
+      "title": "Complete: Basics of Human-Centred Design",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-03",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-03",
+      "title": "Complete: Design Process Part 1: Discover",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-04",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-04",
+      "title": "Complete: Design Process Part 2: Define",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-05",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-05",
+      "title": "Complete: Design Process Part 3: Develop",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-06",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-06",
+      "title": "Complete: Design Process Part 4: Deliver and Prototyping",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-07",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-07",
+      "title": "Complete: Evaluation and User Testing",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-08",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-08",
+      "title": "Complete: Quantitative and Qualitative Analysis",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-09",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-09",
+      "title": "Complete: Affordances",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-10",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-10",
+      "title": "Complete: Interfaces, Models and Metaphors",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-11",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-11",
+      "title": "Complete: Design for All",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ui-module-12",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ui-module-12",
+      "title": "Complete: User Interfaces of Tomorrow",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-01",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-01",
+      "title": "Complete: Introduction to Cloud-Based Web Application Development",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-02",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-02",
+      "title": "Complete: Web Hosting and Full-Stack Development",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-03",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-03",
+      "title": "Complete: Databases for Modern Web Applications",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-04",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-04",
+      "title": "Complete: Building a Full-Stack Web Application",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-05",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-05",
+      "title": "Complete: Authentication, Identity and Secure Access",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-06",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-06",
+      "title": "Complete: Advanced React, Next.js and Modern Frontend Design",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-07",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-07",
+      "title": "Complete: Cloud Web Applications for IoT Networks",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-08",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-08",
+      "title": "Complete: Microsoft ASP.NET Core and the Microsoft Web Ecosystem",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-09",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-09",
+      "title": "Complete: ASP.NET Core in the Microsoft Family",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-10",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-10",
+      "title": "Complete: AWS Cloud Deployment and Hosting",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-11",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-11",
+      "title": "Complete: AWS Cloud Automation and Deployment Operations",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-cwa-module-12",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "cwa-module-12",
+      "title": "Complete: Final Integration and Professional Practice",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-01",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-01",
+      "title": "Complete: Introduction to Project Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-02",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-02",
+      "title": "Complete: Project Management Approaches",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-03",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-03",
+      "title": "Complete: Agile Development and Scrum",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-04",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-04",
+      "title": "Complete: Project Integration Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-05",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-05",
+      "title": "Complete: Project Scope Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-06",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-06",
+      "title": "Complete: Schedule and Resource Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-07",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-07",
+      "title": "Complete: Quality and Cost Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-08",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-08",
+      "title": "Complete: Risk Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-09",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-09",
+      "title": "Complete: Quality Control and Project Success",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-10",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-10",
+      "title": "Complete: Project Management Standards",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-11",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-11",
+      "title": "Complete: ITIL and IT Service Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-pm-module-12",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "pm-module-12",
+      "title": "Complete: Revision and Integration",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-01",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-01",
+      "title": "Complete: Professional Practice and Entrepreneurship Foundations",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-02",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-02",
+      "title": "Complete: Opportunity Identification and Innovation",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-03",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-03",
+      "title": "Complete: Market and Customer Discovery",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-04",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-04",
+      "title": "Complete: Entrepreneurial Planning and Value Propositions",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-05",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-05",
+      "title": "Complete: Start-up Business Models",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-06",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-06",
+      "title": "Complete: Structuring and Delivering the Startup Plan and Pitch",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-07",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-07",
+      "title": "Complete: Ethics in Information Technology",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-08",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-08",
+      "title": "Complete: Privacy, Surveillance and Digital Manipulation",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-09",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-09",
+      "title": "Complete: Ethics and Governance in Artificial Intelligence",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-10",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-10",
+      "title": "Complete: Open-Source Ethics and Licensing",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-11",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-11",
+      "title": "Complete: Professional Career Readiness",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    },
+    {
+      "id": "module-task-ppe-module-12",
+      "linkedAssessmentId": null,
+      "linkedModuleId": "ppe-module-12",
+      "title": "Complete: Professional Communication, Decision-Making and Conflict Management",
+      "type": "milestone",
+      "dueDate": null,
+      "estimatedMinutes": null,
+      "completed": false,
+      "completedAt": null,
+      "reviewedAt": null,
+      "xpReward": 10,
+      "weekNumber": null
+    }
+  ],
+  "assessmentProgress": [
+    {
+      "assessmentId": "ui-assessment-1",
+      "progressPercent": 40,
+      "status": "in_progress",
+      "estimatedHours": null,
+      "hoursCompleted": 5,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "ui-assessment-2",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "ui-assessment-3",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "ui-assessment-4",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "cwa-assessment-1",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "cwa-assessment-2",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "cwa-assessment-3",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "cwa-assessment-4",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "pm-assessment-1-case-study",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "pm-assessment-2-quizzes",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "pm-assessment-3-group-project",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "pm-assessment-3-part1",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "pm-assessment-3-part3",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    },
+    {
+      "assessmentId": "ppe-assessments-structure-not-confirmed",
+      "progressPercent": 0,
+      "status": "not_started",
+      "estimatedHours": null,
+      "hoursCompleted": 0,
+      "checklist": [],
+      "grade": null,
+      "links": [],
+      "statusChangedAt": null
+    }
+  ],
+  "reminders": [
+    {
+      "id": "existing-reminder-1",
+      "kind": "study-session",
+      "title": "Pre-existing reminder",
+      "subjectId": null,
+      "assessmentId": null,
+      "offsetIso": null,
+      "fireAt": "2026-07-01T09:00",
+      "sourceWindow": "manual",
+      "status": "pending",
+      "snoozedUntil": null,
+      "notifiedAt": null,
+      "origin": "user",
+      "createdAt": "2026-06-01T00:00:00.000Z"
+    }
+  ],
+  "studyLog": [],
+  "activeFocusSession": null,
+  "completedFocusSessions": [],
+  "mentorBonds": {},
+  "npcMemory": {},
+  "buildingVisits": {},
+  "buildingVisitLog": [],
+  "milestones": [],
+  "completionCelebratedAt": null,
+  "userProgress": {
+    "xp": 0,
+    "level": 1,
+    "streakCount": 0,
+    "longestStreak": 0,
+    "lastActiveDate": null,
+    "perSubjectCompletionPercent": {
+      "user-interface-design": 0,
+      "cloud-based-web-application-development": 0,
+      "project-management": 0,
+      "professional-practices-and-entrepreneurship-in-it": 0
+    },
+    "overallCompletionPercent": 0
+  },
+  "settings": {
+    "reducedMotion": false,
+    "soundEnabled": false,
+    "soundVolumes": {
+      "ambience": 1,
+      "footsteps": 1,
+      "interaction": 1,
+      "ui": 1,
+      "npc": 1,
+      "music": 1
+    },
+    "browserNotificationsEnabled": false,
+    "notificationPermission": "default",
+    "reminderOffsets": [
+      {
+        "isoDuration": "P28D",
+        "enabled": true
+      },
+      {
+        "isoDuration": "P14D",
+        "enabled": true
+      },
+      {
+        "isoDuration": "P7D",
+        "enabled": true
+      },
+      {
+        "isoDuration": "P3D",
+        "enabled": true
+      },
+      {
+        "isoDuration": "P1D",
+        "enabled": true
+      },
+      {
+        "isoDuration": "PT3H",
+        "enabled": true
+      }
+    ],
+    "weeklyPlanningReminder": true,
+    "quietHours": {
+      "enabled": false,
+      "startHour": 22,
+      "endHour": 7
+    },
+    "dataVersion": 2,
+    "theme": "system",
+    "pinnedPriorityIds": [],
+    "onboardingHintDismissed": false,
+    "worldRenderer": "legacy-2d",
+    "graphicsQuality": "auto",
+    "campus3DGuidanceDismissed": false
+  },
+  "canvasSync": null,
+  "moodleSync": null,
+  "playerIdentity": null,
+  "proactiveMentorLog": [],
+  "dailyCheckIn": null,
+  "eveningCheckIn": null
+}

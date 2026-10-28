@@ -1,0 +1,36 @@
+Unit code: XYZ1000
+Unit name: Systems Analysis and Design
+Coordinator: Dr Alex Rivera
+
+This unit introduces structured techniques for analysing and designing
+information systems, covering requirements elicitation, UML modelling and
+usability evaluation.
+
+Week 1: Introduction to Systems Analysis
+Week 2: Requirements Elicitation Techniques
+Week 3: Wireframing and Prototyping
+
+Required reading: Dennis, A. (2021). Systems Analysis and Design. Wiley.
+Recommended reading: Norman, D. (2013). The Design of Everyday Things.
+
+Assessment 1: Portfolio of Wireframes
+Weighting: 30%
+Due: 11:59 pm AEST, Sunday 9 August 2026
+Submission: Submit via the LMS as a single PDF.
+
+Assessment 2: Final Report and Prototype
+Weighting: 40%
+Due: 16 August 2026
+Submission: Submit via the LMS as a zipped project folder.
+
+Assessment 3: Reflective Practice Journal Entry
+Weighting: 10%
+Due: end of Week 8.
+Submission: Submit via the LMS.
+
+Assessment 4: Case Study Exercise
+Weighting: 5%
+Late policy note: for example, a submission due 1 August 2026 could receive
+a 48-hour extension. The actual due date for this assessment is not listed
+here and will be confirmed separately.
+Submission: Submit via the LMS.

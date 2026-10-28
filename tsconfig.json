@@ -1,0 +1,10 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.cache/tsc-root.tsbuildinfo"
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

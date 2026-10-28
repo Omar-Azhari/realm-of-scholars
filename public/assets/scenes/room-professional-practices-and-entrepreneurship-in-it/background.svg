@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" preserveAspectRatio="none">
+  <!--
+    UniGame interim background v2: Professional Practices & Entrepreneurship
+    startup incubator (hand-built vector; final raster briefs in
+    planning/ART_BRIEFS.md). Anchor skeleton + ambience coordinates
+    preserved: venture board 180-370×250-550 (cells/count engine-drawn),
+    networking corkboard 400-600×220-400 (notes engine-pinned), business
+    canvas 630-840×210-380, growth display 870-1110×190-390 (readouts
+    engine-drawn; growth pulse rides 888,378→1096,288), window
+    1140-1300×180-360 (warm glow at 1220,270), trophy case y240/330,
+    pitch desk 1080-1380 (left screen covers the pitch pulse path
+    1120,452→1226,408; chair/monitor-glow engine-drawn), demo-day table
+    750,666, festoon bulbs at 360,113 and 1080,113 (blinkers) with engine
+    sway lamps hung at 720,96 and 1200,96, floor 520.
+  -->
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d3a29"/>
+      <stop offset="70%" stop-color="#14291d"/>
+      <stop offset="100%" stop-color="#0f2016"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#20301f"/>
+      <stop offset="55%" stop-color="#172315"/>
+      <stop offset="100%" stop-color="#0d150c"/>
+    </linearGradient>
+    <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1a3d"/>
+      <stop offset="45%" stop-color="#8a4a2e"/>
+      <stop offset="100%" stop-color="#e0913d"/>
+    </linearGradient>
+    <linearGradient id="wainscot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12241a"/>
+      <stop offset="100%" stop-color="#0e1c14"/>
+    </linearGradient>
+    <linearGradient id="gold-refl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4c542" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#f4c542" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="warm-refl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff9a3d" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ff9a3d" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="76%">
+      <stop offset="60%" stop-color="rgba(5,10,7,0)"/>
+      <stop offset="100%" stop-color="rgba(5,10,7,0.5)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ======================= CEILING ======================= -->
+  <rect x="0" y="0" width="1600" height="96" fill="#0c1a10"/>
+  <rect x="0" y="90" width="1600" height="6" fill="#08110a"/>
+  <rect x="140" y="58" width="1320" height="7" rx="3.5" fill="#f4c542"/>
+  <rect x="140" y="65" width="1320" height="18" fill="#f4c542" opacity="0.12"/>
+  <!-- festoon string (blinking bulbs sit at 360,113 and 1080,113) -->
+  <path d="M200 98 Q360 126 520 100 Q630 122 760 98 Q920 126 1080 102 Q1200 124 1330 98"
+        fill="none" stroke="#2a4433" stroke-width="2.5"/>
+  <circle cx="280" cy="110" r="4" fill="#ffd15c" opacity="0.9"/>
+  <circle cx="360" cy="113" r="4.5" fill="#f4c542"/>
+  <circle cx="450" cy="110" r="4" fill="#ff9a3d" opacity="0.9"/>
+  <circle cx="580" cy="110" r="4" fill="#ffd15c" opacity="0.9"/>
+  <circle cx="690" cy="106" r="4" fill="#ff9a3d" opacity="0.85"/>
+  <circle cx="840" cy="112" r="4" fill="#ffd15c" opacity="0.9"/>
+  <circle cx="960" cy="115" r="4" fill="#ff9a3d" opacity="0.85"/>
+  <circle cx="1080" cy="113" r="4.5" fill="#ff9a3d"/>
+  <circle cx="1160" cy="115" r="4" fill="#ffd15c" opacity="0.9"/>
+  <circle cx="1280" cy="106" r="4" fill="#ff9a3d" opacity="0.85"/>
+
+  <!-- ======================= BACK WALL ======================= -->
+  <rect x="0" y="96" width="1600" height="424" fill="url(#wall)"/>
+  <g stroke="rgba(244,197,66,0.03)" stroke-width="2">
+    <line x1="30" y1="96" x2="30" y2="470"/><line x1="160" y1="96" x2="160" y2="470"/>
+    <line x1="290" y1="96" x2="290" y2="470"/><line x1="420" y1="96" x2="420" y2="470"/>
+    <line x1="550" y1="96" x2="550" y2="470"/><line x1="680" y1="96" x2="680" y2="470"/>
+    <line x1="810" y1="96" x2="810" y2="470"/><line x1="940" y1="96" x2="940" y2="470"/>
+    <line x1="1070" y1="96" x2="1070" y2="470"/><line x1="1200" y1="96" x2="1200" y2="470"/>
+    <line x1="1330" y1="96" x2="1330" y2="470"/><line x1="1460" y1="96" x2="1460" y2="470"/>
+  </g>
+  <rect x="0" y="470" width="1600" height="50" fill="url(#wainscot)"/>
+  <line x1="0" y1="470" x2="1600" y2="470" stroke="#2a4433" stroke-width="2.5"/>
+  <rect x="0" y="508" width="1600" height="12" fill="#0b1810"/>
+
+  <!-- ethics / governance display above the door -->
+  <g transform="translate(46,134)">
+    <rect x="0" y="0" width="108" height="96" rx="5" fill="#12241a" stroke="#2a4433" stroke-width="2.5"/>
+    <text x="54" y="16" text-anchor="middle" fill="#ffd15c" font-size="10" font-family="monospace">ETHICS</text>
+    <!-- balance scales -->
+    <line x1="54" y1="24" x2="54" y2="46" stroke="#f4c542" stroke-width="2.5"/>
+    <line x1="34" y1="30" x2="74" y2="30" stroke="#f4c542" stroke-width="2.5"/>
+    <path d="M28 30 l6 12 h-12 Z M80 30 l6 12 h-12 Z" fill="none" stroke="#f4c542" stroke-width="2"/>
+    <rect x="14" y="56" width="10" height="8" rx="2" fill="#2ed17e"/>
+    <rect x="30" y="58" width="64" height="5" rx="2" fill="#1d3a29"/>
+    <rect x="14" y="70" width="10" height="8" rx="2" fill="#2ed17e"/>
+    <rect x="30" y="72" width="56" height="5" rx="2" fill="#1d3a29"/>
+    <rect x="14" y="84" width="10" height="8" rx="2" fill="#ffd15c"/>
+    <rect x="30" y="86" width="48" height="5" rx="2" fill="#1d3a29"/>
+  </g>
+
+  <!-- ======================= EXIT DOOR ======================= -->
+  <rect x="42" y="250" width="156" height="270" fill="#08110b"/>
+  <rect x="46" y="254" width="148" height="266" fill="#0b1810"/>
+  <rect x="50" y="258" width="140" height="262" fill="none" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="3.5"/>
+  <rect x="50" y="258" width="140" height="5" fill="#22d3ee" opacity="0.35"/>
+  <circle cx="120" cy="352" r="18" fill="none" stroke="#22d3ee" stroke-width="2.5" opacity="0.85"/>
+
+  <!-- ======================= VENTURE BOARD (modules) ======================= -->
+  <rect x="174" y="244" width="202" height="312" rx="10" fill="#0e1c14"/>
+  <rect x="180" y="250" width="190" height="300" rx="8" fill="#14291d" stroke="#2ed17e" stroke-width="3"/>
+  <path d="M338 246 l9 -20 l9 20 l-7 0 l0 11 l-4 0 l0 -11 Z" fill="#f4c542"/>
+  <rect x="204" y="257" width="70" height="7" rx="3" fill="#f4c542"/>
+  <rect x="282" y="257" width="42" height="7" rx="3" fill="#2ed17e"/>
+  <rect x="196" y="268" width="158" height="200" rx="4" fill="#08130c"/>
+  <rect x="196" y="480" width="158" height="52" rx="4" fill="#0b1810" stroke="#1e4d38" stroke-width="1.5"/>
+  <rect x="204" y="536" width="64" height="12" rx="2" fill="#14291d" stroke="#2a4433" stroke-width="1.4"/>
+  <text x="236" y="546" text-anchor="middle" fill="#ffd15c" font-size="9" font-family="monospace">Q3 GOALS</text>
+  <ellipse cx="275" cy="560" rx="96" ry="10" fill="#000" opacity="0.32"/>
+
+  <!-- ======================= NETWORKING CORKBOARD (missions) ======================= -->
+  <rect x="394" y="214" width="212" height="192" rx="9" fill="#231710"/>
+  <rect x="400" y="220" width="200" height="180" rx="6" fill="#33221a" stroke="#4a3423" stroke-width="5"/>
+  <!-- red-string network between pins (engine notes overlay on top) -->
+  <g stroke="#d64545" stroke-width="1.6" opacity="0.8">
+    <line x1="418" y1="238" x2="560" y2="286"/>
+    <line x1="560" y1="286" x2="452" y2="368"/>
+    <line x1="418" y1="238" x2="500" y2="380"/>
+    <line x1="560" y1="286" x2="586" y2="238"/>
+  </g>
+  <circle cx="418" cy="238" r="3" fill="#d64545"/>
+  <circle cx="560" cy="286" r="3" fill="#d64545"/>
+  <circle cx="452" cy="368" r="3" fill="#d64545"/>
+  <circle cx="586" cy="238" r="3" fill="#d64545"/>
+  <circle cx="500" cy="380" r="3" fill="#d64545"/>
+  <!-- name-tag lanyards hung on the frame -->
+  <path d="M412 400 q2 12 8 16 M420 400 q0 10 4 14" stroke="#f4c542" stroke-width="2" fill="none"/>
+  <rect x="408" y="414" width="20" height="12" rx="2" fill="#eaf6ff"/>
+
+  <!-- ======================= BUSINESS CANVAS (info) ======================= -->
+  <rect x="626" y="206" width="218" height="178" rx="7" fill="#c9c0a6"/>
+  <rect x="630" y="210" width="210" height="170" rx="6" fill="#f4f1e6" stroke="#c9c0a6" stroke-width="3"/>
+  <g stroke="#8f8465" stroke-width="2.2">
+    <line x1="700" y1="216" x2="700" y2="374"/>
+    <line x1="770" y1="216" x2="770" y2="374"/>
+    <line x1="636" y1="295" x2="834" y2="295"/>
+  </g>
+  <text x="666" y="230" text-anchor="middle" fill="#6b5f42" font-size="9" font-family="monospace">PROBLEM</text>
+  <text x="735" y="230" text-anchor="middle" fill="#6b5f42" font-size="9" font-family="monospace">VALUE</text>
+  <text x="804" y="230" text-anchor="middle" fill="#6b5f42" font-size="9" font-family="monospace">USERS</text>
+  <rect x="644" y="238" width="44" height="8" rx="3" fill="#ff9a3d" opacity="0.85"/>
+  <rect x="708" y="238" width="44" height="8" rx="3" fill="#f4c542" opacity="0.9"/>
+  <rect x="778" y="238" width="44" height="8" rx="3" fill="#2ed17e" opacity="0.85"/>
+  <rect x="644" y="252" width="36" height="8" rx="3" fill="#8f8465" opacity="0.5"/>
+  <rect x="708" y="252" width="38" height="8" rx="3" fill="#8f8465" opacity="0.5"/>
+  <text x="666" y="310" text-anchor="middle" fill="#6b5f42" font-size="9" font-family="monospace">COSTS</text>
+  <text x="770" y="310" text-anchor="middle" fill="#6b5f42" font-size="9" font-family="monospace">REVENUE</text>
+  <path d="M652 352 l30 -18 l22 8 l34 -22" fill="none" stroke="#2ed17e" stroke-width="3"/>
+  <path d="M744 352 l28 -14 l20 6 l30 -18" fill="none" stroke="#f4c542" stroke-width="2.5"/>
+  <!-- "DEMO DAY!" sticky + interview-notes stack on the tray -->
+  <rect x="812" y="216" width="24" height="20" rx="2" fill="#f6e7b2" transform="rotate(6 824 226)"/>
+  <rect x="668" y="382" width="134" height="9" rx="4" fill="#aab2c5"/>
+  <rect x="676" y="372" width="34" height="12" rx="2" fill="#e8e4d8" stroke="#b6ac91" stroke-width="1.4"/>
+  <rect x="680" y="368" width="34" height="12" rx="2" fill="#f2f4fa" stroke="#b6ac91" stroke-width="1.4"/>
+
+  <!-- ======================= GROWTH DISPLAY (progress) ======================= -->
+  <rect x="864" y="184" width="252" height="212" rx="10" fill="#0e1c14"/>
+  <rect x="870" y="190" width="240" height="200" rx="8" fill="#08130c" stroke="#2ed17e" stroke-width="3"/>
+  <!-- faint market-growth path (the ambience pulse rides this diagonal) -->
+  <path d="M888 378 l52 -30 l44 12 l60 -44 l52 -28" fill="none" stroke="#f4c542" stroke-width="2.5" opacity="0.35"/>
+  <path d="M888 378 l52 -30 l44 12 l60 -44 l52 -28" fill="none" stroke="#ffd15c" stroke-width="1" opacity="0.25"/>
+  <rect x="944" y="396" width="92" height="8" rx="4" fill="#14291d"/>
+
+  <!-- ======================= WINDOW: golden hour + balloon ======================= -->
+  <rect x="1134" y="174" width="172" height="192" rx="8" fill="#08110b"/>
+  <rect x="1148" y="188" width="144" height="164" rx="4" fill="url(#sunset)"/>
+  <circle cx="1268" cy="230" r="12" fill="#ffe1a8" opacity="0.95"/>
+  <!-- hot-air balloon -->
+  <g transform="translate(1178,208)">
+    <path d="M0 0 q-11 2 -11 13 q0 10 8 16 l6 0 q8 -6 8 -16 q0 -11 -11 -13 Z" fill="#ff9a3d"/>
+    <path d="M-6 4 q6 -5 12 0 q-6 22 -12 0 Z" fill="#ffd15c" opacity="0.85"/>
+    <line x1="-4" y1="28" x2="-2" y2="34" stroke="#6b3d20" stroke-width="1.5"/>
+    <line x1="4" y1="28" x2="2" y2="34" stroke="#6b3d20" stroke-width="1.5"/>
+    <rect x="-4" y="34" width="8" height="6" rx="1.5" fill="#6b3d20"/>
+  </g>
+  <rect x="1158" y="256" width="26" height="96" fill="#3d2417"/>
+  <rect x="1192" y="232" width="22" height="120" fill="#4d2e1a"/>
+  <rect x="1222" y="264" width="28" height="88" fill="#3d2417"/>
+  <rect x="1258" y="242" width="20" height="110" fill="#4d2e1a"/>
+  <rect x="1162" y="270" width="4" height="5" fill="#ffe1a8" opacity="0.95"/>
+  <rect x="1196" y="284" width="4" height="5" fill="#ffd15c" opacity="0.95"/>
+  <rect x="1230" y="276" width="4" height="5" fill="#ffe1a8" opacity="0.95"/>
+  <rect x="1262" y="262" width="4" height="5" fill="#ffd15c" opacity="0.9"/>
+  <rect x="1262" y="296" width="4" height="5" fill="#ffe1a8" opacity="0.85"/>
+  <line x1="1220" y1="188" x2="1220" y2="352" stroke="#08110b" stroke-width="5" opacity="0.35"/>
+  <!-- career resources shelf -->
+  <rect x="1140" y="372" width="160" height="9" rx="3" fill="#3d5a3f"/>
+  <rect x="1148" y="344" width="10" height="28" fill="#2ed17e"/>
+  <rect x="1160" y="348" width="10" height="24" fill="#f4c542"/>
+  <rect x="1172" y="342" width="10" height="30" fill="#ff9a3d"/>
+  <rect x="1184" y="350" width="10" height="22" fill="#eaf6ff"/>
+  <path d="M1200 372 v-22 h18 l4 5 h12 v17 Z" fill="#f4c542" opacity="0.9"/>
+  <path d="M1240 372 v-22 h18 l4 5 h12 v17 Z" fill="#2ed17e" opacity="0.9"/>
+  <rect x="1278" y="356" width="20" height="10" rx="2" fill="#12241a" stroke="#2a4433" stroke-width="1.4"/>
+  <text x="1288" y="364" text-anchor="middle" fill="#ffd15c" font-size="7" font-family="monospace">CV</text>
+
+  <!-- ======================= TROPHY CASE (achievements) ======================= -->
+  <rect x="1324" y="192" width="212" height="204" rx="8" fill="none" stroke="#2a4433" stroke-width="3"/>
+  <rect x="1330" y="240" width="200" height="10" rx="3" fill="#3d5a3f"/>
+  <rect x="1330" y="330" width="200" height="10" rx="3" fill="#3d5a3f"/>
+  <rect x="1330" y="392" width="200" height="6" rx="3" fill="#2a4433"/>
+
+  <!-- ======================= FLOOR ======================= -->
+  <rect x="0" y="520" width="1600" height="240" fill="url(#floor)"/>
+  <g stroke="rgba(244,197,66,0.045)" stroke-width="2">
+    <line x1="0" y1="556" x2="1600" y2="556"/>
+    <line x1="0" y1="600" x2="1600" y2="600"/>
+    <line x1="0" y1="652" x2="1600" y2="652"/>
+    <line x1="0" y1="712" x2="1600" y2="712"/>
+    <line x1="320" y1="520" x2="222" y2="760"/>
+    <line x1="560" y1="520" x2="506" y2="760"/>
+    <line x1="800" y1="520" x2="792" y2="760"/>
+    <line x1="1040" y1="520" x2="1074" y2="760"/>
+    <line x1="1280" y1="520" x2="1358" y2="760"/>
+  </g>
+  <rect x="1134" y="520" width="172" height="96" fill="url(#warm-refl)"/>
+  <rect x="140" y="520" width="1320" height="56" fill="url(#gold-refl)"/>
+  <rect x="1090" y="520" width="270" height="90" fill="url(#warm-refl)"/>
+  <rect x="0" y="520" width="1600" height="10" fill="rgba(0,0,0,0.36)"/>
+
+  <!-- rug + presentation floor marks around the demo table -->
+  <ellipse cx="500" cy="660" rx="212" ry="53" fill="#243a22"/>
+  <ellipse cx="500" cy="660" rx="208" ry="51" fill="#2a4227" stroke="#f4c542" stroke-opacity="0.35" stroke-width="2"/>
+  <ellipse cx="500" cy="660" rx="140" ry="34" fill="none" stroke="rgba(255,154,61,0.28)" stroke-width="2" stroke-dasharray="12 8"/>
+  <path d="M628 700 l14 -8 M872 700 l-14 -8" stroke="rgba(255,209,92,0.35)" stroke-width="3" fill="none"/>
+
+  <!-- bean bag (informal corner) -->
+  <ellipse cx="320" cy="712" rx="66" ry="16" fill="#000" opacity="0.3"/>
+  <ellipse cx="320" cy="698" rx="64" ry="30" fill="#b85f24"/>
+  <ellipse cx="320" cy="684" rx="52" ry="24" fill="#d0752e"/>
+  <path d="M282 676 q38 -18 76 0" stroke="#e08a3d" stroke-width="3" fill="none"/>
+
+  <!-- ======================= PITCH DESK (assessments) ======================= -->
+  <ellipse cx="1230" cy="588" rx="158" ry="17" fill="#000" opacity="0.34"/>
+  <rect x="1080" y="470" width="300" height="18" rx="4" fill="#2a4433" stroke="#2ed17e" stroke-opacity="0.65" stroke-width="2"/>
+  <rect x="1080" y="486" width="300" height="5" fill="#1c2f22"/>
+  <rect x="1096" y="488" width="14" height="86" fill="#182a1c"/>
+  <rect x="1350" y="488" width="14" height="86" fill="#182a1c"/>
+  <rect x="1090" y="560" width="280" height="8" rx="4" fill="#182a1c"/>
+  <!-- pitch screen: covers the pitch-pulse path 1120,452 → 1226,408 -->
+  <rect x="1104" y="392" width="150" height="76" rx="6" fill="#08130c" stroke="#f4c542" stroke-width="3"/>
+  <rect x="1110" y="398" width="138" height="64" rx="3" fill="#0b1810"/>
+  <path d="M1120 452 l34 -22 l28 8 l44 -30" fill="none" stroke="#2ed17e" stroke-width="3.5"/>
+  <circle cx="1226" cy="408" r="4" fill="#f4c542"/>
+  <text x="1178" y="410" text-anchor="middle" fill="#ffd15c" font-size="9" font-family="monospace">PITCH v3</text>
+  <!-- laptop + business cards + cue cards -->
+  <path d="M1276 464 h64 l8 10 h-80 Z" fill="#182a1c" stroke="#2ed17e" stroke-width="2"/>
+  <rect x="1284" y="432" width="48" height="32" rx="3" fill="#08130c" stroke="#2ed17e" stroke-width="2"/>
+  <line x1="1292" y1="444" x2="1324" y2="444" stroke="#f4c542" stroke-width="2.5" opacity="0.85"/>
+  <line x1="1292" y1="454" x2="1316" y2="454" stroke="#2ed17e" stroke-width="2.5" opacity="0.8"/>
+  <rect x="1256" y="452" width="22" height="12" rx="2" fill="#eaf6ff"/>
+  <rect x="1259" y="449" width="22" height="12" rx="2" fill="#ffd15c"/>
+
+  <!-- ======================= DEMO-DAY TABLE (deadlines) ======================= -->
+  <ellipse cx="750" cy="682" rx="112" ry="16" fill="#000" opacity="0.3"/>
+  <ellipse cx="750" cy="666" rx="120" ry="26" fill="#1c2f22" stroke="#f4c542" stroke-opacity="0.55" stroke-width="2.5"/>
+  <ellipse cx="750" cy="662" rx="104" ry="20" fill="#14291d"/>
+  <ellipse cx="750" cy="662" rx="56" ry="10" fill="none" stroke="rgba(255,209,92,0.4)" stroke-width="2"/>
+
+  <!-- storytelling: dropped cue cards -->
+  <rect x="1010" y="704" width="28" height="18" rx="2" fill="#eaf6ff" transform="rotate(-9 1024 713)"/>
+  <rect x="1030" y="712" width="28" height="18" rx="2" fill="#ffd15c" transform="rotate(7 1044 721)"/>
+
+  <!-- plants (two, warm pots) -->
+  <ellipse cx="1561" cy="512" rx="30" ry="7" fill="#000" opacity="0.3"/>
+  <rect x="1540" y="470" width="42" height="38" rx="3" fill="#2c2214"/>
+  <rect x="1540" y="470" width="42" height="8" fill="#3b2d18"/>
+  <path d="M1561 470 q -26 -30 -11 -56 q 11 15 11 28 q 2 -22 15 -34 q 9 26 -4 62 Z" fill="#2ed17e"/>
+  <path d="M1561 470 q 16 -20 10 -42 q -10 9 -10 22 Z" fill="#1fa35f"/>
+  <ellipse cx="43" cy="682" rx="28" ry="6" fill="#000" opacity="0.3"/>
+  <rect x="20" y="640" width="46" height="40" rx="3" fill="#2c2214"/>
+  <rect x="20" y="640" width="46" height="8" fill="#3b2d18"/>
+  <path d="M43 640 q -28 -32 -13 -60 q 13 17 13 30 q 2 -24 17 -37 q 9 28 -4 67 Z" fill="#2ed17e"/>
+
+  <!-- ======================= VIGNETTE ======================= -->
+  <rect x="0" y="0" width="1600" height="760" fill="url(#vignette)"/>
+</svg>
