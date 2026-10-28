@@ -2,7 +2,7 @@
 
 **A 3D study RPG that turns real university subjects into an adventure.** Each teaching week becomes a waystone on a quest trail, lectures play out in a gothic lecture theatre, and practice questions become duels against rival scholars. Players earn XP, Focus and coins for genuine study.
 
-Built by **Omar Al Azhari**. Showcasing at the **La Trobe University Campus IT Expo, 18 November 2026**. No public deployment yet; it runs locally in a minute (see [Run it locally](#run-it-locally)).
+**Designed and built by Omar Al Azhari.** Showcasing at the **La Trobe University Campus IT Expo, 18 November 2026**. No public deployment yet; it runs locally in a minute (see [Run it locally](#run-it-locally)).
 
 <p>
 <img src="docs/screenshots/04-overview.png" width="400" alt="Campus overview">
@@ -68,7 +68,7 @@ The AI endpoints are tested against a mocked SDK, so the test suite never calls 
 
 ## How it was built
 
-I designed the game, its rules and its content, and built it with an AI coding assistant (Claude Code), reviewing and testing each change. The lectures are original writing in the voice of fictional professors, and the question banks are hand-written practice questions; neither copies university materials.
+I built Realm of Scholars myself: the game design, rules, world, content, AI features and test suite, in both the web version and the Unity 6 rebuild. I used an AI coding assistant (Claude Code) as a tool to write code faster, and I reviewed and tested every change. The lectures are original writing in the voice of fictional professors, and the question banks are hand-written practice questions; neither copies university materials.
 
 ## Challenges solved
 
